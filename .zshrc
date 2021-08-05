@@ -64,6 +64,20 @@ alias of='v index.html css/* *.js modules/*'
 #.........................................................................
 # -- cd fast -- 
 
+alias h='cd'                          # cd into home dir
+alias b='cd -'                        # cd into previous dir
+alias u='cd ..'                       # go up 1 dir
+alias d='cd ~/Desktop'                # cd into Desktop
+alias dl='cd ~/Downloads'             # cd into Downloads
+alias c='cd ~/code'                   # cd into code/
+alias dot='cd ~/.dotfiles'            # cd into code/
+
+alias cn='cd ~/code/node'             # cd into node/
+alias cnt='cd ~/code/net'             # cd into net/ (netlify)
+alias pw='cd ~/code/pwa'              # cd into pwa/
+alias cs='cd ~/code/css'              # cd into css
+alias cj='cd ~/code/js'               # cd into js
+
 alias pj='cd ~/code/vue/nuxt/serial' # cd into current project
 alias el='cd ~/code/vue/projects/element' # cd into element project
 alias cv='cd ~/code/vue'              # cd into vue
@@ -73,24 +87,14 @@ alias cvc='cd ~/code/vue/course'      # cd into vue course
 alias l='cd ~/code/node/projects/list-api'  # cd into list-api
 alias fl='cd ~/code/net/list-project/dist' # cd to net/ list-project/dist 
 
-alias h='cd'                          # cd into home dir
-alias b='cd -'                        # cd into previous dir
-alias u='cd ..'                       # go up 1 dir
-alias d='cd ~/Desktop'                # cd into Desktop
-alias dl='cd ~/Downloads'             # cd into Downloads
-alias c='cd ~/code'                   # cd into code/
-alias cn='cd ~/code/node'             # cd into node/
-alias cnt='cd ~/code/net'             # cd into net/ (netlify)
-alias pw='cd ~/code/pwa'              # cd into pwa/
-alias cs='cd ~/code/css'              # cd into css
-alias cj='cd ~/code/js'               # cd into js
 #.........................................................................
 
 # -- git --
-alias gp='git push -u origin main'
-alias gph='git push heroku main'
-alias gpl='git pull --quiet'
-alias ght='cd ~/code && cat ghpat.txt'
+alias gd='git add . && git commit -m "-" git push -u origin main' # git do
+alias gp='git push -u origin main' # git push
+alias gph='git push heroku main'   # git push heroku
+alias gpl='git pull --quiet'       # git pull shhh
+alias ght='cd ~/code && cat ghpat.txt && b'
 
 # -- node --
 
