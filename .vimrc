@@ -75,6 +75,7 @@ au FileType json colorscheme sonokai
 au FileType zsh colorscheme sonokai
 au FileType svg colorscheme PaperColor
 au FileType python colorscheme PaperColor
+au FileType text colorscheme PaperColor
 
 
 " netrw settings----------------------------------------------------------
@@ -400,7 +401,7 @@ augroup filetype_javascript
     au FileType javascript hi statusline none
     au FileType javascript setlocal shiftwidth=2 tabstop=2
     au FileType javascript nnoremap <buffer> <leader>c :norm 0i// <esc>j
-    au FileType javascript nnoremap <buffer> <leader>u :norm 0xxx<cr>j
+    au FileType javascript nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType javascript nnoremap <buffer> <leader>bc 0i/* */<esc>0f*;
     au FileType javascript nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType javascript nnoremap <buffer> <leader>b viw<esc>a!<esc>
@@ -462,6 +463,7 @@ augroup filetype_javascript
 
     " vanilla
     au FileType javascript inoreabb <buffer> len length<esc>Ft
+    au FileType javascript inoreabb <buffer> th this.<esc>Fsl
     au FileType javascript inoreabb <buffer> wh while()<esc>Fel
     au FileType javascript inoreabb <buffer> inf Infinity<esc>
     au FileType javascript inoreabb <buffer> fe forEach()<esc>Fhl
@@ -553,7 +555,7 @@ augroup filetype_javascript
 
     " read files
     au FileType javascript inoreabb <buffer> rng <esc>:-1read ~/.vim/.range.js<cr>
-    au FileType javascript inoreabb <buffer> rndint <esc>:-1read ~/.vim/.randInt.js<cr>
+    au FileType javascript inoreabb <buffer> rndi <esc>:-1read ~/.vim/.randInt.js<cr>
     au FileType javascript inoreabb <buffer> shffl <esc>:-1read ~/.vim/.shuffle.js<cr>
     au FileType javascript inoreabb <buffer> vstore <esc>:-1read ~/.vim/.vstore.js<cr>
     au FileType javascript inoreabb <buffer> vstate <esc>:-1read ~/.vim/.vstate.js<cr>
@@ -613,7 +615,7 @@ augroup filetype_html
     au FileType html nnoremap <buffer> <leader>u 0i<space><esc>0w4x/--><cr>3x
     au FileType html nnoremap <buffer> <leader>bc {wO<!--<esc>}a--><esc>
     au FileType html nnoremap <buffer> <leader>ub {w4x}b3x
-    au FileType html nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>
+    au FileType html nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>a<cr><esc>
     au FileType html nnoremap <buffer> <leader>sc diwi< /><esc>F<pE
     au FileType html nnoremap <buffer> <leader><leader>ul :-1read ~/.vim/.list.html<cr>
     au FileType html nnoremap <buffer> <leader><leader>lorem :-1read ~/.vim/.lorem.txt<cr>
@@ -628,7 +630,7 @@ augroup filetype_html
 
     au FileType html inoreabb <buffer> ejif <% if () { %><cr><% } else { %><cr><% } %>
                                             \<esc>2kff2l
-    au FileType html inoreabb <buffer> btn <button class="btn" type="submit"></button><esc>F>;
+    au FileType html inoreabb <buffer> btt <button class="btn" type="submit"></button><esc>F>;
     au FileType html inoreabb <buffer> ul <ul><cr></ul><esc>O<li><cr></li><esc>O
     au FileType html inoreabb <buffer> id id=""<left>
     au FileType html inoreabb <buffer> for for=""<left>
