@@ -90,7 +90,7 @@ alias fl='cd ~/code/net/list-project/dist' # cd to net/ list-project/dist
 #.........................................................................
 
 # -- git --
-alias gd='git add . && git commit -m "-" git push -u origin main' # git do
+alias gd='git add . && git commit -m "-" && git push -u origin main' # git do
 alias gp='git push -u origin main' # git push
 alias gph='git push heroku main'   # git push heroku
 alias gpl='git pull --quiet'       # git pull shhh
