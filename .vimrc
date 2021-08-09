@@ -449,6 +449,7 @@ augroup filetype_javascript
     au FileType javascript inoreabb <buffer> qs querySelector()<esc>Frl
     au FileType javascript inoreabb <buffer> rj res.json({<cr>});<esc>O//<esc>0f/h
 
+    au FileType javascript inoreabb <buffer> ofe Object.fromEntries()<esc>Fsl
     au FileType javascript inoreabb <buffer> ov Object.values()<esc>Fsl
     au FileType javascript inoreabb <buffer> af Array.from()<esc>Fml
     au FileType javascript inoreabb <buffer> jst JSON.stringify()<esc>Fyl
@@ -563,6 +564,7 @@ augroup filetype_javascript
 
     " Vue Nuxt
     au FileType javascript nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>
+    au FileType javascript nnoremap <buffer> <leader>s /script<cr>zt
     au FileType javascript inoreabb <buffer> nt this.$nextTick(() => {<cr>})<esc>O//<esc>hh
     au FileType javascript inoreabb <buffer> rp this.$router.push('')<esc>Fhll
     au FileType javascript inoreabb <buffer> vi v-if=""<esc>F=l
@@ -615,7 +617,7 @@ augroup filetype_html
     au FileType html nnoremap <buffer> <leader>u 0i<space><esc>0w4x/--><cr>3x
     au FileType html nnoremap <buffer> <leader>bc {wO<!--<esc>}a--><esc>
     au FileType html nnoremap <buffer> <leader>ub {w4x}b3x
-    au FileType html nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>a<cr><esc>
+    au FileType html nnoremap <buffer> <leader>t yypkI<<esc>A><esc>jI</<esc>A><esc>k$h
     au FileType html nnoremap <buffer> <leader>sc diwi< /><esc>F<pE
     au FileType html nnoremap <buffer> <leader><leader>ul :-1read ~/.vim/.list.html<cr>
     au FileType html nnoremap <buffer> <leader><leader>lorem :-1read ~/.vim/.lorem.txt<cr>
@@ -654,6 +656,7 @@ augroup filetype_html
     au FileType html inoreabb <buffer> vbs :style="{ }"<esc>F=lla
     au FileType html inoreabb <buffer> db {{ }}<esc>F<space>ha
     au FileType html inoreabb <buffer> ac @click=""<esc>F=l
+    au FileType html inoreabb <buffer> ach @change=""<esc>F=l
     au FileType html inoreabb <buffer> sl <slot></slot><esc>
     au FileType html inoreabb <buffer> sub @submit.prevent="submitForm"<esc>F=
     au FileType html inoreabb <buffer> clo <client-only><cr></client-only><esc>
