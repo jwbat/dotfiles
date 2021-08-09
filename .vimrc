@@ -410,7 +410,7 @@ augroup filetype_javascript
     au FileType javascript nnoremap <buffer> <leader>dt 0A<cr>.then()<esc>V>l
     au FileType javascript nnoremap <buffer> <leader>dc 0A<cr>.catch()<esc>V>l
     au FileType javascript nnoremap <buffer> <leader>tt A<cr>.then()<esc>0fnl
-    au FileType javascript nnoremap <buffer> <leader>[ A {<cr>}<esc>O//<esc>0w
+    au FileType javascript nnoremap <buffer> <leader>[ A {<cr>}<esc>O//<esc>j0A,<esc>h
     au FileType javascript nnoremap <buffer> <leader>et a<><cr></><esc>
     au FileType javascript nnoremap <buffer> <leader>sct a< /><esc><left><left>i
     au FileType javascript nnoremap <buffer> <leader>h1 a<h1></h1><esc>F1;lli
@@ -443,7 +443,7 @@ augroup filetype_javascript
     au FileType javascript inoreabb <buffer> fbi findById()<esc>Fdl
     au FileType javascript inoreabb <buffer> fi findIndex()<esc>Fxl
     au FileType javascript inoreabb <buffer> arf const x = () => {<cr>};<esc>k0fx<left>
-    au FileType javascript inoreabb <buffer> acb () => {<cr>}<esc>k0f=hhh
+    au FileType javascript inoreabb <buffer> acb () =>
     au FileType javascript inoreabb <buffer> fl for (i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType javascript inoreabb <buffer> pn parentNode
     au FileType javascript inoreabb <buffer> qs querySelector()<esc>Frl
