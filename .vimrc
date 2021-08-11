@@ -158,11 +158,11 @@ nnoremap + o<esc>0D
 
 " create a new empty space right of cursor
 nnoremap sp a<space><esc>
-" go to middle of line
+" go 40 chars into line fr 0
 nnoremap <leader>m 040l 
-" 9 * ctrl-e
+" 9 * page-down
 nnoremap <C-n> 9<C-e>
-" 9 * ctrl-y
+" 9 * page-up
 nnoremap <C-p> 9<C-y>
 " clear line
 nnoremap <leader>k 0Dj 
@@ -176,9 +176,16 @@ vnoremap <leader>c "+d
 nnoremap <leader><leader>' gg0"+yG
 " paste from clipboard
 nnoremap <leader>p "+p
+ 
+""   copy visual text into register u
+""replace visual text with text from u
+vnoremap <leader><leader>u "uy
+vnoremap <leader><leader>p d"uP
+
+
 
 "-- marks ----------------------------------------
-" create mark Q, W, E, R
+" create mark Q, W, ..
 nnoremap mq mQ
 nnoremap mw mW
 nnoremap me mE
@@ -188,7 +195,7 @@ nnoremap md mD
 nnoremap mz mZ
 nnoremap mx mX
 nnoremap mc mC
-" go to mark A or S
+" go to mark Q, W, ..
 nnoremap `q `Q
 nnoremap `w `W
 nnoremap `e `E
@@ -371,6 +378,13 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 "  comment a line:      <space>c   **************
 "uncomment a line:      <space>u   **************
 
+"vimrc----------------------------------------------------------
+augroup filetype_vim
+    autocmd!
+    au FileType vim nnoremap <buffer> <leader>c :normal 0i"<cr>j
+    au FileType vim nnoremap <buffer> <leader>u :normal 0xx<cr>j
+augroup END
+
 "python----------------------------------------------------------
 augroup filetype_python
     autocmd!
@@ -400,7 +414,7 @@ augroup filetype_javascript
     au FileType javascript colorscheme PaperColor
     au FileType javascript hi statusline none
     au FileType javascript setlocal shiftwidth=2 tabstop=2
-    au FileType javascript nnoremap <buffer> <leader>c :norm 0i// <esc>j
+    au FileType javascript nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType javascript nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType javascript nnoremap <buffer> <leader>bc 0i/* */<esc>0f*;
     au FileType javascript nnoremap <buffer> <leader>; A;<esc>:w<cr>
@@ -410,7 +424,7 @@ augroup filetype_javascript
     au FileType javascript nnoremap <buffer> <leader>dt 0A<cr>.then()<esc>V>l
     au FileType javascript nnoremap <buffer> <leader>dc 0A<cr>.catch()<esc>V>l
     au FileType javascript nnoremap <buffer> <leader>tt A<cr>.then()<esc>0fnl
-    au FileType javascript nnoremap <buffer> <leader>[ A {<cr>}<esc>O//<esc>j0A,<esc>h
+    au FileType javascript nnoremap <buffer> <leader>[ A {<cr>}<esc>O//<esc>j0A,<esc>hkw
     au FileType javascript nnoremap <buffer> <leader>et a<><cr></><esc>
     au FileType javascript nnoremap <buffer> <leader>sct a< /><esc><left><left>i
     au FileType javascript nnoremap <buffer> <leader>h1 a<h1></h1><esc>F1;lli
