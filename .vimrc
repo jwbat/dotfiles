@@ -31,6 +31,7 @@ nnoremap sft :setfiletype <C-d><cr>
 nnoremap 'j :set filetype=javascript<cr>
 nnoremap 'h :set filetype=html<cr>
 nnoremap 'c :set filetype=css<cr>
+nnoremap 't :set filetype=text<cr>
 
 
 " set runtimepath^=~/.vim/color
@@ -424,7 +425,7 @@ augroup filetype_javascript
     au FileType javascript nnoremap <buffer> <leader>dt 0A<cr>.then()<esc>V>l
     au FileType javascript nnoremap <buffer> <leader>dc 0A<cr>.catch()<esc>V>l
     au FileType javascript nnoremap <buffer> <leader>tt A<cr>.then()<esc>0fnl
-    au FileType javascript nnoremap <buffer> <leader>[ A {<cr>}<esc>O//<esc>j0A,<esc>hkw
+    au FileType javascript nnoremap <buffer> <leader>[ A {<cr>}<esc>O//<esc>j0A<esc>
     au FileType javascript nnoremap <buffer> <leader>et a<><cr></><esc>
     au FileType javascript nnoremap <buffer> <leader>sct a< /><esc><left><left>i
     au FileType javascript nnoremap <buffer> <leader>h1 a<h1></h1><esc>F1;lli
