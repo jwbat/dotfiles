@@ -36,6 +36,25 @@ alias kdl='rm -r ~/Downloads/*'             # klear out Downloads
 alias rmds='rm .DS_Store'
 
 #.........................................................................
+# -- cd fast -- 
+
+alias h='cd'                          # cd into home dir
+alias b='cd -'                        # cd into previous dir
+alias u='cd ..'                       # go up 1 dir
+alias d='cd ~/Desktop'                # cd into Desktop
+alias dl='cd ~/Downloads'             # cd into Downloads
+alias c='cd ~/code'                   # cd into code/
+alias dot='cd ~/.dotfiles'            # cd into code/
+
+alias cn='cd ~/code/node'             # cd into node/
+alias cnt='cd ~/code/net'             # cd into net/ (netlify)
+alias pw='cd ~/code/pwa'              # cd into pwa/
+alias cs='cd ~/code/css'              # cd into css
+alias cj='cd ~/code/js'               # cd into js
+
+alias pj='cd ~/code/vue/nuxt/serial' # cd into current project
+alias cv='cd ~/code/vue'              # cd into vue
+alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
 
 # -- git --
 alias g='git add . && git commit -m "-" && git push -u origin main' # 3-for-1
@@ -90,6 +109,7 @@ alias fdf='firebase deploy --only functions'
 alias oc='v *.html *.css customers/* packages/* start-hosting/* *.js'
 
 
+alias v='~/nvim-osx64/bin/nvim'       # neovim
 alias sz='source ~/.zshrc'            # source .zshrc
 alias vz='v ~/.zshrc'                 # open .zshrc with vim
 alias vv='v ~/.vimrc'                 # open .vimrc with vim
@@ -99,7 +119,6 @@ alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil 
 alias ls='gls --group-directories-first'
 alias p='python'
 alias n='node'
-alias v='~/nvim-osx64/bin/nvim'
 alias activate='source venv/bin/activate'
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
