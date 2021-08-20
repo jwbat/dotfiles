@@ -1,7 +1,4 @@
 "runtime snippets.vim
-"
-""scriptencoding utf-8
-""set encoding=utf-8
 
 syntax on
 filetype indent plugin on
@@ -146,7 +143,7 @@ augroup END
 nnoremap t :0<cr>0
 " go to EOF:     q
 " go to line nr: <nr>q
-nnoremap q G0
+nnoremap ,, G0
 "------------------------
 "------------------------
 
@@ -415,6 +412,7 @@ au BufEnter,BufNewFile,BufRead *.cpp,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
     au FileType cpp colorscheme PaperColor
+    au FileType cpp hi statusline none
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
@@ -427,9 +425,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclh #include <stdio.h>
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
-    au FileType cpp inoreabb <buffer> out cout <<
+    au FileType cpp inoreabb <buffer> out cout <<  << endl;<esc>Ft4l
     au FileType cpp inoreabb <buffer> str string
-    au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>kh
+    au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
 augroup END
 
@@ -615,7 +613,7 @@ augroup filetype_javascript
                                              \ setl filetype=html<cr>
     au FileType javascript nnoremap <buffer> <localleader>j /<script><cr>:
                                              \ setl filetype=javascript<cr>zt
-    au FileType javascript nnoremap <buffer> <localleader>c /<style><cr>:
+    au FileType javascript nnoremap <buffer> <localleader>c /<style<cr>:
                                              \ setl filetype=css<cr>zt
                                              \ :setl filetype=css<cr>
     au FileType javascript nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>
