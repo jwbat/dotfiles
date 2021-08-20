@@ -52,19 +52,23 @@ alias pw='cd ~/code/pwa'              # cd into pwa/
 alias cs='cd ~/code/css'              # cd into css
 alias cj='cd ~/code/js'               # cd into js
 
-alias pj='cd ~/code/vue/nuxt/serial' # cd into current project
+alias pj='cd ~/code/vue/nuxt/resume'  # cd into resume project
+alias pj2='cd ~/code/vue/nuxt/serial' # cd into serial project
 alias cv='cd ~/code/vue'              # cd into vue
 alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
 
 # -- git --
 alias g='git add . && git commit -m "-" && git push -u origin main' # 3-for-1
+alias gs='git status'
 alias gp='git push -u origin main' # git push
 alias gph='git push heroku main'   # git push heroku
 alias gpl='git pull --quiet'       # git pull shhh
 alias ght='cd ~/code && cat ghpat.txt && b'
+alias gb='git rev-parse --abbrev-ref HEAD' # show current branch
 
 # -- node --
 
+alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
 alias pkg='v package.json'
 alias rmn='rm -r node_modules'        # rm node_modules
 alias ns='npm start'
@@ -74,6 +78,7 @@ alias nrs='npm run serve'             # vue dev server
 alias nrd='npm run dev'               # nuxt dev server
 alias nrb='npm run build'             # build vue project
 alias nrg='npm run generate'          # nuxt generate static
+alias nuxtwf='cat ~/code/vue/nuxt/workflow.txt'  # cat nuxt workflow
 
 alias nif='npm install fsevents'
 alias nt='npm test'
@@ -86,17 +91,13 @@ alias ntdl='netlify dev --live'
 alias ntdp='netlify deploy'
 alias nth='netlify help'
 
-#.........................................................................
-# -- react --
-# open React project  
-alias or='v src/App.js src/pages/Feed/Feed.js src/pages/Feed/SinglePost/SinglePost.js'
-
 # -- vue --- nuxt ---------------------------------------------------------
 # open Vue project  
 alias ov='v main.js App.vue pages/* components/*/* composables/*'
 alias va='v *.js *.vue `find . -type f`'
 
-# open nuxt project
+# open nuxt projects
+alias or='v pages/*.vue components/*.vue layouts/**/*.vue nuxt.config.js'  # resume project
 alias on='v store/*.js pages/*.vue components/*.vue layouts/**/*.vue plugins/*.js nuxt.config.js'  
 alias onu='v store/*.js pages/**/*.vue components/**/*.vue layouts/**/*.vue middleware/*.js assets/**/*.css api/*.js nuxt.config.js'
 
@@ -110,6 +111,7 @@ alias oc='v *.html *.css customers/* packages/* start-hosting/* *.js'
 
 
 alias v='~/nvim-osx64/bin/nvim'       # neovim
+alias nv='~/.config/nvim/pack'        # plugins live here
 alias sz='source ~/.zshrc'            # source .zshrc
 alias vz='v ~/.zshrc'                 # open .zshrc with vim
 alias vv='v ~/.vimrc'                 # open .vimrc with vim
@@ -123,6 +125,14 @@ alias activate='source venv/bin/activate'
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
+
+# -- cpp ---------------------------------------------------------
+
+alias runc='clang -std=gnu17 -Wall -Wextra -pedantic arr.cpp -o arr'
+
+cfunc() {
+    clang -std=c17 -Wall -Wextra -pedantic "$1" -o "$2"
+}
 
 # --nvm----------------------------------------------------------
 export NVM_DIR="$HOME/.nvm"

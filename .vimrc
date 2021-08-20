@@ -70,13 +70,13 @@ endfunction
 au BufEnter * call MyHighlights()
 au ColorScheme * call MyHighlights()
 
-" colorscheme sonokai
-au FileType vim colorscheme sonokai
-au FileType json colorscheme sonokai
-au FileType zsh colorscheme sonokai
-au FileType svg colorscheme PaperColor
-au FileType python colorscheme PaperColor
-au FileType text colorscheme PaperColor
+""au FileType vim colorscheme PaperColor
+""au FileType json colorscheme sonokai
+""au FileType zsh colorscheme sonokai
+""au FileType svg colorscheme PaperColor
+""au FileType python colorscheme PaperColor
+""au FileType text colorscheme PaperColor
+""au FileType markdown colorscheme PaperColor
 
 
 " netrw settings----------------------------------------------------------
@@ -117,7 +117,7 @@ inoremap jk <esc>:w<cr>
 inoremap j; <esc>A;<esc>:w<cr>
 
 ""inoremap <C-l> <esc>la
-inoremap ,. <esc>la
+""inoremap ,. <esc>la
 "-------------------------------------------------
 "leader
 let mapleader=" "
@@ -140,19 +140,25 @@ augroup hooks
     au bufwritepost .vimrc source ~/.vimrc
 augroup END
 
-"-------------------------------------------------
+"------------------------
+"------------------------
 " go to top of file
 nnoremap t :0<cr>0
-" go to line nr: <nr>, / go to EOF: ,
-nnoremap , G0
-nnoremap <leader>, A,<esc>
+" go to EOF:     q
+" go to line nr: <nr>q
+nnoremap q G0
+"------------------------
+"------------------------
+
 nnoremap <C-l> $
+nnoremap ,s ^
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
 nnoremap <leader>o yyp
 
 " indent line
-nnoremap <leader>i i<C-t><esc>j0
+nnoremap <leader>i :normal >>j<cr>
+""nnoremap <leader>i i<C-t><esc>j0
 " create a new empty line above / below current one
 nnoremap = O<esc>
 nnoremap + o<esc>0D
@@ -247,12 +253,6 @@ nnoremap gr :source ~/.vimrc<cr>:e<cr><C-o>
 nnoremap <silent> <leader>h :set hls!<cr>
 
 " colorscheme
-nnoremap ca :colorscheme alduin<cr>
-nnoremap cg :colorscheme gruvbox<cr>
-nnoremap co :colorscheme oceanic_material<cr>
-nnoremap cp :colorscheme PaperColor<cr>
-nnoremap cs :colorscheme sonokai<cr>
-nnoremap cm :colorscheme materialbox<cr>
 nnoremap <silent> <C-c> :colorscheme<cr> 
 " set runtimepath^=~/.vim/color
 call plug#begin('~/.vim/plugged')
@@ -338,8 +338,16 @@ nnoremap <leader>z yyp
 nnoremap \ dd
 " delete word
 nnoremap K diwx
-" delete lines i visual mode
+" delete word backwards
+nnoremap ,d bediw
+" delete lines in visual mode
 vnoremap \ d
+
+onoremap p i(
+onoremap sq i'
+onoremap dq i"
+onoremap c i{
+onoremap b i[
 
 " --html tags-----------------------------------------------------------
 "surround with <></>
@@ -374,14 +382,10 @@ inoreabb lh http://localhost:8080<esc>
 "   on the command-line prompt, :e %%, e.g.
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-"-------------------------------------------------
-
-"  comment a line:      <space>c   **************
-"uncomment a line:      <space>u   **************
-
-"vimrc----------------------------------------------------------
+"Vim----------------------------------------------------------
 augroup filetype_vim
     autocmd!
+    au FileType vim colorscheme PaperColor
     au FileType vim nnoremap <buffer> <leader>c :normal 0i"<cr>j
     au FileType vim nnoremap <buffer> <leader>u :normal 0xx<cr>j
 augroup END
@@ -406,12 +410,40 @@ augroup filetype_python
 augroup END
 "--------------------------------------------------^^-python ^^---
 
+""cpp
+au BufEnter,BufNewFile,BufRead *.cpp,*.c setl filetype=cpp
+augroup filetype_cpp
+    autocmd!
+    au FileType cpp colorscheme PaperColor
+    au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
+    au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
+    au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
+    au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
+    au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
+
+    au FileType cpp inoreabb <buffer> inclio #include <iostream>
+    au FileType cpp inoreabb <buffer> inclm #include <cmath>
+    au FileType cpp inoreabb <buffer> incls #include <string>
+    au FileType cpp inoreabb <buffer> inclh #include <stdio.h>
+    au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
+    au FileType cpp inoreabb <buffer> in cin >>
+    au FileType cpp inoreabb <buffer> out cout <<
+    au FileType cpp inoreabb <buffer> str string
+    au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>kh
+    au FileType cpp inoreabb <buffer> rtn return
+augroup END
+
+
+"vue -------------------------------------------------------
+""autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
 "javaScript-------------------------------------------------------
 
 au BufEnter,BufNewFile,BufRead *.ts setl filetype=javascript
 au BufEnter,BufNewFile,BufRead *.vue setl filetype=javascript
 augroup filetype_javascript
     autocmd!
+    let maplocalleader=","
     au FileType javascript colorscheme PaperColor
     au FileType javascript hi statusline none
     au FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -436,6 +468,46 @@ augroup filetype_javascript
     au FileType javascript nnoremap <buffer> <leader>app :-1read ~/.vim/.app.js<cr>
     au FileType javascript nnoremap <buffer> <leader>gqlq :-1read ~/.vim/.gqlQuery.js<cr>
 
+    " vanilla
+    au FileType javascript inoreabb <buffer> ok Object.keys()<esc>Fsl
+    au FileType javascript inoreabb <buffer> len length<esc>Ft
+    au FileType javascript inoreabb <buffer> th this.<esc>Fsl
+    au FileType javascript inoreabb <buffer> wh while()<esc>Fel
+    au FileType javascript inoreabb <buffer> inf Infinity<esc>
+    au FileType javascript inoreabb <buffer> fe forEach()<esc>Fhl
+    au FileType javascript inoreabb <buffer> ls localStorage.setItem('')<esc>Fml
+    au FileType javascript inoreabb <buffer> t true
+    au FileType javascript inoreabb <buffer> f false
+    au FileType javascript inoreabb <buffer> cl console.log()<esc>Fgl
+    au FileType javascript inoreabb <buffer> evt event.target
+    au FileType javascript inoreabb <buffer> cla classList.add('')<esc>Fdll
+    au FileType javascript inoreabb <buffer> clr classList.remove('')<esc>Fell
+    au FileType javascript inoreabb <buffer> clt classList.toggle('')<esc>Fell
+    au FileType javascript inoreabb <buffer> clc classList.contains('')<esc>Fsll
+    au FileType javascript inoreabb <buffer> sa setAttribute('', '')<esc>Fell
+    au FileType javascript inoreabb <buffer> ra removeAttribute('', '')<esc>Fell
+    au FileType javascript inoreabb <buffer> rc removeChild()<esc>Fdl
+    au FileType javascript inoreabb <buffer> fc firstChild<esc>h
+    au FileType javascript inoreabb <buffer> fec firstElementChild<esc>h
+    au FileType javascript inoreabb <buffer> rm remove()<esc>Fel
+    au FileType javascript inoreabb <buffer> ht offsetHeight
+    au FileType javascript inoreabb <buffer> wd offsetWidth
+    au FileType javascript inoreabb <buffer> iae insertAdjacentElement('afterend', el);<esc>Feh
+    au FileType javascript inoreabb <buffer> gb getBoundingClientRect();
+
+    au FileType javascript inoreabb <buffer> odp Object.defineProperty()
+    au FileType javascript inoreabb <buffer> ed export default {};<esc>Ftl
+    au FileType javascript inoreabb <buffer> exp exports.<esc>Fs
+    au FileType javascript inoreabb <buffer> etv event.target.value;<esc>F;h
+    au FileType javascript inoreabb <buffer> fcn function
+    au FileType javascript inoreabb <buffer> fcns functions
+    au FileType javascript inoreabb <buffer> rtn return
+    au FileType javascript inoreabb <buffer> ar =>
+    au FileType javascript inoreabb <buffer> if if ()<esc>Fflla
+    au FileType javascript inoreabb <buffer> rt return
+    au FileType javascript inoreabb <buffer> und undefined
+    au FileType javascript inoreabb <buffer> m. Math.
+    au FileType javascript inoreabb <buffer> ctor constructor()<space>{<esc>a<cr>}<esc>O
     
     au FileType javascript inoreabb <buffer> trc try {<cr>}
                                              \ catch {<cr>}<esc>O//<esc>kko//<esc>hh
@@ -476,46 +548,6 @@ augroup filetype_javascript
                 \ => {<cr>});<esc>
                 \Oconsole.log(error);<cr>const status = error.statusCode;<cr>
                 \const message = error.message;<cr>res.status(status).json({ message });
-
-    " vanilla
-    au FileType javascript inoreabb <buffer> len length<esc>Ft
-    au FileType javascript inoreabb <buffer> th this.<esc>Fsl
-    au FileType javascript inoreabb <buffer> wh while()<esc>Fel
-    au FileType javascript inoreabb <buffer> inf Infinity<esc>
-    au FileType javascript inoreabb <buffer> fe forEach()<esc>Fhl
-    au FileType javascript inoreabb <buffer> ls localStorage.setItem('')<esc>Fml
-    au FileType javascript inoreabb <buffer> t true
-    au FileType javascript inoreabb <buffer> f false
-    au FileType javascript inoreabb <buffer> cl console.log()<esc>Fgl
-    au FileType javascript inoreabb <buffer> evt event.target
-    au FileType javascript inoreabb <buffer> cla classList.add('')<esc>Fdll
-    au FileType javascript inoreabb <buffer> clr classList.remove('')<esc>Fell
-    au FileType javascript inoreabb <buffer> clt classList.toggle('')<esc>Fell
-    au FileType javascript inoreabb <buffer> clc classList.contains('')<esc>Fsll
-    au FileType javascript inoreabb <buffer> sa setAttribute('', '')<esc>Fell
-    au FileType javascript inoreabb <buffer> ra removeAttribute('', '')<esc>Fell
-    au FileType javascript inoreabb <buffer> rc removeChild()<esc>Fdl
-    au FileType javascript inoreabb <buffer> fc firstChild<esc>h
-    au FileType javascript inoreabb <buffer> fec firstElementChild<esc>h
-    au FileType javascript inoreabb <buffer> rm remove()<esc>Fel
-    au FileType javascript inoreabb <buffer> ht offsetHeight
-    au FileType javascript inoreabb <buffer> wd offsetWidth
-    au FileType javascript inoreabb <buffer> iae insertAdjacentElement('afterend', el);<esc>Feh
-    au FileType javascript inoreabb <buffer> gb getBoundingClientRect();
-
-    au FileType javascript inoreabb <buffer> odp Object.defineProperty()
-    au FileType javascript inoreabb <buffer> ed export default {};<esc>Ftl
-    au FileType javascript inoreabb <buffer> exp exports.<esc>Fs
-    au FileType javascript inoreabb <buffer> etv event.target.value;<esc>F;h
-    au FileType javascript inoreabb <buffer> fcn function
-    au FileType javascript inoreabb <buffer> fcns functions
-    au FileType javascript inoreabb <buffer> rtn return
-    au FileType javascript inoreabb <buffer> ar =>
-    au FileType javascript inoreabb <buffer> if if ()<esc>Fflla
-    au FileType javascript inoreabb <buffer> rt return
-    au FileType javascript inoreabb <buffer> und undefined
-    au FileType javascript inoreabb <buffer> m. Math.
-    au FileType javascript inoreabb <buffer> ctor constructor()<space>{<esc>a<cr>}<esc>O
 
     " firebase
     au FileType javascript inoreabb <buffer> fi this.$fire.<esc>h
@@ -578,8 +610,15 @@ augroup filetype_javascript
     au FileType javascript inoreabb <buffer> cpnt <esc>:-1read ~/.vim/.cpnt.vue<cr>
 
     " Vue Nuxt
+    " ,h ,j ,c => go template, script, or style & set filetype
+    au FileType javascript nnoremap <buffer> <localleader>h /<template><cr>:
+                                             \ setl filetype=html<cr>
+    au FileType javascript nnoremap <buffer> <localleader>j /<script><cr>:
+                                             \ setl filetype=javascript<cr>zt
+    au FileType javascript nnoremap <buffer> <localleader>c /<style><cr>:
+                                             \ setl filetype=css<cr>zt
+                                             \ :setl filetype=css<cr>
     au FileType javascript nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>
-    au FileType javascript nnoremap <buffer> <leader>s /script<cr>zt
     au FileType javascript inoreabb <buffer> nt this.$nextTick(() => {<cr>})<esc>O//<esc>hh
     au FileType javascript inoreabb <buffer> rp this.$router.push('')<esc>Fhll
     au FileType javascript inoreabb <buffer> vi v-if=""<esc>F=l
@@ -770,7 +809,7 @@ augroup filetype_css
     au FileType css inoreabb <buffer> tsh text-shadow: 2px 2px 2px grey;<esc>F:l
     au FileType css inoreabb <buffer> ls list-style: none;<esc>
     au FileType css inoreabb <buffer> c color:
-    au FileType css inoreabb <buffer> in inherit;<esc>
+    au FileType css inoreabb <buffer> inh inherit;<esc>
     au FileType css inoreabb <buffer> ol outline:
     au FileType css inoreabb <buffer> on outline: none;<esc>
     au FileType css inoreabb <buffer> moz -moz-appearance: none;<esc>
