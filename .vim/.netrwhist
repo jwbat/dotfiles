@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/jamesbatman/code/js'
+let g:netrw_dirhist_5='/Users/jamesbatman/code/vue/nuxt/bz-blends/node_modules/glob-parent'
+let g:netrw_dirhist_4='/Users/jamesbatman/code/vue/nuxt/bz-blends/node_modules'
+let g:netrw_dirhist_3='/Users/jamesbatman/code/vue/projects/firebase/guidez/functions'
+let g:netrw_dirhist_2='/Users/jamesbatman/code/vue/projects/firebase/guidez'
+let g:netrw_dirhist_1='/Users/jamesbatman/code/vue/nuxt/course/first-nuxt-app/pages/customers'
+let g:netrw_dirhist_0='/Users/jamesbatman/code/vue/projects/examples/greensock/src/StaggerCards.vue'
+let g:netrw_dirhist_9='/Users/jamesbatman/code/vue/projects/examples/greensock/src'
+let g:netrw_dirhist_8='/Users/jamesbatman/code/vue/projects/examples/greensock/src/StaggerCards.vue'
+let g:netrw_dirhist_7='/Users/jamesbatman/code/js/utils'

@@ -128,11 +128,7 @@ alias postman='open -a /Applications/Postman.app'
 
 # -- cpp ---------------------------------------------------------
 
-alias runc='clang -std=gnu17 -Wall -Wextra -pedantic arr.cpp -o arr'
-
-cfunc() {
-    clang -std=c17 -Wall -Wextra -pedantic "$1" -o "$2"
-}
+alias gc='g++ -o ./m ./main.cpp'  # g++ compile main.cpp to m
 
 # --nvm----------------------------------------------------------
 export NVM_DIR="$HOME/.nvm"

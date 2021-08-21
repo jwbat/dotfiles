@@ -419,12 +419,14 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
 
+    au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> inclio #include <iostream>
     au FileType cpp inoreabb <buffer> inclm #include <cmath>
     au FileType cpp inoreabb <buffer> incls #include <string>
     au FileType cpp inoreabb <buffer> inclh #include <stdio.h>
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
+    au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> out cout <<  << endl;<esc>Ft4l
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
