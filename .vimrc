@@ -1,11 +1,8 @@
-"runtime snippets.vim
-
 syntax on
 filetype indent plugin on
 highlight Folded NONE 
 highlight LineNr ctermfg=black
 hi statusline none
-nnoremap <C-h> :hi statusline none<cr>
 hi statusline ctermbg=none
 hi StatusLine ctermbg=0 cterm=none
 hi StatusLineNC ctermbg=0 cterm=none
@@ -22,7 +19,8 @@ set nohlsearch
 set incsearch
 
 " see all recognized filetypes
-nnoremap sft :setfiletype <C-d><cr>
+noremap sft :setfiletype <C-d><cr>
+nnoremap <C-h> :hi statusline none<cr>
 
 " filetype switcher
 nnoremap 'j :set filetype=javascript<cr>
@@ -67,15 +65,6 @@ endfunction
 au BufEnter * call MyHighlights()
 au ColorScheme * call MyHighlights()
 
-""au FileType vim colorscheme PaperColor
-""au FileType json colorscheme sonokai
-""au FileType zsh colorscheme sonokai
-""au FileType svg colorscheme PaperColor
-""au FileType python colorscheme PaperColor
-""au FileType text colorscheme PaperColor
-""au FileType markdown colorscheme PaperColor
-
-
 " netrw settings----------------------------------------------------------
 let g:netrw_liststyle= 3    " show the tree listing (0 - 3)
 let g:netrw_winsize = 0     " set default window size to be equal
@@ -111,14 +100,10 @@ inoremap '' ''
 inoremap ''' ''''''<left>
 inoremap ` ``<left>
 inoremap jk <esc>:w<cr>
-inoremap j; <esc>A;<esc>:w<cr>
 
-""inoremap <C-l> <esc>la
-""inoremap ,. <esc>la
 "-------------------------------------------------
-"leader
+
 let mapleader=" "
-let maplocalleader=" "
 
 "-------------------------------------------------
 "set viewoptions-=options
@@ -128,8 +113,6 @@ augroup remember_folds
   autocmd!
   au BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
   au BufWinEnter ?* silent! loadview
-  "autocmd BufWinLeave * mkview
-  "autocmd BufWinEnter * silent! loadview
 augroup END
 
 augroup hooks
@@ -138,13 +121,11 @@ augroup hooks
 augroup END
 
 "------------------------
-"------------------------
 " go to top of file
 nnoremap t :0<cr>0
 " go to EOF:     q
 " go to line nr: <nr>q
 nnoremap ,, G0
-"------------------------
 "------------------------
 
 nnoremap <C-l> $
@@ -155,7 +136,6 @@ nnoremap <leader>o yyp
 
 " indent line
 nnoremap <leader>i :normal >>j<cr>
-""nnoremap <leader>i i<C-t><esc>j0
 " create a new empty line above / below current one
 nnoremap = O<esc>
 nnoremap + o<esc>0D
@@ -185,8 +165,6 @@ nnoremap <leader>p "+p
 ""replace visual text with text from u
 vnoremap <leader><leader>u "uy
 vnoremap <leader><leader>p d"uP
-
-
 
 "-- marks ----------------------------------------
 " create mark Q, W, ..
@@ -231,14 +209,11 @@ nnoremap rv viW"zp
 vnoremap rv "zpkdd
 "-------------------------------------------------
 
-
-"-------------------------------------------------
 " Start recording macro w/ qq or qw
 " finish recording w/ q,
 " execute macro w/ Q
 nnoremap Q @q
 "-------------------------------------------------
-
 
 " open vimrc in a split; source the vimrc
 " nnoremap <leader>ev :split ~/.vimrc<cr>
@@ -267,7 +242,6 @@ au ColorScheme * call MyHighlights()
 
 ""colorscheme PaperColor
 au FileType vim colorscheme sonokai
-
 
 " --buffer-cmds----------------------------------------------------------
 " next/previous/toggle buffers
@@ -364,8 +338,7 @@ vnoremap <leader>dq <esc>`<i"<esc>`>ea"<esc>
 vnoremap <leader>bt <esc>`<i`<esc>`>ea`<esc>
 " ---------------------------------------------------^^-quotes-^^------
 
-
-"uppercase current word in insert mode
+"uppercase current word in insert or normal mode
 inoremap <c-\> <esc>viwUea
 nnoremap <c-\> viwUea<esc>
 ""vnoremap <c-u> <esc>viwUea
@@ -433,12 +406,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rtn return
 augroup END
 
-
-"vue -------------------------------------------------------
-""autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
-
 "javaScript-------------------------------------------------------
-
 au BufEnter,BufNewFile,BufRead *.ts setl filetype=javascript
 au BufEnter,BufNewFile,BufRead *.vue setl filetype=javascript
 augroup filetype_javascript
@@ -656,14 +624,11 @@ augroup filetype_javascript
     au FileType javascript inoreabb rsp respondWith()<esc>Fh 
 
 augroup END
-"------------------------------------------------^^-javascript-^^-
-
 
 "html------------------------------------------------------------
 au BufEnter,BufNewFile,BufRead *.ejs,*.njk setl filetype=html
 augroup filetype_html
     au! 
-"   au FileType html colorscheme PaperColor
     au FileType html colorscheme sonokai
     au FileType html runtime macros/matchit.vim
     au FileType html hi statusline none
@@ -714,11 +679,7 @@ augroup filetype_html
     au FileType html inoreabb <buffer> sl <slot></slot><esc>
     au FileType html inoreabb <buffer> sub @submit.prevent="submitForm"<esc>F=
     au FileType html inoreabb <buffer> clo <client-only><cr></client-only><esc>
-    
-
 augroup END
-"------------------------------------------------^^-html-^^-------
-
 
 "css-------------------------------------------------------
 au BufEnter,BufNewFile,BufRead *.scss setl filetype=css
@@ -734,7 +695,6 @@ augroup filetype_css
     au FileType css nnoremap <buffer> <leader>a bea:active<esc>
 
     au FileType css inoreabb <buffer> r :root {<cr>--varname:<cr>}<esc>k0fvh
-    " au FileType css inoreabb <buffer> v var(--name)<esc>Fnh
     au FileType css inoreabb <buffer> am @media (min-width: rem)<esc>F:l
     au FileType css inoreabb <buffer> kf @keyframes<esc>Fs
     au FileType css inoreabb <buffer> an animation:
@@ -771,7 +731,6 @@ augroup filetype_css
     au FileType css inoreabb <buffer> pr position: relative;<esc>
     au FileType css inoreabb <buffer> rel relative;<esc>
     au FileType css inoreabb <buffer> abs absolute;<esc>
-
     au FileType css inoreabb <buffer> ds display:
     au FileType css inoreabb <buffer> db display: block;<esc>
     au FileType css inoreabb <buffer> dib display: inline-block;<esc>
@@ -796,7 +755,6 @@ augroup filetype_css
     au FileType css inoreabb <buffer> lh line-height: 2;<esc>F2h
     au FileType css inoreabb <buffer> ws white-space: pre;<esc>Fp
     au FileType css inoreabb <buffer> lsp letter-spacing: 5px;<esc>
-
     au FileType css inoreabb <buffer> atff @font-face {<cr>font-family: ;<cr>
                              \src: url('');<cr>}<esc>?y<cr>ll
 
@@ -841,26 +799,21 @@ augroup filetype_css
     au FileType css inoreabb <buffer> ji justify-items: center;<esc>Fch
     au FileType css inoreabb <buffer> dir direction:
     au FileType css inoreabb <buffer> col column
-
     au FileType css inoreabb <buffer> gtc grid-template-columns: repeat(2, 15rem);<esc>Fsll
     au FileType css inoreabb <buffer> gtr grid-template-rows: repeat(2, 15rem);<esc>Fsll
     au FileType css inoreabb <buffer> gar grid-auto-rows: minmax(5rem, auto);<esc>Fsll
     au FileType css inoreabb <buffer> gac grid-auto-columns: minmax(5rem, auto);<esc>Fsll
     au FileType css inoreabb <buffer> gaf grid-auto-flow: column;<esc>
     au FileType css inoreabb <buffer> gafd grid-auto-flow: dense;<esc>
-
     au FileType css inoreabb <buffer> ga grid-area:
     au FileType css inoreabb <buffer> gta grid-template-areas:
-
     au FileType css inoreabb <buffer> gcs grid-column-start:
     au FileType css inoreabb <buffer> gce grid-column-end:
-
     au FileType css inoreabb <buffer> gr grid-row: 1 / -1;<esc>Fwll
     au FileType css inoreabb <buffer> gc grid-column: 1 / -1;<esc>Fnll
     au FileType css inoreabb <buffer> grs grid-row-start:
     au FileType css inoreabb <buffer> gre grid-row-end:
     au FileType css inoreabb <buffer> rp repeat();<esc>Ftl
-
     au FileType css inoreabb <buffer> gcg grid-column-gap: 1rem;<esc>F1h
     au FileType css inoreabb <buffer> grg grid-row-gap: 1rem;<esc>F1h
     au FileType css inoreabb <buffer> gg grid-gap: 1rem 2rem;<esc>F1h
@@ -876,8 +829,6 @@ augroup filetype_css
     au FileType css inoreabb <buffer> jcsb justify-content: space-between;<esc>
     au FileType css inoreabb <buffer> jcsa justify-content: space-around;<esc>
     au FileType css inoreabb <buffer> jcfs justify-content: flex-start;<esc>
-
-  
     au FileType css inoreabb <buffer> dif display: inline-flex;<esc>
     au FileType css inoreabb <buffer> fd flex-direction: column;<esc>
     au FileType css inoreabb <buffer> flwr flex-wrap: wrap;<esc>
@@ -920,7 +871,6 @@ augroup filetype_css
     au FileType css inoreabb <buffer> po perspective-origin: right;<esc>F1h
     au FileType css inoreabb <buffer> p3d transform-style: preserve-3d;<esc>
     au FileType css inoreabb <buffer> bfv backface-visibility: hidden;<esc>
-
     au FileType css inoreabb <buffer> ve .v-enter {<cr>}<esc>k
     au FileType css inoreabb <buffer> vea .v-enter-active {<cr>}<esc>k
     au FileType css inoreabb <buffer> vet .v-enter-to {<cr>}<esc>k
@@ -930,14 +880,9 @@ augroup filetype_css
     au FileType css inoreabb <buffer> 4v .v-enter-from {<cr>}
                 \<esc>o.v-enter-active,<cr>.v-leave-active {<cr>}
                 \<esc>o.v-leave-to {<cr>}<esc>
-
-
 augroup END
-
 "-----------------------------------------------------------------
 
 au BufEnter *.vue set syntax=html
 au BufEnter *.njk set syntax=html
-
-
 

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/jamesbatman/code/web/css/tailwind/dist/img'
+let g:netrw_dirhist_2='/Users/jamesbatman/nvim-osx64/share/nvim/runtime'
+let g:netrw_dirhist_1='/Users/jamesbatman/nvim-osx64/share/nvim/runtime/indent'
+let g:netrw_dirhist_0='/Users/jamesbatman/code/web/js-tutorials/accessors'
+let g:netrw_dirhist_9='/Users/jamesbatman/code/web/js-tutorials/events'
+let g:netrw_dirhist_8='/Users/jamesbatman/code/web/accessors'
+let g:netrw_dirhist_7='/Users/jamesbatman/code/web/accessors/js'
+let g:netrw_dirhist_6='/Users/jamesbatman/code/web/accessors'
+let g:netrw_dirhist_5='/Users/jamesbatman/code/react/jsx-tutorial/src'
+let g:netrw_dirhist_4='/Users/jamesbatman/code/react/jsx-tutorial'
