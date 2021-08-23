@@ -352,10 +352,20 @@ inoreabb lh http://localhost:8080<esc>
 "   on the command-line prompt, :e %%, e.g.
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+"zsh----------------------------------------------------------
+au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
+augroup filetype_zsh
+    autocmd!
+    au FileType zsh colorscheme materialbox
+    au FileType zsh hi statusline none
+augroup END
+
 "Vim----------------------------------------------------------
 augroup filetype_vim
     autocmd!
     au FileType vim colorscheme PaperColor
+""    au FileType vim hi statusline none
+    au * vim hi statusline none
     au FileType vim nnoremap <buffer> <leader>c :normal 0i"<cr>j
     au FileType vim nnoremap <buffer> <leader>u :normal 0xx<cr>j
 augroup END
@@ -366,17 +376,17 @@ augroup filetype_python
     "---python-------------------------------------------------------
     au FileType python nnoremap <buffer> <localleader>c I#<esc>
     au FileType python nnoremap <buffer> <localleader>u 0wx
-    au FileType python iab init def __init__(self):<cr>pass<esc>
-    au FileType python iab str def __str__(self):<cr>pass<esc>
-    au FileType python iab repr def __repr__(self):<cr>pass<esc>
+    au FileType python inoreabb init def __init__(self):<cr>pass<esc>
+    au FileType python inoreabb str def __str__(self):<cr>pass<esc>
+    au FileType python inoreabb repr def __repr__(self):<cr>pass<esc>
     "---django-------------------------------------------------------
-    au FileType python iab dj django<esc>A
-    au FileType python iab diu from django.contrib.auth.models import User<esc>
-    au FileType python iab dir from django.urls import reverse<esc>
+    au FileType python inoreabb dj django<esc>A
+    au FileType python inoreabb diu from django.contrib.auth.models import User<esc>
+    au FileType python inoreabb dir from django.urls import reverse<esc>
     "---rest_framework-----------------------------------------------
-    au FileType python iab rfser from rest_framework import serializers<esc>
-    au FileType python iab rfstatus from rest_framework import status<esc>
-    au FileType python iab rft from rest_framework.test import APITestCase<esc>
+    au FileType python inoreabb rfser from rest_framework import serializers<esc>
+    au FileType python inoreabb rfstatus from rest_framework import status<esc>
+    au FileType python inoreabb rft from rest_framework.test import APITestCase<esc>
 augroup END
 "--------------------------------------------------^^-python ^^---
 
@@ -393,10 +403,14 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
 
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
-    au FileType cpp inoreabb <buffer> inclio #include <iostream>
-    au FileType cpp inoreabb <buffer> inclm #include <cmath>
-    au FileType cpp inoreabb <buffer> incls #include <string>
-    au FileType cpp inoreabb <buffer> inclh #include <stdio.h>
+    au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
+    au FileType cpp inoreabb <buffer> incls #include <string><esc>
+    au FileType cpp inoreabb <buffer> inclcs #include <cstdlib><esc>
+    au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
+    au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
+    au FileType cpp inoreabb <buffer> incla #include <array><esc>
+    au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
+    au FileType cpp inoreabb <buffer> inclh #include <stdio.h><esc>
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
@@ -404,6 +418,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
+    au FileType cpp inoreabb <buffer> co const
+    au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
+    au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
 augroup END
 
 "javaScript-------------------------------------------------------

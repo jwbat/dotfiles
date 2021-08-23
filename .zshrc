@@ -1,9 +1,9 @@
 autoload -Uz compinit
 compinit # completions
 
-setopt nobeep autocd  # cd using only the name of the dir
+setopt nobeep autocd  # cd using only name of dir
 
-PS1=' %F{180} %1d ~ ' # tan prompt
+PS1=' %F{180} %1d ~ ' # prompt color
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -11,7 +11,6 @@ export PATH="/usr/local/bin:$PATH"
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagaced
  
-# alias ls='ls -G'
 alias ll='ls -lG'
 
 
@@ -21,30 +20,18 @@ fi
 
 #alias tr='tree -L 3 -I "node_modules|*.md|babel.config.js|*.json"'
 alias esh='v ~/code/shell_scripts/*'       # edit shell scripts 
-#.........................................................................
-#.........................................................................
 
-alias z='python ~/code/shell_scripts/vz_to_andromeda.py'    # .vimrc & .zshrc to A
-alias zb='python ~/code/shell_scripts/vz_from_andromeda.py' #    "        " from A 
-
-alias zs='cp -r ~/code/shell_scripts /Volumes/Andromeda'    # cp shell_scripts to A
-alias zbs='cp -r /Volumes/Andromeda/shell_scripts ~/code'   # cp      "    " from A 
-
-alias lsa='ls /Volumes/Andromeda'          # ls Andromeda
-alias ka='rm -r /Volumes/Andromeda/*'      # klear A of everything
-alias kdl='rm -r ~/Downloads/*'             # klear out Downloads
+alias kdl='rm -r ~/Downloads/*'       # klear Downloads
 alias rmds='rm .DS_Store'
 
-#.........................................................................
-# -- cd fast -- 
-
+# cd
 alias h='cd'                          # cd into home dir
 alias b='cd -'                        # cd into previous dir
 alias u='cd ..'                       # go up 1 dir
 alias d='cd ~/Desktop'                # cd into Desktop
 alias dl='cd ~/Downloads'             # cd into Downloads
 alias c='cd ~/code'                   # cd into code/
-alias dot='cd ~/.dotfiles'            # cd into code/
+alias dot='cd ~/.dotfiles'            # cd into .dotfiles
 
 alias cn='cd ~/code/node'             # cd into node/
 alias cnt='cd ~/code/net'             # cd into net/ (netlify)
@@ -52,22 +39,22 @@ alias pw='cd ~/code/pwa'              # cd into pwa/
 alias cs='cd ~/code/css'              # cd into css
 alias cj='cd ~/code/js'               # cd into js
 
-alias pj='cd ~/code/vue/nuxt/resume'  # cd into resume project
-alias pj2='cd ~/code/vue/nuxt/serial' # cd into serial project
+alias pj='cd ~/code/vue/nuxt/resume'  # cd into project
+alias pj2='cd ~/code/vue/nuxt/serial' # cd into project
 alias cv='cd ~/code/vue'              # cd into vue
 alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
 
-# -- git --
-alias g='git add . && git commit -m "-" && git push -u origin main' # 3-for-1
+# git
+alias g='git add . && git commit -m "." && git push -u origin main'
 alias gs='git status'
-alias gp='git push -u origin main' # git push
-alias gph='git push heroku main'   # git push heroku
-alias gpl='git pull --quiet'       # git pull shhh
-alias ght='cd ~/code && cat ghpat.txt && b'
+alias gp='git push origin main'
+alias gpl='git pull --quiet'
 alias gb='git rev-parse --abbrev-ref HEAD' # show current branch
 
-# -- node --
+alias gph='git push heroku main'
+alias ght='cd ~/code && cat ghpat.txt && b'
 
+# node
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
 alias pkg='v package.json'
 alias rmn='rm -r node_modules'        # rm node_modules
@@ -83,33 +70,27 @@ alias nuxtwf='cat ~/code/vue/nuxt/workflow.txt'  # cat nuxt workflow
 alias nif='npm install fsevents'
 alias nt='npm test'
 alias op='v test/* app.js controllers/* routes/* models/* middleware/*' 
-#.........................................................................
 
-# -- netlify --
+# netlify
 alias ntd='netlify dev'
 alias ntdl='netlify dev --live'
 alias ntdp='netlify deploy'
 alias nth='netlify help'
 
-# -- vue --- nuxt ---------------------------------------------------------
-# open Vue project  
+# vue
 alias ov='v main.js App.vue pages/* components/*/* composables/*'
 alias va='v *.js *.vue `find . -type f`'
 
-# open nuxt projects
+# nuxt
 alias or='v pages/*.vue components/*.vue layouts/**/*.vue nuxt.config.js'  # resume project
 alias on='v store/*.js pages/*.vue components/*.vue layouts/**/*.vue plugins/*.js nuxt.config.js'  
 alias onu='v store/*.js pages/**/*.vue components/**/*.vue layouts/**/*.vue middleware/*.js assets/**/*.css api/*.js nuxt.config.js'
 
-#---------------------------------------------------------------------------
-# -- firebase --
+# firebase
 alias fbs='firebase serve'
 alias fdf='firebase deploy --only functions'
-#---------------------------------------------------------------------------
-# open css course project
-alias oc='v *.html *.css customers/* packages/* start-hosting/* *.js'
 
-
+# vim
 alias v='~/nvim-osx64/bin/nvim'       # neovim
 alias nv='~/.config/nvim/pack'        # plugins live here
 alias sz='source ~/.zshrc'            # source .zshrc
@@ -125,12 +106,10 @@ alias activate='source venv/bin/activate'
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
-
-# -- cpp ---------------------------------------------------------
-
+# cpp
 alias gc='g++ -o ./m ./main.cpp'  # g++ compile main.cpp to m
 
-# --nvm----------------------------------------------------------
+# nvm
 export NVM_DIR="$HOME/.nvm"
 
 # This loads nvm:
@@ -138,5 +117,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # This loads nvm bash_completion:
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
-# ----------------------------------------------------^-nvm-^----
 
