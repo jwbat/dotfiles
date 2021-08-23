@@ -108,6 +108,8 @@ alias postman='open -a /Applications/Postman.app'
 
 # cpp
 alias gc='g++ -o ./m ./main.cpp'  # g++ compile main.cpp to m
+alias gc='g++ -std=c++2a -o ./m ./main.cpp'  # g++ compile main.cpp to m
+     # or use -std=gnu++2a  for 'C++ 2020 with GNU extensions' std
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
