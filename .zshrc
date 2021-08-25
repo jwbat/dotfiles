@@ -38,11 +38,12 @@ alias cnt='cd ~/code/net'             # cd into net/ (netlify)
 alias pw='cd ~/code/pwa'              # cd into pwa/
 alias cs='cd ~/code/css'              # cd into css
 alias cj='cd ~/code/js'               # cd into js
-
-alias pj='cd ~/code/vue/nuxt/resume'  # cd into project
-alias pj2='cd ~/code/vue/nuxt/serial' # cd into project
 alias cv='cd ~/code/vue'              # cd into vue
 alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
+
+alias course='cd ~/code/cpp/course'   # cd into c++ course
+alias serial='cd ~/code/vue/nuxt/serial' # cd into serial
+alias resume='cd ~/code/vue/nuxt/resume' # cd into resume
 
 # git
 alias g='git add . && git commit -m "." && git push -u origin main'
@@ -107,7 +108,6 @@ alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
-alias gc='g++ -o ./m ./main.cpp'  # g++ compile main.cpp to m
 alias gc='g++ -std=c++2a -o ./m ./main.cpp'  # g++ compile main.cpp to m
      # or use -std=gnu++2a  for 'C++ 2020 with GNU extensions' std
 

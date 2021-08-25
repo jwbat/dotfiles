@@ -421,6 +421,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
+    au FileType cpp inoreabb <buffer> ch <space><<
 augroup END
 
 "javaScript-------------------------------------------------------
