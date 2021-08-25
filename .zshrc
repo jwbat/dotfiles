@@ -109,6 +109,7 @@ alias postman='open -a /Applications/Postman.app'
 
 # cpp
 alias gc='g++ -std=c++2a -o ./m ./main.cpp'  # g++ compile main.cpp to m
+alias vm='v main.cpp'                       # open main.cpp with vim
      # or use -std=gnu++2a  for 'C++ 2020 with GNU extensions' std
 
 # nvm
