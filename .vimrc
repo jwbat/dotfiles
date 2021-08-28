@@ -373,7 +373,7 @@ augroup END
 "python----------------------------------------------------------
 augroup filetype_python
     autocmd!
-    "---python-------------------------------------------------------
+    au FileType python colorscheme oceanic_material
     au FileType python nnoremap <buffer> <localleader>c I#<esc>
     au FileType python nnoremap <buffer> <localleader>u 0wx
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
@@ -391,7 +391,7 @@ augroup END
 "--------------------------------------------------^^-python ^^---
 
 ""cpp
-au BufEnter,BufNewFile,BufRead *.cpp,*.c setl filetype=cpp
+au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
     au FileType cpp colorscheme PaperColor
@@ -403,6 +403,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
 
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
+    au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclcs #include <cstdlib><esc>
@@ -410,20 +411,26 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
-    au FileType cpp inoreabb <buffer> inclh #include <stdio.h><esc>
+    au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
+    au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> out cout <<  << endl;<esc>Ft4l
     au FileType cpp inoreabb <buffer> str string
+    au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
-    au FileType cpp inoreabb <buffer> ch <space><<
-    au FileType cpp inoreabb <buffer> che <space><< endl;<esc>
+    au FileType cpp inoreabb <buffer> ch <<
+    au FileType cpp inoreabb <buffer> che << endl;<esc>
+    au FileType cpp inoreabb <buffer> th this-><esc>F-
+    au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
+    au FileType cpp inoreabb <buffer> ew err.what()<esc>
+    au FileType cpp inoreabb <buffer> rerr runtime_error
 augroup END
 
 "javaScript-------------------------------------------------------

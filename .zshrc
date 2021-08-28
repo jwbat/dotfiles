@@ -14,13 +14,14 @@ export LSCOLORS=ExFxCxDxBxegedabagaced
 alias ll='ls -lG'
 
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+  #eval "$(pyenv init -)"
+#fi
 
 #alias tr='tree -L 3 -I "node_modules|*.md|babel.config.js|*.json"'
 alias esh='v ~/code/shell_scripts/*'       # edit shell scripts 
 
+alias k='clear'                       # clear console
 alias kdl='rm -r ~/Downloads/*'       # klear Downloads
 alias rmds='rm .DS_Store'
 
@@ -101,16 +102,18 @@ alias vh='vim -c help -c only'        # open vim help
 alias ds='du -sh * | sort -rn'        # see disk space 
 alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
 alias ls='gls --group-directories-first'
-alias p='python'
+alias p='python3.9'                   # manage versions with pyenv
 alias n='node'
 alias activate='source venv/bin/activate'
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
-alias gc='g++ -std=c++2a -o ./m ./main.cpp'  # g++ compile main.cpp to m
-alias vm='v main.cpp'                       # open main.cpp with vim
-     # or use -std=gnu++2a  for 'C++ 2020 with GNU extensions' std
+alias gc='g++ -std=c++2a -I Headers Source/* -o ./m'    # -std=gnu++2a for GNU extensions' std
+alias gc1='g++ -std=c++2a *.cpp -o ./m'                 # g++ compile flat dir
+alias vm='v */main.cpp */*'                             # open main.cpp et al with vim
+     
+alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
