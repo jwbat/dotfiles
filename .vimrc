@@ -406,12 +406,13 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
-    au FileType cpp inoreabb <buffer> inclcs #include <cstdlib><esc>
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
+    au FileType cpp inoreabb <buffer> inclstd #include <cstdlib><esc>
+    au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
@@ -431,6 +432,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
+    au FileType cpp inoreabb <buffer> np nullptr
 augroup END
 
 "javaScript-------------------------------------------------------
