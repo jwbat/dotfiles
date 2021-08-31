@@ -351,6 +351,12 @@ inoreabb lh http://localhost:8080<esc>
 " %% will automatically expand to the path of the active buffer
 "   on the command-line prompt, :e %%, e.g.
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+ 
+augroup filetype_text
+    autocmd!
+    au FileType text colorscheme oceanic_material
+    au FileType text hi statusline none
+augroup END
 
 "zsh----------------------------------------------------------
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
@@ -406,10 +412,12 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
+    au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
+    au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
@@ -430,12 +438,14 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> ch <<
+    au FileType cpp inoreabb <buffer> hc >>
     au FileType cpp inoreabb <buffer> che << endl;<esc>
     au FileType cpp inoreabb <buffer> th this-><esc>F-
     au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
     au FileType cpp inoreabb <buffer> np nullptr
+    au FileType cpp inoreabb <buffer> dbl static_cast<double>()<esc>Fell
 augroup END
 
 "javaScript-------------------------------------------------------

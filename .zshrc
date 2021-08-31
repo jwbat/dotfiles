@@ -110,7 +110,8 @@ alias postman='open -a /Applications/Postman.app'
 
 # cpp
 alias gc='g++ -std=c++2a -I Headers Source/* -o ./m'    # -std=gnu++2a for GNU extensions' std
-alias gc1='g++ -std=c++2a *.cpp -o ./m'                 # g++ compile flat dir
+alias gcs='g++ -std=c++2a *.cpp -o ./m'                 # g++ compile simple (gcs)
+#alias gc2='g++ -std=gnu++2a *.cpp -o ./m'
 alias vm='v */main.cpp */*'                             # open main.cpp et al with vim
      
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
