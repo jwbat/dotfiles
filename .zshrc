@@ -25,27 +25,6 @@ alias k='clear'                       # clear console
 alias kdl='rm -r ~/Downloads/*'       # klear Downloads
 alias rmds='rm .DS_Store'
 
-# cd
-alias h='cd'                          # cd into home dir
-alias b='cd -'                        # cd into previous dir
-alias u='cd ..'                       # go up 1 dir
-alias d='cd ~/Desktop'                # cd into Desktop
-alias dl='cd ~/Downloads'             # cd into Downloads
-alias c='cd ~/code'                   # cd into code/
-alias dot='cd ~/.dotfiles'            # cd into .dotfiles
-
-alias cn='cd ~/code/node'             # cd into node/
-alias cnt='cd ~/code/net'             # cd into net/ (netlify)
-alias pw='cd ~/code/pwa'              # cd into pwa/
-alias cs='cd ~/code/css'              # cd into css
-alias cj='cd ~/code/js'               # cd into js
-alias cv='cd ~/code/vue'              # cd into vue
-alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
-
-alias course='cd ~/code/cpp/course'   # cd into c++ course
-alias serial='cd ~/code/vue/nuxt/serial' # cd into serial
-alias resume='cd ~/code/vue/nuxt/resume' # cd into resume
-
 # git
 alias g='git add . && git commit -m "." && git push -u origin main'
 alias gs='git status'
@@ -55,6 +34,29 @@ alias gb='git rev-parse --abbrev-ref HEAD' # show current branch
 
 alias gph='git push heroku main'
 alias ght='cd ~/code && cat ghpat.txt && b'
+
+# cd
+alias rp='cd ~/code/repos'            # cd into repos
+alias dot='cd ~/.dotfiles'            # cd into .dotfiles
+alias h='cd'                          # cd into home dir
+alias b='cd -'                        # cd into previous dir
+alias u='cd ..'                       # go up 1 dir
+alias d='cd ~/Desktop'                # cd into Desktop
+alias dl='cd ~/Downloads'             # cd into Downloads
+alias c='cd ~/code'                   # cd into code/
+
+alias cn='cd ~/code/node'             # cd into node/
+alias cnt='cd ~/code/net'             # cd into net/ (netlify)
+alias pw='cd ~/code/pwa'              # cd into pwa/
+alias cs='cd ~/code/css'              # cd into css
+alias cj='cd ~/code/js'               # cd into js
+alias cpy='cd ~/code/python'          # cd into python
+alias cv='cd ~/code/vue'              # cd into vue
+alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
+
+alias course='cd ~/code/cpp/course'   # cd into c++ course
+alias serial='cd ~/code/vue/nuxt/serial' # cd into serial
+alias resume='cd ~/code/vue/nuxt/resume' # cd into resume
 
 # node
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands

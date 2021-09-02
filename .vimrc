@@ -380,11 +380,13 @@ augroup END
 augroup filetype_python
     autocmd!
     au FileType python colorscheme oceanic_material
-    au FileType python nnoremap <buffer> <localleader>c I#<esc>
-    au FileType python nnoremap <buffer> <localleader>u 0wx
+    au FileType python nnoremap <buffer> <leader>c I#<esc>
+    au FileType python nnoremap <buffer> <leader>u 0wx
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
     au FileType python inoreabb str def __str__(self):<cr>pass<esc>
     au FileType python inoreabb repr def __repr__(self):<cr>pass<esc>
+    au FileType python inoreabb rtn return
+
     "---django-------------------------------------------------------
     au FileType python inoreabb dj django<esc>A
     au FileType python inoreabb diu from django.contrib.auth.models import User<esc>
@@ -412,6 +414,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
+    au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
