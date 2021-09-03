@@ -18,9 +18,9 @@ alias ll='ls -lG'
   #eval "$(pyenv init -)"
 #fi
 
-#alias tr='tree -L 3 -I "node_modules|*.md|babel.config.js|*.json"'
 alias esh='v ~/code/shell_scripts/*'       # edit shell scripts 
 
+alias lsa='ls /Volumes/Andromeda'
 alias k='clear'                       # clear console
 alias kdl='rm -r ~/Downloads/*'       # klear Downloads
 alias rmds='rm .DS_Store'
@@ -43,7 +43,7 @@ alias b='cd -'                        # cd into previous dir
 alias u='cd ..'                       # go up 1 dir
 alias d='cd ~/Desktop'                # cd into Desktop
 alias dl='cd ~/Downloads'             # cd into Downloads
-alias c='cd ~/code'                   # cd into code/
+alias o='cd ~/code'                   # cd into code/
 
 alias cn='cd ~/code/node'             # cd into node/
 alias cnt='cd ~/code/net'             # cd into net/ (netlify)
@@ -112,11 +112,12 @@ alias postman='open -a /Applications/Postman.app'
 
 # cpp
 alias gc='g++ -std=c++2a -I Headers Source/* -o ./m'    # -std=gnu++2a for GNU extensions' std
-alias gcs='g++ -std=c++2a *.cpp -o ./m'                 # g++ compile simple (gcs)
+alias c='g++ -std=c++2a *.cpp -o ./m'                   # g++ compile un-nested  
 #alias gc2='g++ -std=gnu++2a *.cpp -o ./m'
-alias vm='v */main.cpp */*'                             # open main.cpp et al with vim
-     
+alias vm='v */main.cpp */*'                             # open main.cpp et. al.
+alias vc='v main.cpp'                                   # open main.cpp 
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
+alias m='./m'                                           # run compiled cpp file
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

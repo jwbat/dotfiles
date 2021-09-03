@@ -415,17 +415,18 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
+    au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
+    au FileType cpp inoreabb <buffer> inclstd #include <cstdlib><esc>
     au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
+    au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
     au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
-    au FileType cpp inoreabb <buffer> inclstd #include <cstdlib><esc>
-    au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
@@ -449,6 +450,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rerr runtime_error
     au FileType cpp inoreabb <buffer> np nullptr
     au FileType cpp inoreabb <buffer> dbl static_cast<double>()<esc>Fell
+    au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
 augroup END
 
 "javaScript-------------------------------------------------------
