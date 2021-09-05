@@ -136,9 +136,13 @@ nnoremap <leader>o yyp
 
 " indent line
 nnoremap <leader>i :normal >>j<cr>
-" create a new empty line above / below current one
+" create a new empty line above / below current one / both
 nnoremap = O<esc>
 nnoremap + o<esc>0D
+nnoremap ,= O<esc>jo<esc>0Dk
+
+"" replace word with space
+nnoremap ,<space> viwr<space>
 
 " create a new empty space right of cursor
 nnoremap sp a<space><esc>
@@ -416,16 +420,18 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
-    au FileType cpp inoreabb <buffer> inclstd #include <cstdlib><esc>
+    au FileType cpp inoreabb <buffer> inclsl #include <cstdlib><esc>
     au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
+    au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
+    au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
@@ -449,8 +455,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
     au FileType cpp inoreabb <buffer> np nullptr
+    au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>k
+    au FileType cpp inoreabb <buffer> mu make_unique<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> dbl static_cast<double>()<esc>Fell
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
+    au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
 augroup END
 
 "javaScript-------------------------------------------------------
