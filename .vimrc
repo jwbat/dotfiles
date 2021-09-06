@@ -138,7 +138,7 @@ nnoremap <leader>o yyp
 nnoremap <leader>i :normal >>j<cr>
 " create a new empty line above / below current one / both
 nnoremap = O<esc>0D
-nnoremap + o<esc>0D
+nnoremap + o<esc>0Dk
 nnoremap ,= O<esc>jo<esc>0Dk
 
 "" replace word with space
