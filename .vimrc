@@ -463,6 +463,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> ne !=
+    au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
 augroup END
 
 "javaScript-------------------------------------------------------
