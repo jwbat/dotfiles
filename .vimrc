@@ -137,7 +137,7 @@ nnoremap <leader>o yyp
 " indent line
 nnoremap <leader>i :normal >>j<cr>
 " create a new empty line above / below current one / both
-nnoremap = O<esc>
+nnoremap = O<esc>0D
 nnoremap + o<esc>0D
 nnoremap ,= O<esc>jo<esc>0Dk
 
@@ -340,6 +340,8 @@ nnoremap <leader>pr viw<esc>a)<esc>bi(<esc>lel
 vnoremap <leader>sq <esc>`<i'<esc>`>ea'<esc>
 vnoremap <leader>dq <esc>`<i"<esc>`>ea"<esc>
 vnoremap <leader>bt <esc>`<i`<esc>`>ea`<esc>
+
+inoreabb ,m ();<esc>hh
 " ---------------------------------------------------^^-quotes-^^------
 
 "uppercase current word in insert or normal mode
@@ -460,6 +462,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> dbl static_cast<double>()<esc>Fell
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
+    au FileType cpp inoreabb <buffer> ne !=
 augroup END
 
 "javaScript-------------------------------------------------------
