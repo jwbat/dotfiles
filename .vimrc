@@ -246,6 +246,7 @@ au ColorScheme * call MyHighlights()
 
 ""colorscheme PaperColor
 au FileType vim colorscheme sonokai
+au FileType json colorscheme sonokai
 
 " --buffer-cmds----------------------------------------------------------
 " next/previous/toggle buffers
