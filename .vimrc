@@ -436,6 +436,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
+    au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
