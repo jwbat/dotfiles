@@ -447,6 +447,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
+    au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
@@ -460,7 +461,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> np nullptr
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>k
     au FileType cpp inoreabb <buffer> mu make_unique<double>();<esc>Fdh
-    au FileType cpp inoreabb <buffer> dbl static_cast<double>()<esc>Fell
+    au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> ne !=
