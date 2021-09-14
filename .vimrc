@@ -125,7 +125,7 @@ augroup END
 nnoremap t :0<cr>0
 " go to EOF:     q
 " go to line nr: <nr>q
-nnoremap ,, G0
+nnoremap ,. G0
 "------------------------
 
 nnoremap <C-l> $
@@ -333,7 +333,7 @@ nnoremap <leader>t diwi<></><esc>F<;pf/pF>
 nnoremap <leader>ej i<% %><esc>F<la
 
 " --quotes--------------------------------------------------------------
-"surround with ' ', " ", ` ` from normal, visual modes
+"surround with ' ', " ", ` ` , parentheses from normal, visual modes
 nnoremap <leader>sq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>dq viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>pr viw<esc>a)<esc>bi(<esc>lel
@@ -342,7 +342,7 @@ vnoremap <leader>sq <esc>`<i'<esc>`>ea'<esc>
 vnoremap <leader>dq <esc>`<i"<esc>`>ea"<esc>
 vnoremap <leader>bt <esc>`<i`<esc>`>ea`<esc>
 
-inoreabb ,m ();<esc>hh
+""inoreabb ,m ();<esc>hh
 " ---------------------------------------------------^^-quotes-^^------
 
 "uppercase current word in insert or normal mode
@@ -420,6 +420,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
+
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
@@ -467,6 +468,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> ne !=
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
+    au FileType cpp inoreabb <buffer> st size_t
 augroup END
 
 "javaScript-------------------------------------------------------
