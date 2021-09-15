@@ -137,7 +137,7 @@ nnoremap <leader>o yyp
 " indent line
 nnoremap <leader>i :normal >>j<cr>
 " create a new empty line above / below current one / both
-nnoremap = O<esc>0D
+nnoremap = O<esc>0Dj
 nnoremap + o<esc>0Dk
 nnoremap ,= O<esc>jo<esc>0Dk
 
@@ -341,6 +341,7 @@ nnoremap <leader>pr viw<esc>a)<esc>bi(<esc>lel
 vnoremap <leader>sq <esc>`<i'<esc>`>ea'<esc>
 vnoremap <leader>dq <esc>`<i"<esc>`>ea"<esc>
 vnoremap <leader>bt <esc>`<i`<esc>`>ea`<esc>
+vnoremap <leader>pr di()<esc>hp
 
 ""inoreabb ,m ();<esc>hh
 " ---------------------------------------------------^^-quotes-^^------
@@ -469,6 +470,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ne !=
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
     au FileType cpp inoreabb <buffer> st size_t
+    au FileType cpp inoreabb <buffer> dbl double<esc>bh
 augroup END
 
 "javaScript-------------------------------------------------------
