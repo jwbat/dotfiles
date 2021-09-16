@@ -112,7 +112,7 @@ alias postman='open -a /Applications/Postman.app'
 
 # cpp
 alias gc='g++ -std=c++2a -I Headers Source/* -o ./m'    # -std=gnu++2a for GNU extensions' std
-alias c='g++ -std=c++2a *.cpp -o ./m'                   # g++ compile un-nested  
+alias c='g++ -std=gnu++2a *.cpp -o ./m'                   # g++ compile un-nested  
 #alias gc2='g++ -std=gnu++2a *.cpp -o ./m'
 alias vm='v */main.cpp */*'                             # open main.cpp et. al.
 alias vc='v main.cpp'                                   # open main.cpp 

@@ -418,6 +418,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> m. a-><esc>a
+    au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.boiler.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
@@ -451,7 +452,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
-    au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
+    au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> ch <<
