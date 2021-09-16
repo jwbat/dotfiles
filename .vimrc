@@ -472,6 +472,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
     au FileType cpp inoreabb <buffer> st size_t
     au FileType cpp inoreabb <buffer> dbl double<esc>bh
+    au FileType cpp inoreabb <buffer> pd ptrdiff_t
 augroup END
 
 "javaScript-------------------------------------------------------
