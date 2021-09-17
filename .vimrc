@@ -430,8 +430,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
+    au FileType cpp inoreabb <buffer> inclcs #include <cstring><esc>
     au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
+    au FileType cpp inoreabb <buffer> inclct #include <cctype><esc>
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
     au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
