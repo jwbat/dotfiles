@@ -424,6 +424,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
 
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
+    au FileType cpp inoreabb <buffer> inclios #include <ios><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
     au FileType cpp inoreabb <buffer> inclsl #include <cstdlib><esc>
@@ -475,6 +476,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> st size_t
     au FileType cpp inoreabb <buffer> dbl double<esc>bh
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
+    au FileType cpp inoreabb <buffer> strv string_view
 augroup END
 
 "javaScript-------------------------------------------------------
