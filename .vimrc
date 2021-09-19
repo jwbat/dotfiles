@@ -351,7 +351,9 @@ inoremap <c-\> <esc>viwUea
 nnoremap <c-\> viwUea<esc>
 ""vnoremap <c-u> <esc>viwUea
 
+" general abreviations
 inoreabb w/ with
+inoreabb nl "\n"
 inoreabb rqd required:
 inoreabb lh http://localhost:8080<esc>
 
