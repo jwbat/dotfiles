@@ -354,6 +354,8 @@ nnoremap <c-\> viwUea<esc>
 " general abreviations
 inoreabb w/ with
 inoreabb nl "\n"
+inoreabb dnl "\n\n"
+inoreabb tb "\t"
 inoreabb rqd required:
 inoreabb lh http://localhost:8080<esc>
 
