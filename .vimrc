@@ -428,13 +428,14 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
 
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
+    au FileType cpp inoreabb <buffer> incls #include <string><esc>
+    au FileType cpp inoreabb <buffer> inclsv #include <string_view><esc>
     au FileType cpp inoreabb <buffer> inclios #include <ios><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
     au FileType cpp inoreabb <buffer> inclsl #include <cstdlib><esc>
     au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
-    au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclcs #include <cstring><esc>
     au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
