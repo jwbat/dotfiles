@@ -353,8 +353,8 @@ nnoremap <c-\> viwUea<esc>
 
 " general abreviations
 inoreabb w/ with
-inoreabb nl "\n"
-inoreabb dnl "\n\n"
+inoreabb nl "\n"<esc>
+inoreabb dnl "\n\n"<esc>
 inoreabb tb "\t"
 inoreabb rqd required:
 inoreabb lh http://localhost:8080<esc>
@@ -482,6 +482,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> dbl double<esc>bh
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
     au FileType cpp inoreabb <buffer> strv string_view
+    au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
+
 augroup END
 
 "javaScript-------------------------------------------------------
