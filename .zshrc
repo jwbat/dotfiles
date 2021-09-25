@@ -111,9 +111,10 @@ alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
-alias gc='g++ -std=c++2a -I Headers Source/* -o ./m'    # -std=gnu++2a for GNU extensions' std
-alias c='g++ -std=c++2a *.cpp -o ./m'                   # g++ compile un-nested  
-#alias gc2='g++ -std=gnu++2a *.cpp -o ./m'
+alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
+alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
+#-std=c++2a 
+alias c2='g++ -std=gnu++2a *.cpp -o ./m'
 alias vm='v */main.cpp */*'                             # open main.cpp et. al.
 alias vc='v main.cpp'                                   # open main.cpp 
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp

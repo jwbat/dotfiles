@@ -353,8 +353,8 @@ nnoremap <c-\> viwUea<esc>
 
 " general abreviations
 inoreabb w/ with
-inoreabb nl "\n"<esc>
-inoreabb dnl "\n\n"<esc>
+inoreabb nl "\n"
+inoreabb dnl "\n\n"
 inoreabb tb "\t"
 inoreabb rqd required:
 inoreabb lh http://localhost:8080<esc>
@@ -430,6 +430,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclsv #include <string_view><esc>
+    au FileType cpp inoreabb <buffer> inclcon #include <concepts><esc>
     au FileType cpp inoreabb <buffer> inclios #include <ios><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
@@ -448,6 +449,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
     au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
+    au FileType cpp inoreabb <buffer> incltt #include <type_traits><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
@@ -483,6 +485,16 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
     au FileType cpp inoreabb <buffer> strv string_view
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
+    au FileType cpp inoreabb <buffer> tmplt template <typename T>
+    au FileType cpp inoreabb <buffer> tn typename
+    au FileType cpp inoreabb <buffer> tti is_integral_v<T>
+    au FileType cpp inoreabb <buffer> ttf is_floating_point_v<T>
+    au FileType cpp inoreabb <buffer> ttfunc is_function_v<T>
+    au FileType cpp inoreabb <buffer> ttcls is_class_v<T>
+    au FileType cpp inoreabb <buffer> ttp is_pointer_v<T>
+    au FileType cpp inoreabb <buffer> tta is_array_v<T>
+    au FileType cpp inoreabb <buffer> ttv is_void_v<T>
+    au FileType cpp inoreabb <buffer> rq requires
 
 augroup END
 

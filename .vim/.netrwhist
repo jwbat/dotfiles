@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources/DWARF'
+let g:netrw_dirhist_1='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources'
+let g:netrw_dirhist_0='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents'
+let g:netrw_dirhist_9='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM'
 let g:netrw_dirhist_8='/Users/jamesbatman/code/cpp/course/6-Classes/RectangleFun/Headers'
 let g:netrw_dirhist_7='/Users/jamesbatman/code/cpp/course/5-Functions/SumBuiltIn'
 let g:netrw_dirhist_6='/Users/jamesbatman/code/js'
 let g:netrw_dirhist_5='/Users/jamesbatman/code/vue/nuxt/bz-blends/node_modules/glob-parent'
 let g:netrw_dirhist_4='/Users/jamesbatman/code/vue/nuxt/bz-blends/node_modules'
 let g:netrw_dirhist_3='/Users/jamesbatman/code/vue/projects/firebase/guidez/functions'
-let g:netrw_dirhist_2='/Users/jamesbatman/code/vue/projects/firebase/guidez'
-let g:netrw_dirhist_1='/Users/jamesbatman/code/vue/nuxt/course/first-nuxt-app/pages/customers'
-let g:netrw_dirhist_0='/Users/jamesbatman/code/vue/projects/examples/greensock/src/StaggerCards.vue'
-let g:netrw_dirhist_9='/Users/jamesbatman/code/vue/projects/examples/greensock/src'
