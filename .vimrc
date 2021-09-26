@@ -431,6 +431,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclsv #include <string_view><esc>
     au FileType cpp inoreabb <buffer> inclcon #include <concepts><esc>
+    au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> inclios #include <ios><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
@@ -495,6 +496,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tta is_array_v<T>
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> rq requires
+    au FileType cpp inoreabb <buffer> thp this->
 
 augroup END
 
