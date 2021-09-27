@@ -443,6 +443,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
     au FileType cpp inoreabb <buffer> inclct #include <cctype><esc>
     au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
+    au FileType cpp inoreabb <buffer> incll #include <limits><esc>
     au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
