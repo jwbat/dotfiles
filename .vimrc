@@ -426,6 +426,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
+    au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
 
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
@@ -450,13 +451,14 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
     au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
+    au FileType cpp inoreabb <buffer> inclass #include <cassert><esc>
     au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
     au FileType cpp inoreabb <buffer> incltt #include <type_traits><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
-    au FileType cpp inoreabb <buffer> out cout <<  << endl;<esc>Ft4l
+    au FileType cpp inoreabb <buffer> out cout <<  << "\n";<esc>Ft4l
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> dbl double
@@ -498,6 +500,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> rq requires
     au FileType cpp inoreabb <buffer> thp this->
+    au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
 
 augroup END
 
