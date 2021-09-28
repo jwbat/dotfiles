@@ -459,6 +459,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> out cout <<  << endl;<esc>Ft4l
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> str string
+    au FileType cpp inoreabb <buffer> dbl double
     au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
@@ -483,7 +484,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ne !=
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
     au FileType cpp inoreabb <buffer> st size_t
-    au FileType cpp inoreabb <buffer> dbl double<esc>bh
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
     au FileType cpp inoreabb <buffer> strv string_view
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
