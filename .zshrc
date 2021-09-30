@@ -21,6 +21,7 @@ alias ll='ls -lG'
 alias esh='v ~/code/shell_scripts/*'       # edit shell scripts 
 
 alias lsa='ls /Volumes/Andromeda'
+alias ka='rm -r /Volumes/Andromeda/*'
 alias k='clear'                       # clear console
 alias kdl='rm -r ~/Downloads/*'       # klear Downloads
 alias rmds='rm .DS_Store'
@@ -114,9 +115,9 @@ alias postman='open -a /Applications/Postman.app'
 alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
 #-std=c++2a 
-alias c2='g++ -std=gnu++2a *.cpp -o ./m'
-alias vm='v */main.cpp */*'                             # open main.cpp et. al.
 alias vc='v main.cpp'                                   # open main.cpp 
+alias vf='v main.cpp *.h *.cpp'                         # "v flat"
+alias vn='v */main.cpp */*'                             # "v nested"
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
 alias m='./m'                                           # run compiled cpp file
 
