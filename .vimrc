@@ -421,6 +421,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
+    au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.boiler.cpp<cr> 
 
@@ -459,6 +460,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> out cout <<  << "\n";<esc>Ft4l
+    au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> dbl double
@@ -479,7 +481,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rerr runtime_error
     au FileType cpp inoreabb <buffer> np nullptr
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>k
-    au FileType cpp inoreabb <buffer> mu make_unique<double>();<esc>Fdh
+    au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
+    au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
+    au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
