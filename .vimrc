@@ -505,6 +505,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rq requires
     au FileType cpp inoreabb <buffer> thp this->
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
+    au FileType cpp inoreabb <buffer> op operator
 
 augroup END
 
