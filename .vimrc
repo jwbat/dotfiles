@@ -506,6 +506,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> thp this->
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
     au FileType cpp inoreabb <buffer> op operator
+    au FileType cpp inoreabb <buffer> df default
 
 augroup END
 
