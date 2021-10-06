@@ -509,6 +509,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> op operator
     au FileType cpp inoreabb <buffer> df default
     au FileType cpp inoreabb <buffer> ss <=>
+    au FileType cpp inoreabb <buffer> po partial_ordering
+    au FileType cpp inoreabb <buffer> so string_ordering
+    au FileType cpp inoreabb <buffer> wo weak_ordering
 
 augroup END
 
