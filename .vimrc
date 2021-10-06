@@ -455,6 +455,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclass #include <cassert><esc>
     au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
     au FileType cpp inoreabb <buffer> incltt #include <type_traits><esc>
+    au FileType cpp inoreabb <buffer> inclu #include <utility><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
@@ -507,6 +508,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
     au FileType cpp inoreabb <buffer> op operator
     au FileType cpp inoreabb <buffer> df default
+    au FileType cpp inoreabb <buffer> ss <=>
 
 augroup END
 
