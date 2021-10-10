@@ -486,6 +486,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
+    au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> ne !=
