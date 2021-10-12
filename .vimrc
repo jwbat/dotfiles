@@ -433,6 +433,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclsv #include <string_view><esc>
     au FileType cpp inoreabb <buffer> inclcon #include <concepts><esc>
+    au FileType cpp inoreabb <buffer> inclchr #include <chrono><esc>
+    au FileType cpp inoreabb <buffer> inclthr #include <thread><esc>
     au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> inclios #include <ios><esc>
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
@@ -451,7 +453,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
-    au FileType cpp inoreabb <buffer> inclx #include <stdexcept><esc>
+    au FileType cpp inoreabb <buffer> inclx #include <exception><esc>
+    au FileType cpp inoreabb <buffer> inclsx #include <stdexcept><esc>
     au FileType cpp inoreabb <buffer> inclass #include <cassert><esc>
     au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
     au FileType cpp inoreabb <buffer> incltt #include <type_traits><esc>
@@ -513,6 +516,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> po partial_ordering
     au FileType cpp inoreabb <buffer> so string_ordering
     au FileType cpp inoreabb <buffer> wo weak_ordering
+    au FileType cpp inoreabb <buffer> vr virtual
 
 augroup END
 
