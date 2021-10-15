@@ -498,7 +498,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
     au FileType cpp inoreabb <buffer> strv string_view
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
-    au FileType cpp inoreabb <buffer> tmplt template <typename T>
+    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> tti is_integral_v<T>
     au FileType cpp inoreabb <buffer> ttf is_floating_point_v<T>
@@ -517,6 +517,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> so string_ordering
     au FileType cpp inoreabb <buffer> wo weak_ordering
     au FileType cpp inoreabb <buffer> vr virtual
+    au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
 
 augroup END
 
