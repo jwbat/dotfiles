@@ -425,9 +425,9 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.boiler.cpp<cr> 
 
-    au FileType cpp inoreabb <buffer> yuzh <esc>:-1read ~/.vim/.boiler.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
+    au FileType cpp inoreabb <buffer> odiv <esc>:-1read ~/.vim/.divider.cpp<cr>
 
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
@@ -499,6 +499,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> strv string_view
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
     au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
+    au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> tti is_integral_v<T>
     au FileType cpp inoreabb <buffer> ttf is_floating_point_v<T>
