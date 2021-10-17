@@ -484,7 +484,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
     au FileType cpp inoreabb <buffer> np nullptr
-    au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>k
+    au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
