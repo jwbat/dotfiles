@@ -429,8 +429,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> odiv <esc>:-1read ~/.vim/.divider.cpp<cr>
 
-    au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
+    au FileType cpp inoreabb <buffer> inclf #include <functional><esc>
+    au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> inclsv #include <string_view><esc>
     au FileType cpp inoreabb <buffer> inclcon #include <concepts><esc>
     au FileType cpp inoreabb <buffer> inclchr #include <chrono><esc>
@@ -440,7 +441,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
     au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
     au FileType cpp inoreabb <buffer> inclsl #include <cstdlib><esc>
-    au FileType cpp inoreabb <buffer> inclf #include <fstream><esc>
+    au FileType cpp inoreabb <buffer> inclfs #include <fstream><esc>
     au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
     au FileType cpp inoreabb <buffer> inclcs #include <cstring><esc>
     au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
