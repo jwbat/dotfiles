@@ -120,6 +120,7 @@ alias vf='v main.cpp *.h *.cpp'                         # "v flat"
 alias vn='v */main.cpp */*'                             # "v nested"
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
 alias m='./m'                                           # run compiled cpp file
+alias cm='c && m'                                       # compile and run ./m
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

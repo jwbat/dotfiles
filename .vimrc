@@ -427,7 +427,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
-    au FileType cpp inoreabb <buffer> odiv <esc>:-1read ~/.vim/.divider.cpp<cr>
+    au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclf #include <functional><esc>
@@ -520,6 +520,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wo weak_ordering
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
+    au FileType cpp inoreabb <buffer> fcn function
 
 augroup END
 
