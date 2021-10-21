@@ -474,6 +474,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
+    au FileType cpp inoreabb <buffer> ci constinit
+    au FileType cpp inoreabb <buffer> cev consteval
     au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
