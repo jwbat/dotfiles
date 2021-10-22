@@ -453,13 +453,16 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> incla #include <array><esc>
     au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
+    au FileType cpp inoreabb <buffer> incldq #include <deque><esc>
+    au FileType cpp inoreabb <buffer> incllst #include <list><esc>
+    au FileType cpp inoreabb <buffer> inclflst #include <forward_list><esc>
+    au FileType cpp inoreabb <buffer> inclu #include <utility><esc>
     au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
     au FileType cpp inoreabb <buffer> inclx #include <exception><esc>
     au FileType cpp inoreabb <buffer> inclsx #include <stdexcept><esc>
     au FileType cpp inoreabb <buffer> inclass #include <cassert><esc>
     au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
     au FileType cpp inoreabb <buffer> incltt #include <type_traits><esc>
-    au FileType cpp inoreabb <buffer> inclu #include <utility><esc>
     au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
