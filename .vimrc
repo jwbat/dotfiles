@@ -429,6 +429,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
+    au FileType cpp inoreabb <buffer> inclalg #include <algorithm><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclf #include <functional><esc>
     au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
@@ -458,6 +459,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> inclflst #include <forward_list><esc>
     au FileType cpp inoreabb <buffer> inclu #include <utility><esc>
     au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
+    au FileType cpp inoreabb <buffer> inclset #include <set><esc>
+    au FileType cpp inoreabb <buffer> inclq #include <queue><esc>
+    au FileType cpp inoreabb <buffer> inclstk #include <stack><esc>
     au FileType cpp inoreabb <buffer> inclx #include <exception><esc>
     au FileType cpp inoreabb <buffer> inclsx #include <stdexcept><esc>
     au FileType cpp inoreabb <buffer> inclass #include <cassert><esc>
@@ -469,6 +473,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> out cout <<  << "\n";<esc>Ft4l
     au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
+    au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
+    au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
+    au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> dbl double
@@ -526,6 +533,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
     au FileType cpp inoreabb <buffer> fcn function
+    au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
 
 augroup END
 
