@@ -536,6 +536,14 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> fe for_each(begin(), end());<esc>Fill
     au FileType cpp inoreabb <buffer> lf [] () { }<esc>6h
 
+""  coroutines    
+    au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
+    au FileType cpp inoreabb <buffer> coy co_yield
+    au FileType cpp inoreabb <buffer> cor co_return
+    au FileType cpp inoreabb <buffer> coa co_await
+
+
+
 augroup END
 
 "javaScript-------------------------------------------------------
