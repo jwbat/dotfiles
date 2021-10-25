@@ -125,11 +125,10 @@ augroup END
 nnoremap t :0<cr>0
 " go to EOF:     q
 " go to line nr: <nr>q
-nnoremap ,. G0
+nnoremap , G0
 "------------------------
 
 nnoremap <C-l> $
-nnoremap ,s ^
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
 nnoremap <leader>o yyp
@@ -139,10 +138,8 @@ nnoremap <leader>i :normal >>j<cr>
 " create a new empty line above / below current one / both
 nnoremap = O<esc>0Dj
 nnoremap + o<esc>0Dk
-nnoremap ,= O<esc>jo<esc>0Dk
 
 "" replace word with space
-nnoremap ,<space> viwr<space>
 
 " create a new empty space right of cursor
 nnoremap sp a<space><esc>
@@ -314,8 +311,6 @@ nnoremap <leader>z yyp
 nnoremap \ dd
 " delete word
 nnoremap K diwx
-" delete word backwards
-nnoremap ,d bediw
 " delete lines in visual mode
 vnoremap \ d
 
@@ -343,7 +338,6 @@ vnoremap <leader>dq <esc>`<i"<esc>`>ea"<esc>
 vnoremap <leader>bt <esc>`<i`<esc>`>ea`<esc>
 vnoremap <leader>pr di()<esc>hp
 
-""inoreabb ,m ();<esc>hh
 " ---------------------------------------------------^^-quotes-^^------
 
 "uppercase current word in insert or normal mode
@@ -429,6 +423,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
+    au FileType cpp inoreabb <buffer> inclrng #include <ranges><esc>
     au FileType cpp inoreabb <buffer> inclalg #include <algorithm><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
     au FileType cpp inoreabb <buffer> inclf #include <functional><esc>
@@ -514,14 +509,18 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
     au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
+
+""    concepts
+    au FileType cpp inoreabb <buffer> rq requires
     au FileType cpp inoreabb <buffer> tti is_integral_v<T>
-    au FileType cpp inoreabb <buffer> ttf is_floating_point_v<T>
-    au FileType cpp inoreabb <buffer> ttfunc is_function_v<T>
+    au FileType cpp inoreabb <buffer> ttfp is_floating_point_v<T>
+    au FileType cpp inoreabb <buffer> ttf is_function_v<T>
     au FileType cpp inoreabb <buffer> ttcls is_class_v<T>
     au FileType cpp inoreabb <buffer> ttp is_pointer_v<T>
     au FileType cpp inoreabb <buffer> tta is_array_v<T>
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
-    au FileType cpp inoreabb <buffer> rq requires
+    au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
+
     au FileType cpp inoreabb <buffer> thp this->
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
     au FileType cpp inoreabb <buffer> op operator
@@ -534,6 +533,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
     au FileType cpp inoreabb <buffer> fcn function
     au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
+    au FileType cpp inoreabb <buffer> fe for_each(begin(), end());<esc>Fill
+    au FileType cpp inoreabb <buffer> lf [] () { }<esc>6h
 
 augroup END
 
