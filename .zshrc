@@ -34,7 +34,7 @@ alias gp='git push origin main'
 alias gb='git rev-parse --abbrev-ref HEAD' # show current branch
 
 alias gph='git push heroku main'
-alias ght='cd ~/code && cat ghpat.txt && b'
+alias ght='cd ~/code && cat gh.txt && b'
 alias gitcommands='cat ~/code/commands/git.txt'
 
 # cd
