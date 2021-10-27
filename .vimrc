@@ -423,6 +423,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
+    au FileType cpp inoreabb <buffer> inclcr #include <coroutine><esc>
     au FileType cpp inoreabb <buffer> inclrng #include <ranges><esc>
     au FileType cpp inoreabb <buffer> inclalg #include <algorithm><esc>
     au FileType cpp inoreabb <buffer> incls #include <string><esc>
@@ -481,7 +482,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> ci constinit
     au FileType cpp inoreabb <buffer> cev consteval
-    au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; i++) {<cr>}<esc>k0fx<left>
+    au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> ch <<
@@ -535,6 +536,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
     au FileType cpp inoreabb <buffer> fe for_each(begin(), end());<esc>Fill
     au FileType cpp inoreabb <buffer> lf [] () { }<esc>6h
+    au FileType cpp inoreabb <buffer> nx noexcept
 
 ""  coroutines    
     au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
