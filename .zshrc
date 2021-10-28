@@ -18,12 +18,12 @@ alias ll='ls -lG'
   #eval "$(pyenv init -)"
 #fi
 
-alias esh='v ~/code/shell_scripts/*'       # edit shell scripts 
+alias esh='v ~/code/shell_scripts/*'        # edit shell scripts 
 
 alias lsa='ls /Volumes/Andromeda'
 alias ka='rm -r /Volumes/Andromeda/*'
-alias k='clear'                       # clear console
-alias kdl='rm -r ~/Downloads/*'       # klear Downloads
+alias k='clear'                             # clear console
+alias kdl='rm -r ~/Downloads/*'             # clear Downloads
 alias rmds='rm .DS_Store'
 
 # git
@@ -38,39 +38,41 @@ alias ght='cd ~/code && cat gh.txt && b'
 alias gitcommands='cat ~/code/commands/git.txt'
 
 # cd
-alias rp='cd ~/code/repos'            # cd into repos
-alias dot='cd ~/.dotfiles'            # cd into .dotfiles
-alias h='cd'                          # cd into home dir
-alias b='cd -'                        # cd into previous dir
-alias u='cd ..'                       # go up 1 dir
-alias d='cd ~/Desktop'                # cd into Desktop
-alias dl='cd ~/Downloads'             # cd into Downloads
-alias o='cd ~/code'                   # cd into code/
+alias o='cd ~/code'                         # code
+alias dot='cd ~/.dotfiles'                  # .dotfiles
+alias rp='cd ~/code/repos'                  # repos
+alias h='cd'                                # home
+alias b='cd -'                              # previous
+alias u='cd ..'                             # go up 1
+alias d='cd ~/Desktop'                      # Desktop
+alias dl='cd ~/Downloads'                   # Downloads
 
-alias cn='cd ~/code/node'             # cd into node/
-alias cnt='cd ~/code/net'             # cd into net/ (netlify)
-alias pw='cd ~/code/pwa'              # cd into pwa/
-alias cs='cd ~/code/css'              # cd into css
-alias cj='cd ~/code/js'               # cd into js
-alias cpy='cd ~/code/python'          # cd into python
-alias cv='cd ~/code/vue'              # cd into vue
-alias cvn='cd ~/code/vue/nuxt'        # cd into nuxt
+alias cpl='cd ~/code/cpp'                   # cpp
+alias cn='cd ~/code/node'                   # node
+alias cnt='cd ~/code/net'                   # netlify
+alias pw='cd ~/code/pwa'                    # pwa
+alias cs='cd ~/code/css'                    # css
+alias cj='cd ~/code/js'                     # js
+alias cpy='cd ~/code/python'                # python
+alias cv='cd ~/code/vue'                    # vue
+alias cvn='cd ~/code/vue/nuxt'              # nuxt
 
-alias gak='cd ~/code/cpp/gakwaya'   # cd into c++ course
-alias serial='cd ~/code/vue/nuxt/serial' # cd into serial
-alias resume='cd ~/code/vue/nuxt/resume' # cd into resume
+alias qt='cd ~/code/cpp/courses/qt1'        # qt1
+alias gak='cd ~/code/cpp/courses/gakwaya'   # gakwaya
+alias serial='cd ~/code/vue/nuxt/serial'    # serial
+alias resume='cd ~/code/vue/nuxt/resume'    # resume
 
 # node
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
 alias pkg='v package.json'
-alias rmn='rm -r node_modules'        # rm node_modules
+alias rmn='rm -r node_modules'              # rm node_modules
 alias ns='npm start'
 alias ni='npm install'
-alias nci='npm ci'                    # install all dependencies
-alias nrs='npm run serve'             # vue dev server
-alias nrd='npm run dev'               # nuxt dev server
-alias nrb='npm run build'             # build vue project
-alias nrg='npm run generate'          # nuxt generate static
+alias nci='npm ci'                          # install all dependencies
+alias nrs='npm run serve'                   # vue dev server
+alias nrd='npm run dev'                     # nuxt dev server
+alias nrb='npm run build'                   # build vue project
+alias nrg='npm run generate'                # nuxt generate static
 alias nuxtwf='cat ~/code/vue/nuxt/workflow.txt'  # cat nuxt workflow
 
 alias nif='npm install fsevents'
