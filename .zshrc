@@ -7,6 +7,7 @@ PS1=' %F{180} %1d ~ ' # prompt color
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagaced
