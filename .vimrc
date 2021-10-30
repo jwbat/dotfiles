@@ -537,6 +537,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> fe for_each(begin(), end());<esc>Fill
     au FileType cpp inoreabb <buffer> lf [] () { }<esc>6h
     au FileType cpp inoreabb <buffer> nx noexcept
+    au FileType cpp inoreabb <buffer> if if ()<esc>hh
 
 ""  coroutines    
     au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
@@ -544,6 +545,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> cor co_return
     au FileType cpp inoreabb <buffer> coa co_await
 
+""  Qt
+""    au FileType cpp inoreabb <buffer> qdbg #include <QDebug><esc>
+    au FileType cpp inoreabb <buffer> qi qInfo() <<
+    au FileType cpp inoreabb <buffer> qdb qDebug() <<
 
 
 augroup END

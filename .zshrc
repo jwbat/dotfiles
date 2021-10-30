@@ -58,7 +58,7 @@ alias cpy='cd ~/code/python'                # python
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
 
-alias qt='cd ~/code/cpp/courses/qt1'        # qt1
+alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
 alias gak='cd ~/code/cpp/courses/gakwaya'   # gakwaya
 alias serial='cd ~/code/vue/nuxt/serial'    # serial
 alias resume='cd ~/code/vue/nuxt/resume'    # resume
