@@ -414,6 +414,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
+    au FileType cpp nnoremap <buffer> <leader>] j0i{<cr>}<esc>O
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
     au FileType cpp nnoremap <buffer> m. a-><esc>a
@@ -546,9 +547,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> coa co_await
 
 ""  Qt
-""    au FileType cpp inoreabb <buffer> qdbg #include <QDebug><esc>
     au FileType cpp inoreabb <buffer> qi qInfo() <<
     au FileType cpp inoreabb <buffer> qdb qDebug() <<
+    au FileType cpp inoreabb <buffer> qs QString
+    au FileType cpp inoreabb <buffer> qo QObject
+    au FileType cpp inoreabb <buffer> qson setObjectName("");<esc>hhh
 
 
 augroup END
