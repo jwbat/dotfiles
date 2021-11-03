@@ -17,6 +17,7 @@ set showmatch
 set noswapfile
 set nohlsearch
 set incsearch
+highlight EndOfBuffer ctermbg=none ctermfg=none
 
 " see all recognized filetypes
 noremap sft :setfiletype <C-d><cr>
@@ -539,6 +540,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> lf [] () { }<esc>6h
     au FileType cpp inoreabb <buffer> nx noexcept
     au FileType cpp inoreabb <buffer> if if ()<esc>hh
+    au FileType cpp inoreabb <buffer> ctor constructor
+    au FileType cpp inoreabb <buffer> dtor destructor
 
 ""  coroutines    
     au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
@@ -551,7 +554,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> qdb qDebug() <<
     au FileType cpp inoreabb <buffer> qs QString
     au FileType cpp inoreabb <buffer> qo QObject
-    au FileType cpp inoreabb <buffer> qson setObjectName("");<esc>hhh
+    au FileType cpp inoreabb <buffer> qson setObjectName("");<esc>3h
 
 
 augroup END

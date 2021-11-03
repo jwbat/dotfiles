@@ -49,12 +49,12 @@ alias d='cd ~/Desktop'                      # Desktop
 alias dl='cd ~/Downloads'                   # Downloads
 
 alias cpl='cd ~/code/cpp'                   # cpp
+alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
 alias cnt='cd ~/code/net'                   # netlify
 alias pw='cd ~/code/pwa'                    # pwa
 alias cs='cd ~/code/css'                    # css
 alias cj='cd ~/code/js'                     # js
-alias cpy='cd ~/code/python'                # python
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
 
