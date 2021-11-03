@@ -541,7 +541,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nx noexcept
     au FileType cpp inoreabb <buffer> if if ()<esc>hh
     au FileType cpp inoreabb <buffer> ctor constructor
+<<<<<<< HEAD
     au FileType cpp inoreabb <buffer> dtor destructor
+=======
+    au FileType cpp inoreabb <buffer> dtor deconstructor
+>>>>>>> 3e632b25f2f58d4f5d56311d8e9ec84ac43a11ca
 
 ""  coroutines    
     au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
