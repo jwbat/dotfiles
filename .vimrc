@@ -348,6 +348,7 @@ nnoremap <c-\> viwUea<esc>
 
 " general abreviations
 inoreabb w/ with
+inoreabb otw otherwise
 inoreabb nl "\n"
 inoreabb dnl "\n\n"
 inoreabb tb "\t"
@@ -550,11 +551,14 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> coa co_await
 
 ""  Qt
+    au FileType cpp inoreabb <buffer> inclqdb #include <QDebug><esc>
+    au FileType cpp inoreabb <buffer> qo QObject
+    au FileType cpp inoreabb <buffer> qfi Q_FUNC_INFO
     au FileType cpp inoreabb <buffer> qi qInfo() <<
     au FileType cpp inoreabb <buffer> qdb qDebug() <<
     au FileType cpp inoreabb <buffer> qs QString
-    au FileType cpp inoreabb <buffer> qo QObject
     au FileType cpp inoreabb <buffer> qson setObjectName("");<esc>3h
+    au FileType cpp inoreabb <buffer> cn connect()<esc>hh
 
 
 augroup END
