@@ -132,7 +132,6 @@ nnoremap , G0
 nnoremap <C-l> $
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
-nnoremap <leader>o yyp
 
 " indent line
 nnoremap <leader>i :normal >>j<cr>
@@ -426,47 +425,47 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
-    au FileType cpp inoreabb <buffer> inclcr #include <coroutine><esc>
-    au FileType cpp inoreabb <buffer> inclrng #include <ranges><esc>
-    au FileType cpp inoreabb <buffer> inclalg #include <algorithm><esc>
-    au FileType cpp inoreabb <buffer> incls #include <string><esc>
-    au FileType cpp inoreabb <buffer> inclf #include <functional><esc>
-    au FileType cpp inoreabb <buffer> inclio #include <iostream><esc>
-    au FileType cpp inoreabb <buffer> inclsv #include <string_view><esc>
-    au FileType cpp inoreabb <buffer> inclcon #include <concepts><esc>
-    au FileType cpp inoreabb <buffer> inclchr #include <chrono><esc>
-    au FileType cpp inoreabb <buffer> inclthr #include <thread><esc>
-    au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
-    au FileType cpp inoreabb <buffer> inclios #include <ios><esc>
-    au FileType cpp inoreabb <buffer> inclsio #include <cstdio><esc>
-    au FileType cpp inoreabb <buffer> incldef #include <cstddef><esc>
-    au FileType cpp inoreabb <buffer> inclsl #include <cstdlib><esc>
-    au FileType cpp inoreabb <buffer> inclfs #include <fstream><esc>
-    au FileType cpp inoreabb <buffer> incliom #include <iomanip><esc>
-    au FileType cpp inoreabb <buffer> inclcs #include <cstring><esc>
-    au FileType cpp inoreabb <buffer> inclsig #include <csignal><esc>
-    au FileType cpp inoreabb <buffer> inclt #include <ctime><esc>
-    au FileType cpp inoreabb <buffer> inclct #include <cctype><esc>
-    au FileType cpp inoreabb <buffer> inclm #include <cmath><esc>
-    au FileType cpp inoreabb <buffer> incll #include <limits><esc>
-    au FileType cpp inoreabb <buffer> inclmem #include <memory><esc>
-    au FileType cpp inoreabb <buffer> incln #include <numbers><esc>
-    au FileType cpp inoreabb <buffer> incla #include <array><esc>
-    au FileType cpp inoreabb <buffer> inclv #include <vector><esc>
-    au FileType cpp inoreabb <buffer> incldq #include <deque><esc>
-    au FileType cpp inoreabb <buffer> incllst #include <list><esc>
-    au FileType cpp inoreabb <buffer> inclflst #include <forward_list><esc>
-    au FileType cpp inoreabb <buffer> inclu #include <utility><esc>
-    au FileType cpp inoreabb <buffer> inclmap #include <map><esc>
-    au FileType cpp inoreabb <buffer> inclset #include <set><esc>
-    au FileType cpp inoreabb <buffer> inclq #include <queue><esc>
-    au FileType cpp inoreabb <buffer> inclstk #include <stack><esc>
-    au FileType cpp inoreabb <buffer> inclx #include <exception><esc>
-    au FileType cpp inoreabb <buffer> inclsx #include <stdexcept><esc>
-    au FileType cpp inoreabb <buffer> inclass #include <cassert><esc>
-    au FileType cpp inoreabb <buffer> inclb #include <bitset><esc>
-    au FileType cpp inoreabb <buffer> incltt #include <type_traits><esc>
-    au FileType cpp inoreabb <buffer> inclh #include ".h"<esc>F.h
+    au FileType cpp inoreabb <buffer> nclcr #include <coroutine><esc>
+    au FileType cpp inoreabb <buffer> nclrng #include <ranges><esc>
+    au FileType cpp inoreabb <buffer> nclalg #include <algorithm><esc>
+    au FileType cpp inoreabb <buffer> ncls #include <string><esc>
+    au FileType cpp inoreabb <buffer> nclf #include <functional><esc>
+    au FileType cpp inoreabb <buffer> nclio #include <iostream><esc>
+    au FileType cpp inoreabb <buffer> nclsv #include <string_view><esc>
+    au FileType cpp inoreabb <buffer> nclcon #include <concepts><esc>
+    au FileType cpp inoreabb <buffer> nclchr #include <chrono><esc>
+    au FileType cpp inoreabb <buffer> nclthr #include <thread><esc>
+    au FileType cpp inoreabb <buffer> nclmem #include <memory><esc>
+    au FileType cpp inoreabb <buffer> nclios #include <ios><esc>
+    au FileType cpp inoreabb <buffer> nclsio #include <cstdio><esc>
+    au FileType cpp inoreabb <buffer> ncldef #include <cstddef><esc>
+    au FileType cpp inoreabb <buffer> nclsl #include <cstdlib><esc>
+    au FileType cpp inoreabb <buffer> nclfs #include <fstream><esc>
+    au FileType cpp inoreabb <buffer> ncliom #include <iomanip><esc>
+    au FileType cpp inoreabb <buffer> nclcs #include <cstring><esc>
+    au FileType cpp inoreabb <buffer> nclsig #include <csignal><esc>
+    au FileType cpp inoreabb <buffer> nclt #include <ctime><esc>
+    au FileType cpp inoreabb <buffer> nclct #include <cctype><esc>
+    au FileType cpp inoreabb <buffer> nclm #include <cmath><esc>
+    au FileType cpp inoreabb <buffer> ncll #include <limits><esc>
+    au FileType cpp inoreabb <buffer> nclmem #include <memory><esc>
+    au FileType cpp inoreabb <buffer> ncln #include <numbers><esc>
+    au FileType cpp inoreabb <buffer> ncla #include <array><esc>
+    au FileType cpp inoreabb <buffer> nclv #include <vector><esc>
+    au FileType cpp inoreabb <buffer> ncldq #include <deque><esc>
+    au FileType cpp inoreabb <buffer> ncllst #include <list><esc>
+    au FileType cpp inoreabb <buffer> nclflst #include <forward_list><esc>
+    au FileType cpp inoreabb <buffer> nclu #include <utility><esc>
+    au FileType cpp inoreabb <buffer> nclmap #include <map><esc>
+    au FileType cpp inoreabb <buffer> nclset #include <set><esc>
+    au FileType cpp inoreabb <buffer> nclq #include <queue><esc>
+    au FileType cpp inoreabb <buffer> nclstk #include <stack><esc>
+    au FileType cpp inoreabb <buffer> nclx #include <exception><esc>
+    au FileType cpp inoreabb <buffer> nclsx #include <stdexcept><esc>
+    au FileType cpp inoreabb <buffer> nclass #include <cassert><esc>
+    au FileType cpp inoreabb <buffer> nclb #include <bitset><esc>
+    au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
+    au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
@@ -485,8 +484,12 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> ci constinit
     au FileType cpp inoreabb <buffer> cev consteval
+
     au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
+    au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
+    au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
+
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> ch <<
     au FileType cpp inoreabb <buffer> hc >>
@@ -503,7 +506,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
-    au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> ne !=
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
     au FileType cpp inoreabb <buffer> st size_t
@@ -551,12 +553,18 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> coa co_await
 
 ""  Qt
-    au FileType cpp inoreabb <buffer> inclqdb #include <QDebug><esc>
+    au FileType cpp inoreabb <buffer> nclqdb #include <QDebug><esc>
+    au FileType cpp inoreabb <buffer> nclqts #include <QTextStream><esc>
+    au FileType cpp inoreabb <buffer> nclqv #include <QVariant><esc>
+    au FileType cpp inoreabb <buffer> nclqt #include <QTimer><esc>
+
+    au FileType cpp inoreabb <buffer> qs QString
     au FileType cpp inoreabb <buffer> qo QObject
+    au FileType cpp inoreabb <buffer> qts QTextStream
+
     au FileType cpp inoreabb <buffer> qfi Q_FUNC_INFO
     au FileType cpp inoreabb <buffer> qi qInfo() <<
     au FileType cpp inoreabb <buffer> qdb qDebug() <<
-    au FileType cpp inoreabb <buffer> qs QString
     au FileType cpp inoreabb <buffer> qson setObjectName("");<esc>3h
     au FileType cpp inoreabb <buffer> cn connect()<esc>hh
 
@@ -656,10 +664,10 @@ augroup filetype_javascript
     au FileType javascript inoreabb <buffer> fi findIndex()<esc>Fxl
     au FileType javascript inoreabb <buffer> arf const x = () => {<cr>};<esc>k0fx<left>
     au FileType javascript inoreabb <buffer> acb () =>
-    au FileType javascript inoreabb <buffer> fl for (i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
     au FileType javascript inoreabb <buffer> pn parentNode
     au FileType javascript inoreabb <buffer> qs querySelector()<esc>Frl
     au FileType javascript inoreabb <buffer> rj res.json({<cr>});<esc>O//<esc>0f/h
+    au FileType javascript inoreabb <buffer> fl for (i = 0; i < x; i++) {<cr>}<esc>k0fx<left>
 
     au FileType javascript inoreabb <buffer> ofe Object.fromEntries()<esc>Fsl
     au FileType javascript inoreabb <buffer> ov Object.values()<esc>Fsl
