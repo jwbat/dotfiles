@@ -63,6 +63,9 @@ alias gak='cd ~/code/cpp/courses/gakwaya'   # gakwaya
 alias serial='cd ~/code/vue/nuxt/serial'    # serial
 alias resume='cd ~/code/vue/nuxt/resume'    # resume
 
+# cats
+alias pi='cat ~/.dotfiles/.snippets/.pi.txt'
+
 # node
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
 alias pkg='v package.json'
