@@ -1,0 +1,3 @@
+~ brew postgresql-upgrade-database       To migrate existing data from
+                                          a previous major version of PostgreSQL run
+~ brew services restart postgresql       To restart postgresql after an upgrade

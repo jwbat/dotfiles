@@ -1,0 +1,3 @@
+
+    "An object is a region of storage that has a type and a value."
+

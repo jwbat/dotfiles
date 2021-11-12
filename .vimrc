@@ -387,8 +387,9 @@ augroup END
 augroup filetype_python
     autocmd!
     au FileType python colorscheme oceanic_material
-    au FileType python nnoremap <buffer> <leader>c I#<esc>
-    au FileType python nnoremap <buffer> <leader>u 0wx
+""    au FileType python nnoremap <buffer> <leader>c I#<esc>
+    au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
+    au FileType python nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
     au FileType python inoreabb str def __str__(self):<cr>pass<esc>
     au FileType python inoreabb repr def __repr__(self):<cr>pass<esc>

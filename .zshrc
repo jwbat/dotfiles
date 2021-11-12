@@ -14,6 +14,8 @@ export LSCOLORS=ExFxCxDxBxegedabagaced
  
 alias ll='ls -lG'
 
+alias grep='ggrep -P'                       # Perl grep
+
 
 #if command -v pyenv 1>/dev/null 2>&1; then
   #eval "$(pyenv init -)"
@@ -65,6 +67,9 @@ alias resume='cd ~/code/vue/nuxt/resume'    # resume
 
 # cats
 alias pi='cat ~/.dotfiles/.snippets/.pi.txt'
+alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
+alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
+alias quotes='cat ~/.dotfiles/.snippets/.quotes.txt'
 
 # node
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
@@ -110,6 +115,7 @@ alias vz='v ~/.zshrc'                 # open .zshrc with vim
 alias vv='v ~/.vimrc'                 # open .vimrc with vim
 alias vh='vim -c help -c only'        # open vim help
 alias ds='du -sh * | sort -rn'        # see disk space 
+alias vq='v ~/.dotfiles/.snippets/.quotes.txt'  # open quotes
 alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
 alias ls='gls --group-directories-first'
 alias p='python3.9'                   # manage versions with pyenv
