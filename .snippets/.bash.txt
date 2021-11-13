@@ -1,5 +1,6 @@
 
 wc -c /path/to/file                 get file size
+---------------------------------------------------------------------------------------
 grep -in "pattern" file.txt         [-i] case insensitive;
                                     [-n] line nr.; 
                                     [-w] only whole wds
@@ -15,3 +16,15 @@ grep -V                             grep version
 ggrep -V                            GNU grep (if installed)
 brew install grep                   installs with GNU version as ggrep 
 grep                                ='ggrep -P'   (Perl grep alias)
+---------------------------------------------------------------------------------------
+echo $SHELL
+echo $PATH
+---------------------------------------------------------------------------------------
+env                                 list all environment variables
+export                              list all environment variables and their values
+set                                 include shell variables
+---------------------------------------------------------------------------------------
+chsh -s /bin/bash
+chsh -s /bin/zsh
+chmod +x <filename>
+chmod 744 <filename>                rwx for owner; read only for all others

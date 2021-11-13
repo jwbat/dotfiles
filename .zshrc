@@ -3,11 +3,12 @@ compinit # completions
 
 setopt nobeep autocd  # cd using only name of dir
 
-PS1=' %F{180} %1d ~ ' # prompt color
+PS1=" %F{11} %1d ~ "
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
+export PATH="$PATH:$HOME/code/shell/scripts"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagaced
@@ -44,11 +45,13 @@ alias gitcommands='cat ~/code/commands/git.txt'
 alias o='cd ~/code'                         # code
 alias dot='cd ~/.dotfiles'                  # .dotfiles
 alias rp='cd ~/code/repos'                  # repos
+alias d='cd ~/Desktop'                      # Desktop
+alias dl='cd ~/Downloads'                   # Downloads
+alias scr='cd ~/code/shell/scripts'         # scripts
+alias allow='chmod 744'                     # set permission
 alias h='cd'                                # home
 alias b='cd -'                              # previous
 alias u='cd ..'                             # go up 1
-alias d='cd ~/Desktop'                      # Desktop
-alias dl='cd ~/Downloads'                   # Downloads
 
 alias cpl='cd ~/code/cpp'                   # cpp
 alias py='cd ~/code/python'                 # python
@@ -66,10 +69,16 @@ alias serial='cd ~/code/vue/nuxt/serial'    # serial
 alias resume='cd ~/code/vue/nuxt/resume'    # resume
 
 # cats
-alias pi='cat ~/.dotfiles/.snippets/.pi.txt'
 alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
 alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
 alias quotes='cat ~/.dotfiles/.snippets/.quotes.txt'
+alias nums='pi && e && sqrt2'
+
+# misc. 
+alias ls='gls --group-directories-first --color'
+alias sz='source ~/.zshrc'                  # source .zshrc
+alias ds='du -sh * | sort -rn'              # see disk space 
+alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
 
 # node
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
@@ -110,14 +119,12 @@ alias fdf='firebase deploy --only functions'
 # vim
 alias v='~/nvim-osx64/bin/nvim'       # neovim
 alias nv='~/.config/nvim/pack'        # plugins live here
-alias sz='source ~/.zshrc'            # source .zshrc
 alias vz='v ~/.zshrc'                 # open .zshrc with vim
 alias vv='v ~/.vimrc'                 # open .vimrc with vim
 alias vh='vim -c help -c only'        # open vim help
-alias ds='du -sh * | sort -rn'        # see disk space 
 alias vq='v ~/.dotfiles/.snippets/.quotes.txt'  # open quotes
-alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
-alias ls='gls --group-directories-first'
+
+# python
 alias p='python3.9'                   # manage versions with pyenv
 alias n='node'
 alias activate='source venv/bin/activate'
@@ -137,10 +144,6 @@ alias cm='c && m'                                       # compile and run ./m
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-
-# This loads nvm:
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
-
-# This loads nvm bash_completion:
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"        # load nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # load nvm bash_completion
 

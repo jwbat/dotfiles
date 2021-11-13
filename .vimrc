@@ -365,12 +365,18 @@ augroup filetype_text
     au FileType text hi statusline none
 augroup END
 
+
 "zsh----------------------------------------------------------
+nnoremap <leader>shb :normal 0i#!/bin/zsh<cr>
+
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
-    au FileType zsh colorscheme materialbox
+    au FileType zsh colorscheme oceanic_material
     au FileType zsh hi statusline none
+    au FileType zsh nnoremap <buffer> <leader><leader>z <esc>:-1read ~/.vim/.zsh-starter<cr>
+    au FileType zsh inoreabb <buffer> tv ${}<esc>F$la
+    au FileType zsh inoreabb <buffer> cs $()<esc>F$la
 augroup END
 
 "Vim----------------------------------------------------------
