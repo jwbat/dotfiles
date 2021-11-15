@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 # Author: James Batman
-# Date Created: 11/12/21
-# Last Modified: 11/12/21
+# Date Created: 
+# Last Modified: 
 
 # Description
 # 
@@ -10,5 +10,4 @@
 # Usage
 # 
 
-echo ""
 exit 0

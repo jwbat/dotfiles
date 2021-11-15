@@ -3,16 +3,17 @@ compinit # completions
 
 setopt nobeep autocd  # cd using only name of dir
 
-PS1=" %F{11} %1d ~ "
+PS1=" %F{190} %1d ~ "
+export CLICOLOR=1
+#export LSCOLORS=ExFxCxDxBxegedabagaced
+export LS_COLORS=$LS_COLORS:'di=1;37:'
+ 
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 export PATH="$PATH:$HOME/code/shell/scripts"
 
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagaced
- 
 alias ll='ls -lG'
 
 alias grep='ggrep -P'                       # Perl grep
@@ -72,7 +73,7 @@ alias resume='cd ~/code/vue/nuxt/resume'    # resume
 alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
 alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
 alias quotes='cat ~/.dotfiles/.snippets/.quotes.txt'
-alias nums='pi && e && sqrt2'
+#alias nums='pi && e && sqrt2'
 
 # misc. 
 alias ls='gls --group-directories-first --color'
@@ -87,7 +88,7 @@ alias rmn='rm -r node_modules'              # rm node_modules
 alias ns='npm start'
 alias ni='npm install'
 alias nci='npm ci'                          # install all dependencies
-alias nrs='npm run serve'                   # vue dev server
+#alias nrs='npm run serve'                   # vue dev server
 alias nrd='npm run dev'                     # nuxt dev server
 alias nrb='npm run build'                   # build vue project
 alias nrg='npm run generate'                # nuxt generate static

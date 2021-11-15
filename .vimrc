@@ -367,16 +367,19 @@ augroup END
 
 
 "zsh----------------------------------------------------------
-nnoremap <leader>shb :normal 0i#!/bin/zsh<cr>
+nnoremap <leader>shb :-1read ~/.vim/.zsh-starter<cr>
 
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
     au FileType zsh colorscheme oceanic_material
+    au FileType zsh nnoremap <buffer> <leader>c :norm 0i#<cr>j
+    au FileType zsh nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType zsh hi statusline none
-    au FileType zsh nnoremap <buffer> <leader><leader>z <esc>:-1read ~/.vim/.zsh-starter<cr>
-    au FileType zsh inoreabb <buffer> tv ${}<esc>F$la
+    au FileType zsh inoreabb <buffer> pe ${}<esc>F$la
+    au FileType zsh inoreabb <buffer> ae $(())<esc>F$lla
     au FileType zsh inoreabb <buffer> cs $()<esc>F$la
+    au FileType zsh inoreabb <buffer> if if [[ ]]; then<cr>fi<esc>kwl
 augroup END
 
 "Vim----------------------------------------------------------
