@@ -26,7 +26,7 @@ alias grep='ggrep -P'                       # Perl grep
 alias esh='v ~/code/shell_scripts/*'        # edit shell scripts 
 
 alias lsa='ls /Volumes/Andromeda'
-alias ka='rm -r /Volumes/Andromeda/*'
+alias ka='sudo rm -r /Volumes/Andromeda/*'
 alias k='clear'                             # clear console
 alias kdl='rm -r ~/Downloads/*'             # clear Downloads
 alias rmds='rm .DS_Store'
