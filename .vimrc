@@ -52,16 +52,6 @@ nnoremap c5 :colorscheme two-firewatch<cr>
 nnoremap c6 :colorscheme alduin<cr>
 nnoremap c7 :colorscheme gruvbox<cr>
 nnoremap <silent> <C-c> :colorscheme<cr> 
-" set runtimepath^=~/.vim/color
-call plug#begin('~/.vim/plugged')
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
-call plug#end()
-
-function! MyHighlights() abort
-    hi StatusLine none
-endfunction
 
 au BufEnter * call MyHighlights()
 au ColorScheme * call MyHighlights()
@@ -128,7 +118,7 @@ nnoremap t :0<cr>0
 " go to line nr: <nr>q
 nnoremap , G0
 "------------------------
-
+" moving
 nnoremap <C-l> $
 nnoremap <C-j> 10j
 nnoremap <C-k> 10k
@@ -139,8 +129,8 @@ nnoremap <leader>i :normal >>j<cr>
 nnoremap = O<esc>0Dj
 nnoremap + o<esc>0Dk
 
-"" replace word with space
-
+" another way to autocomplete
+inoremap xx <C-p>
 " create a new empty space right of cursor
 nnoremap sp a<space><esc>
 " go 40 chars into line fr 0
@@ -227,12 +217,6 @@ nnoremap <silent> <leader>h :set hls!<cr>
 
 " colorscheme
 nnoremap <silent> <C-c> :colorscheme<cr> 
-" set runtimepath^=~/.vim/color
-call plug#begin('~/.vim/plugged')
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
-call plug#end()
 
 function! MyHighlights() abort
     hi StatusLine none
