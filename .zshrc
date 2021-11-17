@@ -3,6 +3,7 @@ compinit # completions
 
 setopt nobeep autocd  # cd using only name of dir
 
+alias allow='chmod 744'                     # set permission
 PS1=" %F{190} %1d ~ "
 export CLICOLOR=1
 #export LSCOLORS=ExFxCxDxBxegedabagaced
@@ -12,6 +13,7 @@ export LS_COLORS=$LS_COLORS:'di=1;37:'
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
+export PATH="/bin:$PATH"
 export PATH="$PATH:$HOME/code/shell/scripts"
 
 alias ll='ls -lG'
@@ -22,8 +24,6 @@ alias grep='ggrep -P'                       # Perl grep
 #if command -v pyenv 1>/dev/null 2>&1; then
   #eval "$(pyenv init -)"
 #fi
-
-alias esh='v ~/code/shell_scripts/*'        # edit shell scripts 
 
 alias lsa='ls /Volumes/Andromeda'
 alias ka='sudo rm -r /Volumes/Andromeda/*'
@@ -49,7 +49,7 @@ alias rp='cd ~/code/repos'                  # repos
 alias d='cd ~/Desktop'                      # Desktop
 alias dl='cd ~/Downloads'                   # Downloads
 alias scr='cd ~/code/shell/scripts'         # scripts
-alias allow='chmod 744'                     # set permission
+alias pdfs='cd ~/pdfs'            # pdfs
 alias h='cd'                                # home
 alias b='cd -'                              # previous
 alias u='cd ..'                             # go up 1
@@ -59,7 +59,6 @@ alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
 alias cnt='cd ~/code/net'                   # netlify
 alias pw='cd ~/code/pwa'                    # pwa
-alias cs='cd ~/code/css'                    # css
 alias cj='cd ~/code/js'                     # js
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt

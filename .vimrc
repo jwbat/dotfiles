@@ -356,14 +356,21 @@ nnoremap <leader>shb :-1read ~/.vim/.zsh-starter<cr>
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
+""    au FileType zsh hi statusline none
     au FileType zsh colorscheme oceanic_material
     au FileType zsh nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType zsh nnoremap <buffer> <leader>u :norm 0x<cr>j
-    au FileType zsh hi statusline none
+    au FileType zsh nnoremap <buffer> <leader>; A;<esc>
+    au FileType zsh inoreabb <buffer> sel <esc>:-1read ~/.vim/.select.sh<cr>
     au FileType zsh inoreabb <buffer> pe ${}<esc>F$la
     au FileType zsh inoreabb <buffer> ae $(())<esc>F$lla
     au FileType zsh inoreabb <buffer> cs $()<esc>F$la
-    au FileType zsh inoreabb <buffer> if if [[ ]]; then<cr>fi<esc>kwl
+    au FileType zsh inoreabb <buffer> if if [ ]; then<cr>fi<esc>kw
+    au FileType zsh inoreabb <buffer> wh while [ ]; do<cr>done<esc>k0wa
+    au FileType zsh inoreabb <buffer> rwh while read line; do<cr>done < "$1"<esc>k0wh
+    au FileType zsh inoreabb <buffer> case case $opt in<cr>esac<esc>k02e
+    au FileType zsh inoreabb <buffer> oa $OPTARG
+    au FileType zsh inoreabb <buffer> ec echo
 augroup END
 
 "Vim----------------------------------------------------------
