@@ -368,6 +368,7 @@ augroup filetype_zsh
     au FileType zsh inoreabb <buffer> if if [ ]; then<cr>fi<esc>kw
     au FileType zsh inoreabb <buffer> wh while [ ]; do<cr>done<esc>k0wa
     au FileType zsh inoreabb <buffer> rwh while read line; do<cr>done < "$1"<esc>k0wh
+    au FileType zsh inoreabb <buffer> fl for ((i = 0; i < 10; ++i)); do<cr>done<esc>k0h
     au FileType zsh inoreabb <buffer> case case $opt in<cr>esac<esc>k02e
     au FileType zsh inoreabb <buffer> oa $OPTARG
     au FileType zsh inoreabb <buffer> ec echo

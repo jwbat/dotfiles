@@ -25,8 +25,9 @@ alias grep='ggrep -P'                       # Perl grep
   #eval "$(pyenv init -)"
 #fi
 
-alias lsa='ls /Volumes/Andromeda'
-alias ka='sudo rm -r /Volumes/Andromeda/*'
+alias lscr='ls $HOME/code/shell/scripts'    # ls scripts
+alias lsa='ls /Volumes/Andromeda'           # ls volume
+alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume
 alias k='clear'                             # clear console
 alias kdl='rm -r ~/Downloads/*'             # clear Downloads
 alias rmds='rm .DS_Store'
