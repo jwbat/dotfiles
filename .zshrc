@@ -5,9 +5,10 @@ setopt nobeep autocd  # cd using only name of dir
 
 alias allow='chmod 744'                     # set permission
 PS1=" %F{190} %1d ~ "
-export CLICOLOR=1
+#export CLICOLOR=1
 #export LSCOLORS=ExFxCxDxBxegedabagaced
-export LS_COLORS=$LS_COLORS:'di=1;37:'
+export LSCOLORS=gafxcxdxfaegedabagacad
+#export LS_COLORS=$LS_COLORS:'di=1;37:'
  
 
 export PATH="/usr/local/sbin:$PATH"
@@ -18,7 +19,7 @@ export PATH="$PATH:$HOME/code/shell/scripts"
 
 alias ll='ls -lG'
 
-alias grep='ggrep -P'                       # Perl grep
+#alias grep='ggrep -P'                       # Perl grep
 
 
 #if command -v pyenv 1>/dev/null 2>&1; then
@@ -56,6 +57,7 @@ alias b='cd -'                              # previous
 alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
+alias cputil='cd ~/code/cpp/utilities'      # cpp utilities
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
 alias cnt='cd ~/code/net'                   # netlify
@@ -73,10 +75,9 @@ alias resume='cd ~/code/vue/nuxt/resume'    # resume
 alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
 alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
 alias quotes='cat ~/.dotfiles/.snippets/.quotes.txt'
-#alias nums='pi && e && sqrt2'
 
 # misc. 
-alias ls='gls --group-directories-first --color'
+alias ls='gls --group-directories-first'
 alias sz='source ~/.zshrc'                  # source .zshrc
 alias ds='du -sh * | sort -rn'              # see disk space 
 alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'

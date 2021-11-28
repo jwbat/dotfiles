@@ -423,13 +423,18 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.boiler.cpp<cr> 
 
+    au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
-    au FileType cpp inoreabb <buffer> nclcr #include <coroutine><esc>
+    au FileType cpp inoreabb <buffer> ncl #include <><esc>hh
     au FileType cpp inoreabb <buffer> nclrng #include <ranges><esc>
     au FileType cpp inoreabb <buffer> nclalg #include <algorithm><esc>
+    au FileType cpp inoreabb <buffer> nclnm #include <numeric><esc>
+    au FileType cpp inoreabb <buffer> nclrnd #include <random><esc>
+    au FileType cpp inoreabb <buffer> nclcr #include <coroutine><esc>
+    au FileType cpp inoreabb <buffer> nclit #include <iterator><esc>
     au FileType cpp inoreabb <buffer> ncls #include <string><esc>
     au FileType cpp inoreabb <buffer> nclf #include <functional><esc>
     au FileType cpp inoreabb <buffer> nclio #include <iostream><esc>
@@ -471,7 +476,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
-    au FileType cpp inoreabb <buffer> out cout <<  << "\n";<esc>Ft4l
+    au FileType cpp inoreabb <buffer> out cout <<
     au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
     au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
     au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
@@ -486,6 +491,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> ci constinit
     au FileType cpp inoreabb <buffer> cev consteval
+    au FileType cpp inoreabb <buffer> dt decltype
 
     au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
@@ -517,6 +523,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
     au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
+    au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
+    au FileType cpp inoreabb <buffer> vdbl vector<double><esc>Frl
+    au FileType cpp inoreabb <buffer> acc accumulate()<esc>Fel
 
 ""    concepts
     au FileType cpp inoreabb <buffer> rq requires
