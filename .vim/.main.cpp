@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
-using namespace std;
+#include <string>
 
+using std::cout; using std::string;
 
 int main() {
 

@@ -465,6 +465,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclu #include <utility><esc>
     au FileType cpp inoreabb <buffer> nclmap #include <map><esc>
     au FileType cpp inoreabb <buffer> nclset #include <set><esc>
+    au FileType cpp inoreabb <buffer> ncluset #include <unordered_set><esc>
     au FileType cpp inoreabb <buffer> nclq #include <queue><esc>
     au FileType cpp inoreabb <buffer> nclstk #include <stack><esc>
     au FileType cpp inoreabb <buffer> nclx #include <exception><esc>
@@ -525,7 +526,15 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
     au FileType cpp inoreabb <buffer> vdbl vector<double><esc>Frl
+    au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
     au FileType cpp inoreabb <buffer> acc accumulate()<esc>Fel
+    au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
+    au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
+    au FileType cpp inoreabb <buffer> uc unsigned char<esc>
+    au FileType cpp inoreabb <buffer> us using std::
+    au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
+    au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
+    au FileType cpp inoreabb <buffer> uss using std::string;<esc>
 
 ""    concepts
     au FileType cpp inoreabb <buffer> rq requires
