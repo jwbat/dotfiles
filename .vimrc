@@ -421,7 +421,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
     au FileType cpp nnoremap <buffer> m. a-><esc>a
-    au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.boiler.cpp<cr> 
+    au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>

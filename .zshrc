@@ -47,6 +47,7 @@ alias gitcommands='cat ~/code/commands/git.txt'
 # cd
 alias o='cd ~/code'                         # code
 alias dot='cd ~/.dotfiles'                  # .dotfiles
+alias dv='cd ~/.vim'                        # .vim
 alias rp='cd ~/code/repos'                  # repos
 alias d='cd ~/Desktop'                      # Desktop
 alias dl='cd ~/Downloads'                   # Downloads
@@ -58,6 +59,7 @@ alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
 alias cputil='cd ~/code/cpp/utilities'      # cpp utilities
+alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
 alias cnt='cd ~/code/net'                   # netlify
@@ -66,6 +68,7 @@ alias cj='cd ~/code/js'                     # js
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
 
+alias c3='cd ~/code/cpp/courses/course3'    # course3
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
 alias gak='cd ~/code/cpp/courses/gakwaya'   # gakwaya
 alias serial='cd ~/code/vue/nuxt/serial'    # serial
@@ -77,7 +80,8 @@ alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
 alias quotes='cat ~/.dotfiles/.snippets/.quotes.txt'
 
 # misc. 
-alias ls='gls --group-directories-first'
+alias ls='gls -aX --group-directories-first'
+#alias ls='ls -aX'
 alias sz='source ~/.zshrc'                  # source .zshrc
 alias ds='du -sh * | sort -rn'              # see disk space 
 alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
