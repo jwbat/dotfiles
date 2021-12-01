@@ -420,6 +420,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>] j0i{<cr>}<esc>O
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
+    au FileType cpp nnoremap <buffer> <leader>s istd::<esc>
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
@@ -536,9 +537,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
     au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
     au FileType cpp inoreabb <buffer> uc unsigned char<esc>
-    au FileType cpp inoreabb <buffer> us using std::
+    au FileType cpp inoreabb <buffer> us using std::<esc>
     au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
+    au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
 
 ""    concepts

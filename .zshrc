@@ -47,6 +47,7 @@ alias gitcommands='cat ~/code/commands/git.txt'
 # cd
 alias o='cd ~/code'                         # code
 alias dot='cd ~/.dotfiles'                  # .dotfiles
+alias dnv='cd ~/.config/nvim'               # .config/nvim
 alias dv='cd ~/.vim'                        # .vim
 alias rp='cd ~/code/repos'                  # repos
 alias d='cd ~/Desktop'                      # Desktop
@@ -77,7 +78,6 @@ alias resume='cd ~/code/vue/nuxt/resume'    # resume
 # cats
 alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
 alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
-alias quotes='cat ~/.dotfiles/.snippets/.quotes.txt'
 
 # misc. 
 alias ls='gls -aX --group-directories-first'
@@ -128,7 +128,6 @@ alias nv='~/.config/nvim/pack'        # plugins live here
 alias vz='v ~/.zshrc'                 # open .zshrc with vim
 alias vv='v ~/.vimrc'                 # open .vimrc with vim
 alias vh='vim -c help -c only'        # open vim help
-alias vq='v ~/.dotfiles/.snippets/.quotes.txt'  # open quotes
 
 # python
 alias p='python3.9'                   # manage versions with pyenv

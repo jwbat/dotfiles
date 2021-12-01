@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorSession>
+<!-- Written by QtCreator 5.0.2, 2021-11-01T19:22:26. -->
+<qtcreator>
+ <data>
+  <variable>CascadeSetActive</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>Color</variable>
+  <value type="QString">#666666</value>
+ </data>
+ <data>
+  <variable>EditorSettings</variable>
+  <value type="QByteArray">AAAAD0VkaXRvck1hbmFnZXJWNQAAAAgAAAB8AC8AVQBzAGUAcgBzAC8AagBhAG0AZQBzAGIAYQB0AG0AYQBuAC8AYwBvAGQAZQAvAGMAcABwAC8AYwBvAHUAcgBzAGUAcwAvAHEAdAAxAC8AMAA4ADcALQBpAG4AdABlAHIAZgBhAGMAZQAvAG0AYQBpAG4ALgBjAHAAcAAAAAwAAAAAIAAAAAIAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAQAAAAggAvAFUAcwBlAHIAcwAvAGoAYQBtAGUAcwBiAGEAdABtAGEAbgAvAGMAbwBkAGUALwBjAHAAcAAvAGMAbwB1AHIAcwBlAHMALwBxAHQAMQAvADAAOAA3AC0AaQBuAHQAZQByAGYAYQBjAGUALwBhAHAAcABsAGkAYQBuAGMAZQAuAGgAAAAMAAAAACAAAAACAAAAAAAAAAAAAAAdAAAAAQAAAAAAAAAAAAAAHAAAAIYALwBVAHMAZQByAHMALwBqAGEAbQBlAHMAYgBhAHQAbQBhAG4ALwBjAG8AZABlAC8AYwBwAHAALwBjAG8AdQByAHMAZQBzAC8AcQB0ADEALwAwADgANwAtAGkAbgB0AGUAcgBmAGEAYwBlAC8AYQBwAHAAbABpAGEAbgBjAGUALgBjAHAAcAAAAAwAAAAAIAAAAAIAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAVAAAAfgAvAFUAcwBlAHIAcwAvAGoAYQBtAGUAcwBiAGEAdABtAGEAbgAvAGMAbwBkAGUALwBjAHAAcAAvAGMAbwB1AHIAcwBlAHMALwBxAHQAMQAvADAAOAA3AC0AaQBuAHQAZQByAGYAYQBjAGUALwBUAG8AYQBzAHQAZQByAC4AaAAAAAwAAAAAIAAAAAIAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAJAAAAggAvAFUAcwBlAHIAcwAvAGoAYQBtAGUAcwBiAGEAdABtAGEAbgAvAGMAbwBkAGUALwBjAHAAcAAvAGMAbwB1AHIAcwBlAHMALwBxAHQAMQAvADAAOAA3AC0AaQBuAHQAZQByAGYAYQBjAGUALwBNAGkAYwByAG8AdwBhAHYAZQAuAGgAAAAMAAAAACAAAAACAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAACgAAAH4ALwBVAHMAZQByAHMALwBqAGEAbQBlAHMAYgBhAHQAbQBhAG4ALwBjAG8AZABlAC8AYwBwAHAALwBjAG8AdQByAHMAZQBzAC8AcQB0ADEALwAwADgANwAtAGkAbgB0AGUAcgBmAGEAYwBlAC8ARgByAGUAZQB6AGUAcgAuAGgAAAAMAAAAACAAAAACAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAACgAAAIgALwBVAHMAZQByAHMALwBqAGEAbQBlAHMAYgBhAHQAbQBhAG4ALwBjAG8AZABlAC8AYwBwAHAALwBjAG8AdQByAHMAZQBzAC8AcQB0ADEALwAwADgANwAtAGkAbgB0AGUAcgBmAGEAYwBlAC8AQwBNAGEAawBlAEwAaQBzAHQAcwAuAHQAeAB0AAAADAAAAAAgAAAAAgAAAAAAAAAAAAAAFwAAAAMAAAAAAAAAAAAAABkAAABwAC8AVQBzAGUAcgBzAC8AagBhAG0AZQBzAGIAYQB0AG0AYQBuAC8AYwBvAGQAZQAvAGMAcABwAC8AYwBvAHUAcgBzAGUAcwAvAHEAdAAxAC8AMAA1ADEALQBxAHQANgAvAG0AYQBpAG4ALgBjAHAAcAAAAAwAAAAAIAAAAAIAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAiAAAAAAAAAAkAAAAFZW1wdHkAAAAA</value>
+ </data>
+ <data>
+  <variable>ProjectDependencies</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+ <data>
+  <variable>ProjectList</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>value-ActiveMode</variable>
+  <value type="QString">Edit</value>
+ </data>
+ <data>
+  <variable>value-Breakpoints</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>value-ProjectTree.ExpandData</variable>
+  <valuelist type="QVariantList">
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/087-interface</value>
+    <value type="QString">Source Files</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/087-interface</value>
+    <value type="QString">087-interface</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/051-qt6</value>
+    <value type="QString">Source Files</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/087-interface</value>
+    <value type="QString">Header Files</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/build-051-qt6-Qt_6_2_1_for_macOS-Debug</value>
+    <value type="QString">&lt;Build Directory&gt;</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/087-interface</value>
+    <value type="QString">087-interface [main]</value>
+   </valuelist>
+   <valuelist type="QVariantList">
+    <value type="QString">/Users/jamesbatman/code/cpp/courses/qt1/051-qt6</value>
+    <value type="QString">051-qt6</value>
+   </valuelist>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-TaskWindow.Categories</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">Task.Category.QmlAnalysis</value>
+   <value type="QString">AssetExporter.Export</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>value-TaskWindow.IncludeWarnings</variable>
+  <value type="bool">true</value>
+ </data>
+ <data>
+  <variable>valueKeys</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">ActiveMode</value>
+   <value type="QString">Breakpoints</value>
+   <value type="QString">ProjectTree.ExpandData</value>
+   <value type="QString">TaskWindow.Categories</value>
+   <value type="QString">TaskWindow.IncludeWarnings</value>
+  </valuelist>
+ </data>
+</qtcreator>
