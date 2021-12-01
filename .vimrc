@@ -388,7 +388,7 @@ augroup END
 augroup filetype_python
     autocmd!
     au FileType python colorscheme oceanic_material
-""    au FileType python nnoremap <buffer> <leader>c I#<esc>
+"     au FileType python nnoremap <buffer> <leader>c I#<esc>
     au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType python nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
@@ -407,7 +407,7 @@ augroup filetype_python
 augroup END
 "--------------------------------------------------^^-python ^^---
 
-""cpp
+" cpp
 au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
@@ -499,19 +499,23 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
 
+    au FileType cpp inoreabb <buffer> pra #pragma once<esc>
+    au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> ch <<
     au FileType cpp inoreabb <buffer> hc >>
     au FileType cpp inoreabb <buffer> che << endl;<esc>
     au FileType cpp inoreabb <buffer> th this-><esc>F-
-    au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
+
+"   pointers
     au FileType cpp inoreabb <buffer> np nullptr
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
+
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
