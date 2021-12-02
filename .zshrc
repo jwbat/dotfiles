@@ -59,7 +59,7 @@ alias b='cd -'                              # previous
 alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
-alias cputil='cd ~/code/cpp/utilities'      # cpp utilities
+alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
 alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node

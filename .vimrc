@@ -1,5 +1,4 @@
 syntax on
-filetype indent plugin on
 highlight Folded NONE 
 highlight LineNr ctermfg=black
 hi statusline none
@@ -18,6 +17,7 @@ set noswapfile
 set nohlsearch
 set incsearch
 highlight EndOfBuffer ctermbg=none ctermfg=none
+""filetype indent plugin on
 
 " see all recognized filetypes
 noremap sft :setfiletype <C-d><cr>
@@ -29,15 +29,10 @@ nnoremap 'h :set filetype=html<cr>
 nnoremap 'c :set filetype=css<cr>
 nnoremap 't :set filetype=text<cr>
 
-
-" set runtimepath^=~/.vim/color
-call plug#begin('~/.vim/plugged')
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
-Plug 'vim-scripts/SyntaxRange'
-Plug 'pangloss/vim-javascript'
-call plug#end()
+func Eatchar(pat)
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
+endfunc
 
 function! MyHighlights() abort
     hi StatusLine none
@@ -357,7 +352,7 @@ au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
 ""    au FileType zsh hi statusline none
-    au FileType zsh colorscheme oceanic_material
+    au FileType zsh colorscheme PaperColor
     au FileType zsh nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType zsh nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType zsh nnoremap <buffer> <leader>; A;<esc>
@@ -531,13 +526,13 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
-    au FileType cpp inoreabb <buffer> vdbl vector<double><esc>Frl
+    au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
     au FileType cpp inoreabb <buffer> acc accumulate()<esc>Fel
     au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
     au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
     au FileType cpp inoreabb <buffer> uc unsigned char<esc>
-    au FileType cpp inoreabb <buffer> us using std::<esc>
+    au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
