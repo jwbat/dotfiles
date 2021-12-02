@@ -5,10 +5,7 @@ setopt nobeep autocd  # cd using only name of dir
 
 alias allow='chmod 744'                     # set permission
 PS1=" %F{190} %1d ~ "
-#export CLICOLOR=1
-#export LSCOLORS=ExFxCxDxBxegedabagaced
 export LSCOLORS=gafxcxdxfaegedabagacad
-#export LS_COLORS=$LS_COLORS:'di=1;37:'
  
 
 export PATH="/usr/local/sbin:$PATH"
@@ -41,7 +38,7 @@ alias gp='git push origin main'
 alias gb='git rev-parse --abbrev-ref HEAD' # show current branch
 
 alias gph='git push heroku main'
-alias ght='cd ~/code && cat gh.txt && b'
+alias ght='cat ~/code/gh.txt'
 alias gitcommands='cat ~/code/commands/git.txt'
 
 # cd

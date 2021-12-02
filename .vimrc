@@ -17,7 +17,7 @@ set noswapfile
 set nohlsearch
 set incsearch
 highlight EndOfBuffer ctermbg=none ctermfg=none
-""filetype indent plugin on
+filetype indent plugin on
 
 " see all recognized filetypes
 noremap sft :setfiletype <C-d><cr>
@@ -351,8 +351,8 @@ nnoremap <leader>shb :-1read ~/.vim/.zsh-starter<cr>
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
-""    au FileType zsh hi statusline none
-    au FileType zsh colorscheme PaperColor
+    au FileType zsh colorscheme oceanic_material
+    au FileType zsh hi StatusLine ctermbg=bg ctermfg=bg
     au FileType zsh nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType zsh nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType zsh nnoremap <buffer> <leader>; A;<esc>
@@ -1069,7 +1069,16 @@ augroup filetype_css
                 \<esc>o.v-leave-to {<cr>}<esc>
 augroup END
 "-----------------------------------------------------------------
-
 au BufEnter *.vue set syntax=html
 au BufEnter *.njk set syntax=html
+"-----------------------------------------------------------------
+"lua
+au BufEnter,BufNewFile,BufRead *.lua setl filetype=lua
+augroup filetype_lua
+    autocmd!
+    au FileType lua colorscheme PaperColor
+    au FileType lua hi StatusLine ctermbg=bg ctermfg=bg
+    au FileType lua nnoremap <buffer> <leader>c :norm 0i--<cr>j
+augroup END
+
 
