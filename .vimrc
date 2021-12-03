@@ -253,7 +253,7 @@ nnoremap gh :wqa<cr>
 " shell command:
 nnoremap gs :!
 " shell command:
-nnoremap <C-w> :!pwd<cr>
+""nnoremap <C-w> :!pwd<cr>
 
 nnoremap g1 :b1<cr>
 nnoremap g2 :b2<cr>
