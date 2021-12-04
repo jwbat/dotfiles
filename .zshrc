@@ -50,6 +50,7 @@ alias rp='cd ~/code/repos'                  # repos
 alias d='cd ~/Desktop'                      # Desktop
 alias dl='cd ~/Downloads'                   # Downloads
 alias scr='cd ~/code/shell/scripts'         # scripts
+alias ulb='cd /usr/local/bin'               # /usr/local/bin
 alias pdfs='cd ~/pdfs'            # pdfs
 alias h='cd'                                # home
 alias b='cd -'                              # previous

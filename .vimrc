@@ -253,7 +253,7 @@ nnoremap gh :wqa<cr>
 " shell command:
 nnoremap gs :!
 " shell command:
-""nnoremap <C-w> :!pwd<cr>
+""nnoremap w :!pwd<cr>
 
 nnoremap g1 :b1<cr>
 nnoremap g2 :b2<cr>
@@ -277,6 +277,8 @@ nnoremap <leader>x @:
 nnoremap <leader>n :setl nu!<cr>
 " toggle relative numbers:
 nnoremap <leader>r :setl rnu!<cr>
+nnoremap <leader>ftz :setl filetype=zsh<cr>
+
 " ---------------------------------------------------^^-ex cmds-^^---
 
 "move line up/down with -/_  
@@ -330,6 +332,7 @@ inoreabb otw otherwise
 inoreabb nl "\n"
 inoreabb dnl "\n\n"
 inoreabb tb "\t"
+inoreabb nlt "\n\t"
 inoreabb rqd required:
 inoreabb lh http://localhost:8080<esc>
 
@@ -479,9 +482,12 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
     au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
     au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
-    au FileType cpp inoreabb <buffer> ba boolalpha
+
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> dbl double
+    au FileType cpp inoreabb <buffer> ui unsigned int
+    au FileType cpp inoreabb <buffer> ba boolalpha
+
     au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
