@@ -135,7 +135,7 @@ alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
-alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
+alias c='g++ -std=c++2a *.cpp -o ./m'                   # gcc compile
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
 #-std=c++2a 
 alias vc='v main.cpp'                                   # open main.cpp 

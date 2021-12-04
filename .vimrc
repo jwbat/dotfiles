@@ -485,6 +485,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> dbl double
+    au FileType cpp inoreabb <buffer> wc wchar_t
     au FileType cpp inoreabb <buffer> ui unsigned int
     au FileType cpp inoreabb <buffer> ba boolalpha
 
@@ -543,6 +544,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
+    au FileType cpp inoreabb <buffer> iosi ios::in
+    au FileType cpp inoreabb <buffer> ioso ios::out
+    au FileType cpp inoreabb <buffer> iosa ios::app
 
 ""    concepts
     au FileType cpp inoreabb <buffer> rq requires
