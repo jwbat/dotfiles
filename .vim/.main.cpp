@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <string>
 
-using std::cout; using std::string;
+using std::cout; using std::setw; using std::string;
 
 int main() {
 

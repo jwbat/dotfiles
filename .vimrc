@@ -474,7 +474,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclb #include <bitset><esc>
     au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
-    au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> out cout <<
@@ -482,15 +481,36 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
     au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
     au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
+    au FileType cpp inoreabb <buffer> nwl void newline(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }<esc>
 
+"   namespaces
+    au FileType cpp inoreabb <buffer> nsp namespace
+    au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
+    au FileType cpp inoreabb <buffer> urv using std::ranges::views::
+    au FileType cpp inoreabb <buffer> urvi using std::ranges::views::iota;<esc>
+    au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
+    au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
+    au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
+    au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
+    au FileType cpp inoreabb <buffer> uss using std::string;<esc>
+    au FileType cpp inoreabb <buffer> iosi ios::in
+    au FileType cpp inoreabb <buffer> ioso ios::out
+    au FileType cpp inoreabb <buffer> iosa ios::app
+
+"   types
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> dbl double
-    au FileType cpp inoreabb <buffer> wc wchar_t
     au FileType cpp inoreabb <buffer> ui unsigned int
+    au FileType cpp inoreabb <buffer> wc wchar_t
+    au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
+    au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
+    au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
+    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
+    au FileType cpp inoreabb <buffer> tct template <class T><esc>
+    au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> ba boolalpha
 
     au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
-    au FileType cpp inoreabb <buffer> im int main() {<cr>}<esc>Oreturn 0;<esc>kh
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
@@ -498,6 +518,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> cev consteval
     au FileType cpp inoreabb <buffer> dt decltype
 
+"   loops
     au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
@@ -529,24 +550,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
     au FileType cpp inoreabb <buffer> strv string_view
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
-    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
-    au FileType cpp inoreabb <buffer> tct template <class T><esc>
-    au FileType cpp inoreabb <buffer> tn typename
-    au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
-    au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
-    au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
     au FileType cpp inoreabb <buffer> acc accumulate()<esc>Fel
     au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
     au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
     au FileType cpp inoreabb <buffer> uc unsigned char<esc>
-    au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
-    au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
-    au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
-    au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
-    au FileType cpp inoreabb <buffer> uss using std::string;<esc>
-    au FileType cpp inoreabb <buffer> iosi ios::in
-    au FileType cpp inoreabb <buffer> ioso ios::out
-    au FileType cpp inoreabb <buffer> iosa ios::app
 
 ""    concepts
     au FileType cpp inoreabb <buffer> rq requires
