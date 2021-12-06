@@ -430,6 +430,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> ncl #include <><esc>hh
     au FileType cpp inoreabb <buffer> nclrng #include <ranges><esc>
+    au FileType cpp inoreabb <buffer> nclfmt #include <format><esc>
     au FileType cpp inoreabb <buffer> nclalg #include <algorithm><esc>
     au FileType cpp inoreabb <buffer> nclnm #include <numeric><esc>
     au FileType cpp inoreabb <buffer> nclrnd #include <random><esc>
@@ -488,14 +489,19 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> urv using std::ranges::views::
     au FileType cpp inoreabb <buffer> urvi using std::ranges::views::iota;<esc>
+    au FileType cpp inoreabb <buffer> urvf using std::ranges::views::filter;<esc>
+    au FileType cpp inoreabb <buffer> urvt using std::ranges::views::transform;<esc>
+    au FileType cpp inoreabb <buffer> urvr using std::ranges::views::reverse;<esc>
     au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
+
+    au FileType cpp inoreabb <buffer> uios using std::ios;<esc>
     au FileType cpp inoreabb <buffer> iosi ios::in
     au FileType cpp inoreabb <buffer> ioso ios::out
-    au FileType cpp inoreabb <buffer> iosa ios::app
+    au FileType cpp inoreabb <buffer> iost ios::trunc
 
 "   types
     au FileType cpp inoreabb <buffer> str string

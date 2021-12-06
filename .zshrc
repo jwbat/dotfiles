@@ -23,9 +23,9 @@ alias ll='ls -lG'
   #eval "$(pyenv init -)"
 #fi
 
-alias lscr='ls $HOME/code/shell/scripts'    # ls scripts
-alias lsa='ls /Volumes/Andromeda'           # ls volume
-alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume
+alias lss='ls ~/code/shell/scripts'         # ls scripts
+alias lsa='ls /Volumes/Andromeda'           # ls volume andromeda
+alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume andromeda
 alias k='clear'                             # clear console
 alias kdl='rm -r ~/Downloads/*'             # clear Downloads
 alias rmds='rm .DS_Store'

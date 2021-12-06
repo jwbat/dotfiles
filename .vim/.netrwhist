@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/jamesbatman/code/cpp/courses/course3/03-write_to_file_v2'
 let g:netrw_dirhist_3='/Users/jamesbatman/code/cpp/gakwaya/29-ClassTemplates/02-TemplateSpecialization/adder.h'
 let g:netrw_dirhist_2='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources/DWARF'
 let g:netrw_dirhist_1='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_8='/Users/jamesbatman/code/cpp/course/6-Classes/RectangleFun
 let g:netrw_dirhist_7='/Users/jamesbatman/code/cpp/course/5-Functions/SumBuiltIn'
 let g:netrw_dirhist_6='/Users/jamesbatman/code/js'
 let g:netrw_dirhist_5='/Users/jamesbatman/code/vue/nuxt/bz-blends/node_modules/glob-parent'
-let g:netrw_dirhist_4='/Users/jamesbatman/code/vue/nuxt/bz-blends/node_modules'
