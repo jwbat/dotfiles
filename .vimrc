@@ -437,6 +437,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclcr #include <coroutine><esc>
     au FileType cpp inoreabb <buffer> nclit #include <iterator><esc>
     au FileType cpp inoreabb <buffer> ncls #include <string><esc>
+    au FileType cpp inoreabb <buffer> nclss #include <sstream><esc>
     au FileType cpp inoreabb <buffer> nclf #include <functional><esc>
     au FileType cpp inoreabb <buffer> nclio #include <iostream><esc>
     au FileType cpp inoreabb <buffer> nclsv #include <string_view><esc>
@@ -482,7 +483,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
     au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
     au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
+
+"   functions
     au FileType cpp inoreabb <buffer> nwl void newline(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }<esc>
+    au FileType cpp inoreabb <buffer> tbb void tab(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\t"; }
+    au FileType cpp inoreabb <buffer> prnt void print(auto x) { cout << x; }
 
 "   namespaces
     au FileType cpp inoreabb <buffer> nsp namespace
@@ -505,6 +510,7 @@ augroup filetype_cpp
 
 "   types
     au FileType cpp inoreabb <buffer> str string
+    au FileType cpp inoreabb <buffer> ss stringstream 
     au FileType cpp inoreabb <buffer> dbl double
     au FileType cpp inoreabb <buffer> ui unsigned int
     au FileType cpp inoreabb <buffer> wc wchar_t
@@ -576,7 +582,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
     au FileType cpp inoreabb <buffer> op operator
     au FileType cpp inoreabb <buffer> df default
-    au FileType cpp inoreabb <buffer> ss <=>
     au FileType cpp inoreabb <buffer> po partial_ordering
     au FileType cpp inoreabb <buffer> so string_ordering
     au FileType cpp inoreabb <buffer> wo weak_ordering
