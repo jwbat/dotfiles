@@ -485,9 +485,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
 
 "   functions
-    au FileType cpp inoreabb <buffer> nwl void newline(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }<esc>
-    au FileType cpp inoreabb <buffer> tbb void tab(int n = 1) { for (size_t i{ 0 }; i < n; ++i) cout << "\t"; }
-    au FileType cpp inoreabb <buffer> prnt void print(auto x) { cout << x; }
+    au FileType cpp inoreabb <buffer> nwl void newline(int n = 1)
+                                        \ { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }<esc>
+    au FileType cpp inoreabb <buffer> tbb void tab(int n = 1)
+                                        \ { for (size_t i{ 0 }; i < n; ++i) cout << "\t"; }<esc>
+    au FileType cpp inoreabb <buffer> prnt template <typename T> void print(T x) { cout << x; }<esc>
 
 "   namespaces
     au FileType cpp inoreabb <buffer> nsp namespace
