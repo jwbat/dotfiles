@@ -461,6 +461,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ncln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> ncla #include <array><esc>
     au FileType cpp inoreabb <buffer> nclv #include <vector><esc>
+    au FileType cpp inoreabb <buffer> ncltp #include <tuple><esc>
     au FileType cpp inoreabb <buffer> ncldq #include <deque><esc>
     au FileType cpp inoreabb <buffer> ncllst #include <list><esc>
     au FileType cpp inoreabb <buffer> nclflst #include <forward_list><esc>
@@ -485,6 +486,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
 
 "   functions
+    au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
     au FileType cpp inoreabb <buffer> nwl void newline(int n = 1)
                                         \ { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }<esc>
     au FileType cpp inoreabb <buffer> tbb void tab(int n = 1)
@@ -554,6 +556,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
+    au FileType cpp inoreabb <buffer> mtp make_tuple();<esc>Fel
 
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
@@ -585,7 +588,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> op operator
     au FileType cpp inoreabb <buffer> df default
     au FileType cpp inoreabb <buffer> po partial_ordering
-    au FileType cpp inoreabb <buffer> so string_ordering
+    au FileType cpp inoreabb <buffer> stro string_ordering
     au FileType cpp inoreabb <buffer> wo weak_ordering
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
