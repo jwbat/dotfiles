@@ -507,10 +507,12 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
 
-    au FileType cpp inoreabb <buffer> uios using std::ios;<esc>
+    au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
+    au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
     au FileType cpp inoreabb <buffer> iosi ios::in
     au FileType cpp inoreabb <buffer> ioso ios::out
     au FileType cpp inoreabb <buffer> iost ios::trunc
+    au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
 
 "   types
     au FileType cpp inoreabb <buffer> str string
@@ -558,8 +560,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> mtp make_tuple();<esc>Fel
 
+"   casts
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
+    au FileType cpp inoreabb <buffer> rc reinterpret_cast<>()<esc>Ftl
+
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> ne !=
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
