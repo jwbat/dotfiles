@@ -2,5 +2,7 @@ autoload
 plugged  
 ftplugin  
 view
+.vim/plugged/*
 .vim/plugged/**
 .vim/plugged/**/*
+.vim/view/**
