@@ -527,6 +527,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> ba boolalpha
+    au FileType cpp inoreabb <buffer> itr iterator
 
     au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> rtn return
