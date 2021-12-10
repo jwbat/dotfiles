@@ -5,6 +5,7 @@ hi statusline none
 hi statusline ctermbg=none
 hi StatusLine ctermbg=0 cterm=none
 hi StatusLineNC ctermbg=0 cterm=none
+hi folded ctermbg=234
 set tabpagemax=20
 syntax enable
 set number
@@ -411,6 +412,8 @@ au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
     au FileType cpp colorscheme PaperColor
+    au FileType cpp hi folded ctermbg=234
+    au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
@@ -507,11 +510,16 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
 
+"   fstream
     au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
     au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
     au FileType cpp inoreabb <buffer> iosi ios::in
     au FileType cpp inoreabb <buffer> ioso ios::out
+    au FileType cpp inoreabb <buffer> iosa ios::app
     au FileType cpp inoreabb <buffer> iost ios::trunc
+    au FileType cpp inoreabb <buffer> iosb ios::beg
+    au FileType cpp inoreabb <buffer> iosc ios::cur
+    au FileType cpp inoreabb <buffer> iose ios::end
     au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
 
 "   types
