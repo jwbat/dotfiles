@@ -278,7 +278,7 @@ nnoremap <leader>x @:
 nnoremap <leader>n :setl nu!<cr>
 " toggle relative numbers:
 nnoremap <leader>r :setl rnu!<cr>
-nnoremap <leader>ftz :setl filetype=zsh<cr>
+nnoremap <leader>fz :setl filetype=zsh<cr>
 
 " ---------------------------------------------------^^-ex cmds-^^---
 
