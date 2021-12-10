@@ -4,8 +4,8 @@
 
 using std::cout; using std::setw; using std::string;
 
-int main() {
-
+int main()
+{
 
     return 0;
 }

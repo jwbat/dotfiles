@@ -278,6 +278,7 @@ nnoremap <leader>x @:
 nnoremap <leader>n :setl nu!<cr>
 " toggle relative numbers:
 nnoremap <leader>r :setl rnu!<cr>
+" set filetype zsh
 nnoremap <leader>fz :setl filetype=zsh<cr>
 
 " ---------------------------------------------------^^-ex cmds-^^---
@@ -535,7 +536,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> ba boolalpha
+
+"   iterators
     au FileType cpp inoreabb <buffer> itr iterator
+    au FileType cpp inoreabb <buffer> bii back_insert_iterator
 
     au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> rtn return
