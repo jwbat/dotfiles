@@ -254,7 +254,7 @@ nnoremap gh :wqa<cr>
 " shell command:
 nnoremap gs :!
 " shell command:
-""nnoremap w :!pwd<cr>
+nnoremap <leader>w :!pwd<cr>
 
 nnoremap g1 :b1<cr>
 nnoremap g2 :b2<cr>
@@ -270,8 +270,6 @@ nnoremap g9 :b9<cr>
 " --ex cmds----------------------------------------------------------
 " enter ex mode (yes, this is faster and easier by a goodly margin)
 nnoremap <leader>e :  
-" escape and write
-nnoremap <leader>w <esc>:w<cr>  
 " repeat last ex command:
 nnoremap <leader>x @:
 " toggle numbers:
@@ -412,15 +410,23 @@ augroup END
 au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
+""    au FileType cpp colorscheme materialbox
     au FileType cpp colorscheme PaperColor
     au FileType cpp hi folded ctermbg=234
     au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
+
+""    au FileType cpp highlight Type cterm=bold ctermfg=148
+    au FileType cpp syntax keyword Type string stringstream
+    au FileType cpp syntax keyword Special vector array
+    au FileType cpp syntax keyword Include /<string>/ 
+
+
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
-    au FileType cpp nnoremap <buffer> <leader>] j0i{<cr>}<esc>O
+    au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>O
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> <leader>s istd::<esc>
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
@@ -434,6 +440,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> ncl #include <><esc>hh
     au FileType cpp inoreabb <buffer> nclrng #include <ranges><esc>
+    au FileType cpp inoreabb <buffer> nclreg #include <regex><esc>
     au FileType cpp inoreabb <buffer> nclfmt #include <format><esc>
     au FileType cpp inoreabb <buffer> nclalg #include <algorithm><esc>
     au FileType cpp inoreabb <buffer> nclnm #include <numeric><esc>
@@ -491,13 +498,12 @@ augroup filetype_cpp
 
 "   functions
     au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
-    au FileType cpp inoreabb <buffer> nwl void newline(int n = 1)
-                                        \ { for (size_t i{ 0 }; i < n; ++i) cout << "\n"; }<esc>
-    au FileType cpp inoreabb <buffer> tbb void tab(int n = 1)
-                                        \ { for (size_t i{ 0 }; i < n; ++i) cout << "\t"; }<esc>
-    au FileType cpp inoreabb <buffer> prnt template <typename T> void print(T x) { cout << x; }<esc>
+    au FileType cpp inoreabb <buffer> prnt auto print = [] (const auto& x) { cout << x; };
+    au FileType cpp inoreabb <buffer> tbb auto tab = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\t"; };<esc>
+    au FileType cpp inoreabb <buffer> nwl auto newline = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\n"; };<esc>
 
 "   namespaces
+    au FileType cpp inoreabb <buffer> usreg <esc>:-1read ~/.vim/.regex.cpp<cr>
     au FileType cpp inoreabb <buffer> nsp namespace
     au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
     au FileType cpp inoreabb <buffer> urv using std::ranges::views::
@@ -525,6 +531,8 @@ augroup filetype_cpp
 
 "   types
     au FileType cpp inoreabb <buffer> str string
+    au FileType cpp inoreabb <buffer> bs basic_string
+    au FileType cpp inoreabb <buffer> bss basic_stringstream
     au FileType cpp inoreabb <buffer> ss stringstream 
     au FileType cpp inoreabb <buffer> dbl double
     au FileType cpp inoreabb <buffer> ui unsigned int
@@ -536,6 +544,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tct template <class T><esc>
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> ba boolalpha
+    au FileType cpp inoreabb <buffer> alc allocator
 
 "   iterators
     au FileType cpp inoreabb <buffer> itr iterator
