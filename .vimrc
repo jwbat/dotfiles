@@ -560,7 +560,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> dt decltype
 
 "   loops
-    au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i) {<cr>}<esc>k0fx<left>
+    au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i)<esc>0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
