@@ -416,8 +416,7 @@ augroup filetype_cpp
     au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
 
-""    au FileType cpp highlight Type cterm=bold ctermfg=148
-    au FileType cpp syntax keyword Type string stringstream
+    au FileType cpp syntax keyword Type string stringstream string_view
     au FileType cpp syntax keyword Special vector array
     au FileType cpp syntax keyword Include /<string>/ 
 
@@ -531,10 +530,12 @@ augroup filetype_cpp
 
 "   types
     au FileType cpp inoreabb <buffer> str string
+    au FileType cpp inoreabb <buffer> sv string_view
     au FileType cpp inoreabb <buffer> bs basic_string
     au FileType cpp inoreabb <buffer> bss basic_stringstream
     au FileType cpp inoreabb <buffer> ss stringstream 
     au FileType cpp inoreabb <buffer> dbl double
+    au FileType cpp inoreabb <buffer> flt float
     au FileType cpp inoreabb <buffer> ui unsigned int
     au FileType cpp inoreabb <buffer> wc wchar_t
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
@@ -592,7 +593,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
     au FileType cpp inoreabb <buffer> st size_t
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
-    au FileType cpp inoreabb <buffer> strv string_view
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
     au FileType cpp inoreabb <buffer> acc accumulate()<esc>Fel
     au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
