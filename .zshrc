@@ -9,10 +9,11 @@ export LSCOLORS=gafxcxdxfaegedabagacad
  
 
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 export PATH="/bin:$PATH"
 export PATH="$PATH:$HOME/code/shell/scripts"
+
+alias pth='echo $PATH'
 
 alias ll='ls -lG'
 
@@ -144,6 +145,7 @@ alias vn='v */main.cpp */*'                             # "v nested"
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
 alias m='./m'                                           # run compiled cpp file
 alias cm='c && m'                                       # compile and run ./m
+alias rmm='rm */m'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

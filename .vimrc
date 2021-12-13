@@ -433,6 +433,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
+    au FileType cpp inoreabb <buffer> struct <esc>:-1read ~/.vim/.struct.cpp<cr>?name<cr>*h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
@@ -504,7 +505,7 @@ augroup filetype_cpp
 "   namespaces
     au FileType cpp inoreabb <buffer> usreg <esc>:-1read ~/.vim/.regex.cpp<cr>
     au FileType cpp inoreabb <buffer> nsp namespace
-    au FileType cpp inoreabb <buffer> uns using namespace std;<esc>Fsh
+    au FileType cpp inoreabb <buffer> uns using namespace std::
     au FileType cpp inoreabb <buffer> urv using std::ranges::views::
     au FileType cpp inoreabb <buffer> urvi using std::ranges::views::iota;<esc>
     au FileType cpp inoreabb <buffer> urvf using std::ranges::views::filter;<esc>
@@ -534,6 +535,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> bs basic_string
     au FileType cpp inoreabb <buffer> bss basic_stringstream
     au FileType cpp inoreabb <buffer> ss stringstream 
+    au FileType cpp inoreabb <buffer> sl string_literals
     au FileType cpp inoreabb <buffer> dbl double
     au FileType cpp inoreabb <buffer> flt float
     au FileType cpp inoreabb <buffer> ui unsigned int
