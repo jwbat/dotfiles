@@ -590,6 +590,7 @@ augroup filetype_cpp
 "   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
+    au FileType cpp inoreabb <buffer> cc const_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> rc reinterpret_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> fw forward<T>()<esc>FTh
 
