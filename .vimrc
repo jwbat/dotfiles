@@ -516,6 +516,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
+    au FileType cpp inoreabb <buffer> usfw using std::forward;<esc>
 
 "   fstream
     au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
@@ -543,8 +544,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
     au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
-    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>
-    au FileType cpp inoreabb <buffer> tct template <class T><esc>
+    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>FTh
+    au FileType cpp inoreabb <buffer> tct template <class T><esc>FTh
+    au FileType cpp inoreabb <buffer> tt <typename T><esc>FTh
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
@@ -585,10 +587,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> mtp make_tuple();<esc>Fel
 
-"   casts
+"   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> dc dynamic_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> rc reinterpret_cast<>()<esc>Ftl
+    au FileType cpp inoreabb <buffer> fw forward<T>()<esc>FTh
 
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> ne !=
