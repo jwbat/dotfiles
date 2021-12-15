@@ -419,6 +419,7 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Type string stringstream string_view
     au FileType cpp syntax keyword Special vector array
     au FileType cpp syntax keyword Include /<string>/ 
+    au FileType cpp syntax keyword Label typename
 
 
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
@@ -433,7 +434,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
-    au FileType cpp inoreabb <buffer> struct <esc>:-1read ~/.vim/.struct.cpp<cr>?name<cr>*h
+    au FileType cpp inoreabb <buffer> struct <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>*h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>

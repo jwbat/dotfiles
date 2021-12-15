@@ -4,7 +4,7 @@ compinit # completions
 setopt nobeep autocd  # cd using only name of dir
 
 alias allow='chmod 744'                     # set permission
-PS1=" %F{190} %1d ~ "
+PS1=" %F{220} %1d ~ "
 export LSCOLORS=gafxcxdxfaegedabagacad
  
 
