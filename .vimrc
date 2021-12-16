@@ -416,7 +416,7 @@ augroup filetype_cpp
     au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
 
-    au FileType cpp syntax keyword Type string stringstream string_view
+    au FileType cpp syntax keyword Type string istringstream string_view
     au FileType cpp syntax keyword Special vector array
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename
