@@ -539,6 +539,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ss stringstream 
     au FileType cpp inoreabb <buffer> sl string_literals
     au FileType cpp inoreabb <buffer> dbl double
+    au FileType cpp inoreabb <buffer> ld long double
     au FileType cpp inoreabb <buffer> flt float
     au FileType cpp inoreabb <buffer> ui unsigned int
     au FileType cpp inoreabb <buffer> wc wchar_t

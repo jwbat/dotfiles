@@ -70,7 +70,7 @@ alias cvn='cd ~/code/vue/nuxt'              # nuxt
 
 alias c3='cd ~/code/cpp/courses/course3'    # course3
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
-alias gak='cd ~/code/cpp/courses/gakwaya'   # gakwaya
+alias num='cd ~/code/cpp/courses/numerical' # numerical
 alias serial='cd ~/code/vue/nuxt/serial'    # serial
 alias resume='cd ~/code/vue/nuxt/resume'    # resume
 
