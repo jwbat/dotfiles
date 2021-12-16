@@ -507,17 +507,18 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> usreg <esc>:-1read ~/.vim/.regex.cpp<cr>
     au FileType cpp inoreabb <buffer> nsp namespace
     au FileType cpp inoreabb <buffer> uns using namespace std::
-    au FileType cpp inoreabb <buffer> urv using std::ranges::views::
-    au FileType cpp inoreabb <buffer> urvi using std::ranges::views::iota;<esc>
-    au FileType cpp inoreabb <buffer> urvf using std::ranges::views::filter;<esc>
-    au FileType cpp inoreabb <buffer> urvt using std::ranges::views::transform;<esc>
-    au FileType cpp inoreabb <buffer> urvr using std::ranges::views::reverse;<esc>
     au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
     au FileType cpp inoreabb <buffer> usw using std::setw;<esc>
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
     au FileType cpp inoreabb <buffer> usfw using std::forward;<esc>
+    au FileType cpp inoreabb <buffer> usacc using std::accumulate;<esc>
+    au FileType cpp inoreabb <buffer> urv using std::ranges::views::
+    au FileType cpp inoreabb <buffer> urvi using std::ranges::views::iota;<esc>
+    au FileType cpp inoreabb <buffer> urvf using std::ranges::views::filter;<esc>
+    au FileType cpp inoreabb <buffer> urvt using std::ranges::views::transform;<esc>
+    au FileType cpp inoreabb <buffer> urvr using std::ranges::views::reverse;<esc>
 
 "   fstream
     au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh

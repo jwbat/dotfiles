@@ -9,6 +9,7 @@ export LSCOLORS=gafxcxdxfaegedabagacad
  
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 export PATH="/bin:$PATH"
 export PATH="$PATH:$HOME/code/shell/scripts"
@@ -137,6 +138,7 @@ alias postman='open -a /Applications/Postman.app'
 
 # cpp
 alias c='g++ -std=c++2a *.cpp -o ./m'                   # gcc compile
+#alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
 #-std=c++2a 
 alias vc='v main.cpp'                                   # open main.cpp 
