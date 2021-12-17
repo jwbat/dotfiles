@@ -426,7 +426,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
-    au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>O
+    au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>k0
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> <leader>s istd::<esc>
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
@@ -533,6 +533,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
 
 "   types
+    au FileType cpp inoreabb <buffer> ul unsigned long
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> sv string_view
     au FileType cpp inoreabb <buffer> bs basic_string
