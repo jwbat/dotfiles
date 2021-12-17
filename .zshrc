@@ -60,6 +60,7 @@ alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
 alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
+alias cps='cd ~/code/cpp/utilities/shell_utils'
 alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
@@ -105,7 +106,7 @@ alias op='v test/* app.js controllers/* routes/* models/* middleware/*'
 
 # netlify
 alias ntd='netlify dev'
-alias ntdl='netlify dev --live'
+#alias ntdl='netlify dev --live'
 alias ntdp='netlify deploy'
 alias nth='netlify help'
 
@@ -137,7 +138,7 @@ alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
-alias c='g++ -std=c++2a *.cpp -o ./m'                   # gcc compile
+alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 #alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
 #-std=c++2a 
