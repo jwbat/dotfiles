@@ -498,6 +498,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
 
 "   functions
+    au FileType cpp inoreabb <buffer> pfcn __PRETTY_FUNCTION__
+    au FileType cpp inoreabb <buffer> ts to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
     au FileType cpp inoreabb <buffer> prnt auto print = [] (const auto& x) { cout << x; };
     au FileType cpp inoreabb <buffer> tbb auto tab = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\t"; };<esc>
@@ -548,18 +550,21 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
     au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
-    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>FTh
-    au FileType cpp inoreabb <buffer> tct template <class T><esc>FTh
-    au FileType cpp inoreabb <buffer> tt <typename T><esc>FTh
-    au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
+
+"   templates
+    au FileType cpp inoreabb <buffer> tn typename
+    au FileType cpp inoreabb <buffer> tt <typename T><esc>FTh
+    au FileType cpp inoreabb <buffer> ttt template <typename T><esc>FTh
+    au FileType cpp inoreabb <buffer> tft template <typename F><esc>FTh
+    au FileType cpp inoreabb <buffer> tct template <class T><esc>FTh
+    au FileType cpp inoreabb <buffer> ttu template <typename T, typename U><esc>FUh
 
 "   iterators
     au FileType cpp inoreabb <buffer> itr iterator
     au FileType cpp inoreabb <buffer> bii back_insert_iterator
 
-    au FileType cpp inoreabb <buffer> tstr to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
