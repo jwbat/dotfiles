@@ -595,6 +595,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
     au FileType cpp inoreabb <buffer> mtp make_tuple();<esc>Fel
+    au FileType cpp inoreabb <buffer> mp make_pair();<esc>Frl
 
 "   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
@@ -616,7 +617,7 @@ augroup filetype_cpp
 
 ""    concepts
     au FileType cpp inoreabb <buffer> rq requires
-    au FileType cpp inoreabb <buffer> tti is_integral_v<T>
+    au FileType cpp inoreabb <buffer> tti is_integral_v<T><esc>FTh
     au FileType cpp inoreabb <buffer> ttfp is_floating_point_v<T>
     au FileType cpp inoreabb <buffer> ttf is_function_v<T>
     au FileType cpp inoreabb <buffer> ttcls is_class_v<T>
