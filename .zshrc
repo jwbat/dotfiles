@@ -26,6 +26,7 @@ alias ll='ls -lG'
 #fi
 
 alias lss='ls ~/code/shell/scripts'         # ls scripts
+alias lscp='ls ~/code/cpp/*/'              # ls cpp
 alias lsa='ls /Volumes/Andromeda'           # ls volume andromeda
 alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume andromeda
 alias k='clear'                             # clear console
