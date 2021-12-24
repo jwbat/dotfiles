@@ -61,12 +61,11 @@ alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
 alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
-alias cps='cd ~/code/cpp/utilities/shell_utils'
+alias cpsh='cd ~/code/cpp/utilities/shell_utils'
 alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
 alias cnt='cd ~/code/net'                   # netlify
-alias pw='cd ~/code/pwa'                    # pwa
 alias cj='cd ~/code/js'                     # js
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
