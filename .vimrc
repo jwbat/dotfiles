@@ -441,7 +441,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> ncl #include <><esc>hh
     au FileType cpp inoreabb <buffer> nclrng #include <ranges><esc>
-    au FileType cpp inoreabb <buffer> nclreg #include <regex><esc>
+    au FileType cpp inoreabb <buffer> nclrx #include <regex><esc>
     au FileType cpp inoreabb <buffer> nclfmt #include <format><esc>
     au FileType cpp inoreabb <buffer> nclalg #include <algorithm><esc>
     au FileType cpp inoreabb <buffer> nclnm #include <numeric><esc>
