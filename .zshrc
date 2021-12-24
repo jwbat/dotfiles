@@ -61,7 +61,7 @@ alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
 alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
-alias cpsh='cd ~/code/cpp/utilities/shell_utils'
+alias cpsh='cd ~/code/cpp/utilities/shell'
 alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
