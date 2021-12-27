@@ -416,10 +416,12 @@ augroup filetype_cpp
     au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
 
-    au FileType cpp syntax keyword Type string stringstream string_view
-    au FileType cpp syntax keyword Special vector array
+    au FileType cpp syntax keyword Type string stringstream string_view tuple
     au FileType cpp syntax keyword Include /<string>/ 
-    au FileType cpp syntax keyword Label typename
+    au FileType cpp syntax keyword Label typename boolalpha
+    au FileType cpp syntax keyword Keyword class template
+    au FileType cpp syntax keyword StorageClass vector array tuple
+""    au FileType cpp syntax keyword Special vector array 
 
 
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
@@ -552,6 +554,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
+    au FileType cpp inoreabb <buffer> ec enum class <cr>{<cr>};<esc>k
 
 "   templates
     au FileType cpp inoreabb <buffer> tn typename
