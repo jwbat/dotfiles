@@ -537,6 +537,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
 
 "   types
+    au FileType cpp inoreabb <buffer> uc unsigned char
     au FileType cpp inoreabb <buffer> ul unsigned long
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> sv string_view
@@ -593,6 +594,7 @@ augroup filetype_cpp
 
 "   pointers
     au FileType cpp inoreabb <buffer> np nullptr
+    au FileType cpp inoreabb <buffer> del delete
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
@@ -616,7 +618,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> acc accumulate()<esc>Fel
     au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
     au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
-    au FileType cpp inoreabb <buffer> uc unsigned char<esc>
 
 ""    concepts
     au FileType cpp inoreabb <buffer> rq requires

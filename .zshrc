@@ -7,6 +7,7 @@ alias allow='chmod 744'                     # set permission
 PS1=" %F{220} %1d ~ "
 export LSCOLORS=gafxcxdxfaegedabagacad
  
+compinit -d ~/.dump
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -18,7 +19,7 @@ alias pth='echo $PATH'
 
 alias ll='ls -lG'
 
-#alias grep='ggrep -P'                       # Perl grep
+alias grep='ggrep -P'                       # Perl grep
 
 
 #if command -v pyenv 1>/dev/null 2>&1; then
