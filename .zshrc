@@ -36,7 +36,7 @@ alias rmds='rm .DS_Store'
 
 # git
 alias g='git add . && git commit -m "." && git push -u origin main'
-alias gpl='git pull --quiet'
+alias gpl='git pull --rebase --quiet'
 alias gs='git status'
 alias gp='git push origin main'
 alias gb='git rev-parse --abbrev-ref HEAD' # show current branch

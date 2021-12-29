@@ -572,6 +572,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
+    au FileType cpp inoreabb <buffer> ice if constexpr
     au FileType cpp inoreabb <buffer> ci constinit
     au FileType cpp inoreabb <buffer> cev consteval
     au FileType cpp inoreabb <buffer> dt decltype
@@ -619,8 +620,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> es EXIT_SUCCESS;<esc>
     au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
 
-""    concepts
-    au FileType cpp inoreabb <buffer> rq requires
+"   type_traits,  concepts
     au FileType cpp inoreabb <buffer> tti is_integral_v<T><esc>FTh
     au FileType cpp inoreabb <buffer> ttfp is_floating_point_v<T>
     au FileType cpp inoreabb <buffer> ttf is_function_v<T>
@@ -629,6 +629,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tta is_array_v<T>
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
+    au FileType cpp inoreabb <buffer> eit enable_if_t<><esc>Ftll
+    au FileType cpp inoreabb <buffer> rq requires
 
     au FileType cpp inoreabb <buffer> thp this->
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
