@@ -430,6 +430,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>k0
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
+    au FileType cpp nnoremap <buffer> r; Da;<esc>0
     au FileType cpp nnoremap <buffer> <leader>s istd::<esc>
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
     au FileType cpp nnoremap <buffer> m. a-><esc>a
@@ -537,6 +538,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
 
 "   types
+    au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
     au FileType cpp inoreabb <buffer> uc unsigned char
     au FileType cpp inoreabb <buffer> ul unsigned long
     au FileType cpp inoreabb <buffer> str string
@@ -593,15 +595,15 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
 
-"   pointers
+"   pointers, make
     au FileType cpp inoreabb <buffer> np nullptr
     au FileType cpp inoreabb <buffer> del delete
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
     au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
-    au FileType cpp inoreabb <buffer> msh make_shared<double>();<esc>Fdh
-    au FileType cpp inoreabb <buffer> mtp make_tuple();<esc>Fel
-    au FileType cpp inoreabb <buffer> mp make_pair();<esc>Frl
+    au FileType cpp inoreabb <buffer> mksh make_shared<double>();<esc>Fdh
+    au FileType cpp inoreabb <buffer> mktp make_tuple();<esc>Fel
+    au FileType cpp inoreabb <buffer> mkp make_pair();<esc>Frl
 
 "   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
@@ -629,6 +631,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tta is_array_v<T>
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
+    au FileType cpp inoreabb <buffer> ttu underlying_type_t<T><esc>FTh
     au FileType cpp inoreabb <buffer> eit enable_if_t<><esc>Ftll
     au FileType cpp inoreabb <buffer> rq requires
 
