@@ -410,18 +410,23 @@ augroup END
 au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
-""    au FileType cpp colorscheme materialbox
+
+"   colorscheme tweaks
     au FileType cpp colorscheme PaperColor
     au FileType cpp hi folded ctermbg=234
     au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
 
+    au FileType cpp hi StorageClass ctermfg=160
+    au FileType cpp hi Statement ctermfg=172
+
     au FileType cpp syntax keyword Type string stringstream string_view tuple
     au FileType cpp syntax keyword Include /<string>/ 
-    au FileType cpp syntax keyword Label typename boolalpha
+    au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
-    au FileType cpp syntax keyword StorageClass vector array tuple
-""    au FileType cpp syntax keyword Special vector array 
+    au FileType cpp syntax keyword StorageClass vector array tuple bitset
+    au FileType cpp syntax keyword Statement constexpr constinit
+
 
 
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
@@ -489,7 +494,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclx #include <exception><esc>
     au FileType cpp inoreabb <buffer> nclsx #include <stdexcept><esc>
     au FileType cpp inoreabb <buffer> nclass #include <cassert><esc>
-    au FileType cpp inoreabb <buffer> nclb #include <bitset><esc>
+    au FileType cpp inoreabb <buffer> nclbs #include <bitset><esc>
     au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
     au FileType cpp inoreabb <buffer> in cin >>
