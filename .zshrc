@@ -62,7 +62,7 @@ alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
 alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
-alias cpsh='cd ~/code/cpp/utilities/shell'
+alias cpsh='cd ~/code/cpp/utilities/shell'  # cpp shell utils
 alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
 alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
@@ -71,7 +71,7 @@ alias cj='cd ~/code/js'                     # js
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
 
-alias c3='cd ~/code/cpp/courses/course3'    # course3
+alias c1='cd ~/code/cpp/courses/design_patterns' # design patterns in cpp
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
 alias num='cd ~/code/cpp/courses/numerical' # numerical
 alias serial='cd ~/code/vue/nuxt/serial'    # serial

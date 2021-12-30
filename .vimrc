@@ -437,7 +437,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
-    au FileType cpp inoreabb <buffer> struct <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>*h
+    au FileType cpp inoreabb <buffer> struct <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>;h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
@@ -526,6 +526,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> urvr using std::ranges::views::reverse;<esc>
 
 "   fstream
+    au FileType cpp inoreabb <buffer> fs fstream
+    au FileType cpp inoreabb <buffer> ofs ofstream
+    au FileType cpp inoreabb <buffer> ifs ifstream
     au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
     au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
     au FileType cpp inoreabb <buffer> iosi ios::in
@@ -554,10 +557,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wc wchar_t
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
     au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
-    au FileType cpp inoreabb <buffer> vs vector<string><esc>Frl
+    au FileType cpp inoreabb <buffer> vs vector<string><esc>Fsh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
-    au FileType cpp inoreabb <buffer> ec enum class <cr>{<cr>};<esc>k
+    au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
 
 "   templates
     au FileType cpp inoreabb <buffer> tn typename
@@ -572,11 +575,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> bii back_insert_iterator
 
     au FileType cpp inoreabb <buffer> rtn return
-    au FileType cpp inoreabb <buffer> co const
-    au FileType cpp inoreabb <buffer> ce constexpr
-    au FileType cpp inoreabb <buffer> ice if constexpr
-    au FileType cpp inoreabb <buffer> ci constinit
-    au FileType cpp inoreabb <buffer> cev consteval
     au FileType cpp inoreabb <buffer> dt decltype
 
 "   loops
@@ -642,7 +640,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> po partial_ordering
     au FileType cpp inoreabb <buffer> stro string_ordering
     au FileType cpp inoreabb <buffer> wo weak_ordering
-    au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
     au FileType cpp inoreabb <buffer> fcn function
     au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
@@ -653,13 +650,23 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ctor constructor
     au FileType cpp inoreabb <buffer> dtor deconstructor
 
-""  coroutines    
+"   specifiers
+    au FileType cpp inoreabb <buffer> vr virtual
+    au FileType cpp inoreabb <buffer> ov override<esc>Foeh
+    au FileType cpp inoreabb <buffer> xp explicit
+    au FileType cpp inoreabb <buffer> co const
+    au FileType cpp inoreabb <buffer> ce constexpr
+    au FileType cpp inoreabb <buffer> ice if constexpr
+    au FileType cpp inoreabb <buffer> ci constinit
+    au FileType cpp inoreabb <buffer> cev consteval
+ 
+"   coroutines    
     au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
     au FileType cpp inoreabb <buffer> coy co_yield
     au FileType cpp inoreabb <buffer> cor co_return
     au FileType cpp inoreabb <buffer> coa co_await
 
-""  Qt
+"   Qt
     au FileType cpp inoreabb <buffer> nclqdb #include <QDebug><esc>
     au FileType cpp inoreabb <buffer> nclqts #include <QTextStream><esc>
     au FileType cpp inoreabb <buffer> nclqv #include <QVariant><esc>
