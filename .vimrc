@@ -442,8 +442,12 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>k0
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> r; Da;<esc>0
+"   insert std::
     au FileType cpp nnoremap <buffer> <leader>s istd::<esc>
+"   remove std::
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
+"   virtual to override
+    au FileType cpp nnoremap <buffer> <leader>vto 0wdwf=Di override {}<esc>0
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
