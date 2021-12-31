@@ -411,14 +411,21 @@ au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
     autocmd!
 
-"   colorscheme tweaks
+"   colorscheme & syntax highlighting tweaks
     au FileType cpp colorscheme PaperColor
     au FileType cpp hi folded ctermbg=234
     au FileType cpp hi folded ctermfg=058
     au FileType cpp hi statusline none
 
+
+    au FileType cpp syn match dFunction "\<\k\+\ze("
+    au FileType cpp hi link dFunction Function
+
     au FileType cpp hi StorageClass ctermfg=160
     au FileType cpp hi Statement ctermfg=172
+    au FileType cpp hi Function ctermfg=179
+    au FileType cpp hi String ctermfg=143
+    au FileType cpp hi Include ctermfg=62
 
     au FileType cpp syntax keyword Type string stringstream string_view tuple
     au FileType cpp syntax keyword Include /<string>/ 
@@ -426,7 +433,6 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Keyword class template
     au FileType cpp syntax keyword StorageClass vector array tuple bitset
     au FileType cpp syntax keyword Statement constexpr constinit
-
 
 
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
