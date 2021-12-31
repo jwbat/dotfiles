@@ -557,6 +557,7 @@ augroup filetype_cpp
 
 "   types
     au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
+    au FileType cpp inoreabb <buffer> bt bitset<8>()<esc>F8h
     au FileType cpp inoreabb <buffer> uc unsigned char
     au FileType cpp inoreabb <buffer> ul unsigned long
     au FileType cpp inoreabb <buffer> str string

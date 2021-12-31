@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/jamesbatman/code/cpp/utilities/shell/powers2'
 let g:netrw_dirhist_9='/Users/jamesbatman/code/cpp/utilities/show_compiler'
 let g:netrw_dirhist_8='/Users/jamesbatman/code/cpp/idioms/03-initializer_list'
 let g:netrw_dirhist_7='/Users/jamesbatman/code/cpp/utilities/shell/random'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_4='/Users/jamesbatman/code/cpp/courses/course3/03-write_to_f
 let g:netrw_dirhist_3='/Users/jamesbatman/code/cpp/gakwaya/29-ClassTemplates/02-TemplateSpecialization/adder.h'
 let g:netrw_dirhist_2='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources/DWARF'
 let g:netrw_dirhist_1='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources'
-let g:netrw_dirhist_0='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents'
