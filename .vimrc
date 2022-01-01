@@ -424,7 +424,7 @@ augroup filetype_cpp
     au FileType cpp hi StorageClass ctermfg=160
     au FileType cpp hi Statement ctermfg=172
     au FileType cpp hi Function ctermfg=179
-    au FileType cpp hi String ctermfg=143
+    au FileType cpp hi String ctermfg=132
     au FileType cpp hi Include ctermfg=62
 
     au FileType cpp syntax keyword Type string stringstream string_view tuple
