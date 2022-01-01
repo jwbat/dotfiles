@@ -507,26 +507,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclbs #include <bitset><esc>
     au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
-    au FileType cpp inoreabb <buffer> in cin >>
-    au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
-    au FileType cpp inoreabb <buffer> out cout <<
-    au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
-    au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
-    au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
-    au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
-
-"   functions
-    au FileType cpp inoreabb <buffer> pfcn __PRETTY_FUNCTION__
-    au FileType cpp inoreabb <buffer> ts to_string()<esc>Fgl
-    au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
-    au FileType cpp inoreabb <buffer> prnt auto print = [] (const auto& x) { cout << x; };
-    au FileType cpp inoreabb <buffer> tbb auto tab = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\t"; };<esc>
-    au FileType cpp inoreabb <buffer> nwl auto newline = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\n"; };<esc>
 
 "   namespaces
     au FileType cpp inoreabb <buffer> usreg <esc>:-1read ~/.vim/.regex.cpp<cr>
-    au FileType cpp inoreabb <buffer> nsp namespace
-    au FileType cpp inoreabb <buffer> uns using namespace std::
     au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
@@ -539,23 +522,15 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> urvf using std::ranges::views::filter;<esc>
     au FileType cpp inoreabb <buffer> urvt using std::ranges::views::transform;<esc>
     au FileType cpp inoreabb <buffer> urvr using std::ranges::views::reverse;<esc>
+    au FileType cpp inoreabb <buffer> usrnd <esc>:-1read ~/.vim/.random.cpp<cr>;
 
-"   fstream
-    au FileType cpp inoreabb <buffer> fs fstream
-    au FileType cpp inoreabb <buffer> ofs ofstream
-    au FileType cpp inoreabb <buffer> ifs ifstream
-    au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
-    au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
-    au FileType cpp inoreabb <buffer> iosi ios::in
-    au FileType cpp inoreabb <buffer> ioso ios::out
-    au FileType cpp inoreabb <buffer> iosa ios::app
-    au FileType cpp inoreabb <buffer> iost ios::trunc
-    au FileType cpp inoreabb <buffer> iosb ios::beg
-    au FileType cpp inoreabb <buffer> iosc ios::cur
-    au FileType cpp inoreabb <buffer> iose ios::end
-    au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
+    au FileType cpp inoreabb <buffer> nsp namespace
+    au FileType cpp inoreabb <buffer> uns using namespace std::
+    au FileType cpp inoreabb <buffer> unl using namespace std::literals;<esc>
+    au FileType cpp inoreabb <buffer> unch using namespace std::chrono;<esc>
 
 "   types
+    au FileType cpp inoreabb <buffer> tmt time_t
     au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
     au FileType cpp inoreabb <buffer> bt bitset<8>()<esc>F8h
     au FileType cpp inoreabb <buffer> uc unsigned char
@@ -578,6 +553,35 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
 
+
+"   functions
+    au FileType cpp inoreabb <buffer> pfcn __PRETTY_FUNCTION__
+    au FileType cpp inoreabb <buffer> ts to_string()<esc>Fgl
+    au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
+    au FileType cpp inoreabb <buffer> prnt auto print = [] (const auto& x) { cout << x; };
+    au FileType cpp inoreabb <buffer> tbb auto tab = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\t"; };<esc>
+    au FileType cpp inoreabb <buffer> nwl auto newline = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\n"; };<esc>
+
+"   random
+    au FileType cpp inoreabb <buffer> rndint <esc>:-1read ~/.vim/.rand_int.cpp<cr>
+    au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
+
+"   fstream
+    au FileType cpp inoreabb <buffer> fs fstream
+    au FileType cpp inoreabb <buffer> ofs ofstream
+    au FileType cpp inoreabb <buffer> ifs ifstream
+    au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
+    au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
+    au FileType cpp inoreabb <buffer> iosi ios::in
+    au FileType cpp inoreabb <buffer> ioso ios::out
+    au FileType cpp inoreabb <buffer> iosa ios::app
+    au FileType cpp inoreabb <buffer> iost ios::trunc
+    au FileType cpp inoreabb <buffer> iosb ios::beg
+    au FileType cpp inoreabb <buffer> iosc ios::cur
+    au FileType cpp inoreabb <buffer> iose ios::end
+    au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
+
+
 "   templates
     au FileType cpp inoreabb <buffer> tn typename
     au FileType cpp inoreabb <buffer> tt <typename T><esc>FTh
@@ -589,6 +593,7 @@ augroup filetype_cpp
 "   iterators
     au FileType cpp inoreabb <buffer> itr iterator
     au FileType cpp inoreabb <buffer> bii back_insert_iterator
+    au FileType cpp inoreabb <buffer> bte v.begin(), v.end()<esc>Fbhhh
 
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> dt decltype
@@ -628,7 +633,6 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> ne !=
-    au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
     au FileType cpp inoreabb <buffer> st size_t
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
     au FileType cpp inoreabb <buffer> lam [](){<cr>}<esc>k0f]
@@ -667,14 +671,29 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> dtor deconstructor
 
 "   specifiers
-    au FileType cpp inoreabb <buffer> vr virtual
-    au FileType cpp inoreabb <buffer> ov override<esc>Foeh
-    au FileType cpp inoreabb <buffer> xp explicit
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> ice if constexpr
     au FileType cpp inoreabb <buffer> ci constinit
     au FileType cpp inoreabb <buffer> cev consteval
+    au FileType cpp inoreabb <buffer> vr virtual
+    au FileType cpp inoreabb <buffer> ov override<esc>Foeh
+    au FileType cpp inoreabb <buffer> xp explicit
+
+"   chrono
+    au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now();<esc>
+    au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>();<esc>
+
+"   io
+    au FileType cpp inoreabb <buffer> in cin >>
+    au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
+    au FileType cpp inoreabb <buffer> out cout <<
+    au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
+    au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
+    au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
+    au FileType cpp inoreabb <buffer> osw cout << setw(5) <<
+    au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
+
  
 "   coroutines    
     au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
