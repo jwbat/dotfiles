@@ -453,7 +453,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
-    au FileType cpp inoreabb <buffer> struct <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>;h
+    au FileType cpp inoreabb <buffer> stk <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>;h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
@@ -609,6 +609,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> pra #pragma once<esc>
     au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
+    au FileType cpp inoreabb <buffer> eb emplace_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> ch <<
     au FileType cpp inoreabb <buffer> hc >>
     au FileType cpp inoreabb <buffer> che << endl;<esc>
