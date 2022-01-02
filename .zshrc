@@ -3,11 +3,12 @@ compinit # completions
 
 setopt nobeep autocd  # cd using only name of dir
 
-alias allow='chmod 744'                     # set permission
-PS1=" %F{220} %1d ~ "
+PS1=' %F{32} %1d %F{yellow}~ '
 export LSCOLORS=gafxcxdxfaegedabagacad
  
 compinit -d ~/.dump
+
+alias allow='chmod 744'                     # set permission
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -27,7 +28,7 @@ alias grep='ggrep -P'                       # Perl grep
 #fi
 
 alias lss='ls ~/code/shell/scripts'         # ls scripts
-alias lscp='ls ~/code/cpp/*/'              # ls cpp
+alias lscp='ls ~/code/cpp/*/'               # ls cpp
 alias lsa='ls /Volumes/Andromeda'           # ls volume andromeda
 alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume andromeda
 alias k='clear'                             # clear console

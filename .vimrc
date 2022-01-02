@@ -419,6 +419,7 @@ augroup filetype_cpp
 
 
     au FileType cpp syn match dFunction "\<\k\+\ze("
+    au FileType cpp syn match dFunction "\<\k\+\ze<"
     au FileType cpp hi link dFunction Function
 
     au FileType cpp hi StorageClass ctermfg=160
@@ -566,7 +567,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rndint <esc>:-1read ~/.vim/.rand_int.cpp<cr>
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
 
-"   fstream
+"   fstream, sstream
+    au FileType cpp inoreabb <buffer> oss ostringstream
     au FileType cpp inoreabb <buffer> fs fstream
     au FileType cpp inoreabb <buffer> ofs ofstream
     au FileType cpp inoreabb <buffer> ifs ifstream
