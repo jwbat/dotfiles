@@ -456,6 +456,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> stk <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>;h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
+    au FileType cpp inoreabb <buffer> prv <esc>:-1read ~/.vim/.print_vector.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
     au FileType cpp inoreabb <buffer> ncl #include <><esc>hh
@@ -594,8 +595,12 @@ augroup filetype_cpp
 
 "   iterators
     au FileType cpp inoreabb <buffer> itr iterator
+    au FileType cpp inoreabb <buffer> ins inserter
+    au FileType cpp inoreabb <buffer> adv advance
+    au FileType cpp inoreabb <buffer> bi back_inserter
     au FileType cpp inoreabb <buffer> bii back_insert_iterator
     au FileType cpp inoreabb <buffer> bte v.begin(), v.end()<esc>Fbhhh
+    au FileType cpp inoreabb <buffer> cbte v.cbegin(), v.cend()<esc>Fv;h
 
     au FileType cpp inoreabb <buffer> rtn return
     au FileType cpp inoreabb <buffer> dt decltype
