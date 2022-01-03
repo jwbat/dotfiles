@@ -452,6 +452,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
+    au FileType cpp inoreabb <buffer> perf <esc>:-1read ~/.vim/.performance.cpp<cr>
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
     au FileType cpp inoreabb <buffer> stk <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>;h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
@@ -508,6 +509,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclass #include <cassert><esc>
     au FileType cpp inoreabb <buffer> nclbs #include <bitset><esc>
     au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
+    au FileType cpp inoreabb <buffer> nclil #include <initializer_list><esc>
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
 
 "   namespaces
@@ -530,6 +532,18 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uns using namespace std::
     au FileType cpp inoreabb <buffer> unl using namespace std::literals;<esc>
     au FileType cpp inoreabb <buffer> unch using namespace std::chrono;<esc>
+    au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
+
+"   io
+    au FileType cpp inoreabb <buffer> out cout <<
+    au FileType cpp inoreabb <buffer> in cin >>
+    au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
+    au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
+    au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
+    au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
+    au FileType cpp inoreabb <buffer> osw cout << setw(5) <<
+    au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
+
 
 "   types
     au FileType cpp inoreabb <buffer> tmt time_t
@@ -691,16 +705,6 @@ augroup filetype_cpp
 "   chrono
     au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now();<esc>
     au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>();<esc>
-
-"   io
-    au FileType cpp inoreabb <buffer> in cin >>
-    au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
-    au FileType cpp inoreabb <buffer> out cout <<
-    au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
-    au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
-    au FileType cpp inoreabb <buffer> sw setw(5)<esc>F5h
-    au FileType cpp inoreabb <buffer> osw cout << setw(5) <<
-    au FileType cpp inoreabb <buffer> odnl cout << "\n\n";<esc>Fnh
 
  
 "   coroutines    
