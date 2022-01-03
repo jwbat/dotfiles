@@ -532,6 +532,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uns using namespace std::
     au FileType cpp inoreabb <buffer> unl using namespace std::literals;<esc>
     au FileType cpp inoreabb <buffer> unch using namespace std::chrono;<esc>
+    au FileType cpp inoreabb <buffer> unchl using namespace std::chrono_literals;<esc>
     au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
 
 "   io
@@ -703,8 +704,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> xp explicit
 
 "   chrono
-    au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now();<esc>
-    au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>();<esc>
+    au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now()<esc>
+    au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>()<esc>Fmh
 
  
 "   coroutines    
