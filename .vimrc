@@ -509,6 +509,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclass #include <cassert><esc>
     au FileType cpp inoreabb <buffer> nclbs #include <bitset><esc>
     au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
+    au FileType cpp inoreabb <buffer> nclopt #include <optional><esc>
     au FileType cpp inoreabb <buffer> nclil #include <initializer_list><esc>
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
 
@@ -531,6 +532,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nsp namespace
     au FileType cpp inoreabb <buffer> uns using namespace std::
     au FileType cpp inoreabb <buffer> unl using namespace std::literals;<esc>
+    au FileType cpp inoreabb <buffer> unsl using namespace std::string_literals;<esc>
     au FileType cpp inoreabb <buffer> unch using namespace std::chrono;<esc>
     au FileType cpp inoreabb <buffer> unchl using namespace std::chrono_literals;<esc>
     au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
