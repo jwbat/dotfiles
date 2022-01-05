@@ -454,7 +454,7 @@ augroup filetype_cpp
 
     au FileType cpp inoreabb <buffer> perf <esc>:-1read ~/.vim/.performance.cpp<cr>
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
-    au FileType cpp inoreabb <buffer> stk <esc>:-1read ~/.vim/.struct.cpp<cr>j?name<cr>;h
+    au FileType cpp inoreabb <buffer> stk <esc>:-1read ~/.vim/.struct.cpp<cr>j?n<cr>h
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> prv <esc>:-1read ~/.vim/.print_vector.cpp<cr>
@@ -678,6 +678,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
     au FileType cpp inoreabb <buffer> ttu underlying_type_t<T><esc>FTh
     au FileType cpp inoreabb <buffer> eit enable_if_t<><esc>Ftll
+    au FileType cpp inoreabb <buffer> tpd typedef
     au FileType cpp inoreabb <buffer> rq requires
 
     au FileType cpp inoreabb <buffer> thp this->
