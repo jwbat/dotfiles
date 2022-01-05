@@ -444,7 +444,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
     au FileType cpp nnoremap <buffer> r; Da;<esc>0
 "   insert std::
-    au FileType cpp nnoremap <buffer> <leader>s istd::<esc>
+    au FileType cpp nnoremap <buffer> <leader>s viw<esc>bistd::<esc>
 "   remove std::
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
 "   virtual to override
