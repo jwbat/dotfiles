@@ -668,11 +668,12 @@ augroup filetype_cpp
 
 "   type_traits,  concepts
     au FileType cpp inoreabb <buffer> tti is_integral_v<T><esc>FTh
+    au FileType cpp inoreabb <buffer> tta is_arithmetic_v<T><esc>FTh
     au FileType cpp inoreabb <buffer> ttfp is_floating_point_v<T>
     au FileType cpp inoreabb <buffer> ttf is_function_v<T>
     au FileType cpp inoreabb <buffer> ttcls is_class_v<T>
     au FileType cpp inoreabb <buffer> ttp is_pointer_v<T>
-    au FileType cpp inoreabb <buffer> tta is_array_v<T>
+    au FileType cpp inoreabb <buffer> ttarr is_array_v<T>
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
     au FileType cpp inoreabb <buffer> ttu underlying_type_t<T><esc>FTh
@@ -699,9 +700,9 @@ augroup filetype_cpp
 "   specifiers
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
-    au FileType cpp inoreabb <buffer> ice if constexpr
-    au FileType cpp inoreabb <buffer> ci constinit
     au FileType cpp inoreabb <buffer> cev consteval
+    au FileType cpp inoreabb <buffer> ci constinit
+    au FileType cpp inoreabb <buffer> ice if constexpr
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> ov override<esc>Foeh
     au FileType cpp inoreabb <buffer> xp explicit
