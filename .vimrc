@@ -511,6 +511,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ncltt #include <type_traits><esc>
     au FileType cpp inoreabb <buffer> nclopt #include <optional><esc>
     au FileType cpp inoreabb <buffer> nclil #include <initializer_list><esc>
+    au FileType cpp inoreabb <buffer> nclvar #include <variant><esc>
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
 
 "   namespaces
