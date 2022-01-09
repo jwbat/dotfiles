@@ -428,7 +428,8 @@ augroup filetype_cpp
     au FileType cpp hi String ctermfg=132
     au FileType cpp hi Include ctermfg=62
 
-    au FileType cpp syntax keyword Type string stringstream string_view tuple
+    au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
+                                        \ smatch
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
@@ -452,6 +453,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
+    au FileType cpp inoreabb <buffer> rx <esc>:-1read ~/.vim/.regex.cpp<cr>
     au FileType cpp inoreabb <buffer> perf <esc>:-1read ~/.vim/.performance.cpp<cr>
     au FileType cpp inoreabb <buffer> cls <esc>:-1read ~/.vim/.class.cpp<cr>
     au FileType cpp inoreabb <buffer> stk <esc>:-1read ~/.vim/.struct.cpp<cr>j?n<cr>h
@@ -515,7 +517,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclh #include ".h"<esc>F.h
 
 "   namespaces
-    au FileType cpp inoreabb <buffer> usreg <esc>:-1read ~/.vim/.regex.cpp<cr>
     au FileType cpp inoreabb <buffer> us using std::<c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> usc using std::cout;<esc>
     au FileType cpp inoreabb <buffer> usv using std::vector;<esc>
@@ -718,6 +719,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> coy co_yield
     au FileType cpp inoreabb <buffer> cor co_return
     au FileType cpp inoreabb <buffer> coa co_await
+
+"   SDL
+    au FileType cpp inoreabb <buffer> sd SDL_<c-r>=Eatchar('\s')<cr>
 
 "   Qt
     au FileType cpp inoreabb <buffer> nclqdb #include <QDebug><esc>

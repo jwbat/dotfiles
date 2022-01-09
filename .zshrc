@@ -31,7 +31,6 @@ alias lss='ls ~/code/shell/scripts'         # ls scripts
 alias lscp='ls ~/code/cpp/*/'               # ls cpp
 alias lsa='ls /Volumes/Andromeda'           # ls volume andromeda
 alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume andromeda
-alias k='clear'                             # clear console
 alias kdl='rm -r ~/Downloads/*'             # clear Downloads
 alias rmds='rm .DS_Store'
 
@@ -140,6 +139,7 @@ alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
+alias k='make proj'                 
 alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 #alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
@@ -150,6 +150,7 @@ alias vn='v */main.cpp */*'                             # "v nested"
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
 alias m='./m'                                           # run compiled cpp file
 alias cm='c && m'                                       # compile and run ./m
+alias km='k && m'                                       # make and run
 alias rmm='rm */m'
 
 # nvm
