@@ -462,6 +462,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> prv <esc>:-1read ~/.vim/.print_vector.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
+    au FileType cpp inoreabb <buffer> nclc #include <complex><esc>
+    au FileType cpp inoreabb <buffer> nclm #include <cmath><esc>
     au FileType cpp inoreabb <buffer> ncl #include <><esc>hh
     au FileType cpp inoreabb <buffer> nclrng #include <ranges><esc>
     au FileType cpp inoreabb <buffer> nclrx #include <regex><esc>
@@ -490,7 +492,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclsig #include <csignal><esc>
     au FileType cpp inoreabb <buffer> nclt #include <ctime><esc>
     au FileType cpp inoreabb <buffer> nclct #include <cctype><esc>
-    au FileType cpp inoreabb <buffer> nclm #include <cmath><esc>
     au FileType cpp inoreabb <buffer> ncll #include <limits><esc>
     au FileType cpp inoreabb <buffer> nclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> ncln #include <numbers><esc>
