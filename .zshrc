@@ -139,16 +139,15 @@ alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
 # cpp
-alias k='make proj'                 
+alias m='./m'                                           # run compiled cpp file
+alias k='make proj'                                     # cmake 
 alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
-#alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
 #-std=c++2a 
 alias vc='v main.cpp'                                   # open main.cpp 
 alias vf='v main.cpp *.h *.cpp'                         # "v flat"
 alias vn='v */main.cpp */*'                             # "v nested"
 alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
-alias m='./m'                                           # run compiled cpp file
 alias cm='c && m'                                       # compile and run ./m
 alias km='k && m'                                       # make and run
 alias rmm='rm */m'

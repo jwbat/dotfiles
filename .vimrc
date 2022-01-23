@@ -571,6 +571,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
     au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Fsh
+    au FileType cpp inoreabb <buffer> vb vector<bool><esc>Fbh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
