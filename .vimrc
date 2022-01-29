@@ -552,6 +552,7 @@ augroup filetype_cpp
 
 
 "   types
+    au FileType cpp inoreabb <buffer> u8 uint8_t
     au FileType cpp inoreabb <buffer> tmt time_t
     au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
     au FileType cpp inoreabb <buffer> bt bitset<8>()<esc>F8h
@@ -648,10 +649,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> del delete
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
-    au FileType cpp inoreabb <buffer> mq make_unique<double>();<esc>Fdh
-    au FileType cpp inoreabb <buffer> mksh make_shared<double>();<esc>Fdh
-    au FileType cpp inoreabb <buffer> mktp make_tuple();<esc>Fel
-    au FileType cpp inoreabb <buffer> mkp make_pair();<esc>Frl
+    au FileType cpp inoreabb <buffer> mq make_unique<double>()<esc>Fdh
+    au FileType cpp inoreabb <buffer> mksh make_shared<double>()<esc>Fdh
+    au FileType cpp inoreabb <buffer> mktp make_tuple()<esc>Fel
+    au FileType cpp inoreabb <buffer> mkp make_pair()<esc>Frl
 
 "   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
