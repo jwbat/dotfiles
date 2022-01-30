@@ -1,13 +1,12 @@
 #ifndef CLASSNAME_H
 #define CLASSNAME_H
 
-using namespace std;
 
 
-class ClassName {
+class ClassName
+{
     public: 
-        ClassName() {
-        }
+        ClassName() {}
     private:
 };
 
