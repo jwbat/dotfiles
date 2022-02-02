@@ -133,8 +133,14 @@ alias vh='vim -c help -c only'        # open vim help
 
 # python
 alias p='python3.9'                   # manage versions with pyenv
+alias pip='pip3'
 alias n='node'
-alias activate='source venv/bin/activate'
+alias act='source venv/bin/activate'  #   activate
+alias deact='deactivate'              # deactivate
+
+# fastapi
+alias uv='uvicorn main:app --reload'                    # run asgi server
+
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 

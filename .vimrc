@@ -131,6 +131,9 @@ inoremap xx <C-p>
 nnoremap sp a<space><esc>
 " go 40 chars into line fr 0
 nnoremap <leader>m 040l 
+
+" 20 * page-down
+nnoremap <C-b> 20<C-e>
 " 9 * page-down
 nnoremap <C-n> 9<C-e>
 " 9 * page-up
@@ -433,7 +436,7 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
-    au FileType cpp syntax keyword StorageClass vector array tuple bitset
+    au FileType cpp syntax keyword StorageClass queue vector array tuple bitset
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
@@ -630,7 +633,7 @@ augroup filetype_cpp
 "   loops
     au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i)<esc>0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
-    au FileType cpp inoreabb <buffer> wh while () {<cr>}<esc>k02w
+    au FileType cpp inoreabb <buffer> wh while ()<cr>{<cr>}<esc>2k0ew
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
 
     au FileType cpp inoreabb <buffer> pra #pragma once<esc>
