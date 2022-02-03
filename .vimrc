@@ -631,7 +631,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> dt decltype
 
 "   loops
-    au FileType cpp inoreabb <buffer> fl for (size_t i{ 0 }; i < x; ++i)<esc>0fx<left>
+    au FileType cpp inoreabb <buffer> fl for (int i{ 0 }; i < x; ++i)<esc>0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> wh while ()<cr>{<cr>}<esc>2k0ew
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
@@ -688,7 +688,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tpd typedef
     au FileType cpp inoreabb <buffer> rq requires
 
-    au FileType cpp inoreabb <buffer> thp this->
+    au FileType cpp inoreabb <buffer> thp this-><c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
     au FileType cpp inoreabb <buffer> op operator
     au FileType cpp inoreabb <buffer> df default
