@@ -87,6 +87,7 @@ inoremap '' ''
 inoremap ''' ''''''<left>
 inoremap ` ``<left>
 inoremap jk <esc>:w<cr>
+inoremap kj <esc>:w<cr>
 
 "-------------------------------------------------
 
@@ -390,13 +391,17 @@ augroup END
 augroup filetype_python
     autocmd!
     au FileType python colorscheme oceanic_material
-"     au FileType python nnoremap <buffer> <leader>c I#<esc>
+"     au FileType python colorscheme PaperColor
     au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType python nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
     au FileType python inoreabb str def __str__(self):<cr>pass<esc>
     au FileType python inoreabb repr def __repr__(self):<cr>pass<esc>
     au FileType python inoreabb rtn return
+
+    au FileType python inoreabb im import
+    au FileType python inoreabb fi from import<esc>0ea
+    au FileType python inoreabb ifnm if __name__ == '__main__':<cr>pass<esc>0wh
 
     "---django-------------------------------------------------------
     au FileType python inoreabb dj django<esc>A
@@ -594,12 +599,13 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> sr srand(time(nullptr));<esc>0h
 
 "   fstream, sstream
+    au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
+    au FileType cpp inoreabb <buffer> usiosb using std::ios_base;<esc>
     au FileType cpp inoreabb <buffer> oss ostringstream
     au FileType cpp inoreabb <buffer> fs fstream
     au FileType cpp inoreabb <buffer> ofs ofstream
     au FileType cpp inoreabb <buffer> ifs ifstream
     au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
-    au FileType cpp inoreabb <buffer> usios using std::ios;<esc>
     au FileType cpp inoreabb <buffer> iosi ios::in
     au FileType cpp inoreabb <buffer> ioso ios::out
     au FileType cpp inoreabb <buffer> iosa ios::app
@@ -607,7 +613,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> iosb ios::beg
     au FileType cpp inoreabb <buffer> iosc ios::cur
     au FileType cpp inoreabb <buffer> iose ios::end
+    au FileType cpp inoreabb <buffer> iosate ios::ate
     au FileType cpp inoreabb <buffer> iosbin ios::binary<esc>
+    au FileType cpp inoreabb <buffer> iob ios_base::<c-r>=Eatchar('\s')<cr>
+    au FileType cpp inoreabb <buffer> iobb ios_base::beg<esc>
+    au FileType cpp inoreabb <buffer> iobe ios_base::end<esc>
 
 
 "   templates
@@ -704,6 +714,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> if if ()<esc>hh
     au FileType cpp inoreabb <buffer> ctor constructor
     au FileType cpp inoreabb <buffer> dtor deconstructor
+    au FileType cpp inoreabb <buffer> trc try<cr>{<cr>}<cr>catch()<cr>{<cr>}<esc>?h<cr>l
 
 "   specifiers
     au FileType cpp inoreabb <buffer> co const
