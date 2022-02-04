@@ -437,7 +437,7 @@ augroup filetype_cpp
     au FileType cpp hi Include ctermfg=62
 
     au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
-                                        \ smatch
+                                        \ smatch ifstream ofstream fstream
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
@@ -581,9 +581,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Fsh
     au FileType cpp inoreabb <buffer> vb vector<bool><esc>Fbh
+    au FileType cpp inoreabb <buffer> vuc vector<unsigned char><esc>Fuh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
+    au FileType cpp inoreabb <buffer> ccc const char* const
 
 
 "   functions
@@ -629,6 +631,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttu template <typename T, typename U><esc>FUh
 
 "   iterators
+    au FileType cpp inoreabb <buffer> isbi istreambuf_iterator<char>()<esc>Fch
     au FileType cpp inoreabb <buffer> itr iterator
     au FileType cpp inoreabb <buffer> ins inserter
     au FileType cpp inoreabb <buffer> adv advance
