@@ -140,7 +140,7 @@ nnoremap <C-n> 9<C-e>
 " 9 * page-up
 nnoremap <C-p> 9<C-y>
 " clear line
-nnoremap <leader>k 0Dj 
+nnoremap <leader>k 0D
 
 " yank line(s) into system clipboard
 nnoremap <leader>' "+yy
@@ -390,14 +390,17 @@ augroup END
 "python----------------------------------------------------------
 augroup filetype_python
     autocmd!
-    au FileType python colorscheme oceanic_material
-"     au FileType python colorscheme PaperColor
+    au FileType python colorscheme gruvbox
+""    au FileType python colorscheme oceanic_material
+""    au FileType python colorscheme PaperColor
+
     au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType python nnoremap <buffer> <leader>u :norm 0x<cr>j
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
     au FileType python inoreabb str def __str__(self):<cr>pass<esc>
     au FileType python inoreabb repr def __repr__(self):<cr>pass<esc>
     au FileType python inoreabb rtn return
+    au FileType python inoreabb dn ____<esc>hh
 
     au FileType python inoreabb im import
     au FileType python inoreabb fi from import<esc>0ea

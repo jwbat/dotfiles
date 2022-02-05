@@ -134,6 +134,8 @@ alias vh='vim -c help -c only'        # open vim help
 # python
 alias p='python3.10'                   # manage versions with pyenv
 alias pip='pip3.10'
+alias pir='pip install -r requirements.txt'
+alias pfr='pip freeze > requirements.txt'
 alias n='node'
 alias act='source venv/bin/activate'  #   activate
 alias deact='deactivate'              # deactivate
