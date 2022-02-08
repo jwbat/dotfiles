@@ -12,6 +12,7 @@ alias allow='chmod 744'                     # set permission
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH"
 export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 export PATH="/bin:$PATH"
 export PATH="$PATH:$HOME/code/shell/scripts"
@@ -40,7 +41,6 @@ alias gpl='git pull --rebase --quiet'
 alias gs='git status'
 alias gp='git push origin main'
 alias gb='git rev-parse --abbrev-ref HEAD' # show current branch
-
 alias gph='git push heroku main'
 alias ght='cat ~/code/gh.txt'
 alias gitcommands='cat ~/code/commands/git.txt'
@@ -89,6 +89,7 @@ alias ds='du -sh * | sort -rn'              # see disk space
 alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
 
 # node
+alias n='node'
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
 alias pkg='v package.json'
 alias rmn='rm -r node_modules'              # rm node_modules
@@ -131,12 +132,12 @@ alias vz='v ~/.zshrc'                 # open .zshrc with vim
 alias vv='v ~/.vimrc'                 # open .vimrc with vim
 alias vh='vim -c help -c only'        # open vim help
 
-# python
-alias p='python3.10'                   # manage versions with pyenv
+# python & pip
+alias p='python3.10'
 alias pip='pip3.10'
+alias pup='p -m pip install --upgrade pip'      # ugrade pip
 alias pir='pip install -r requirements.txt'
 alias pfr='pip freeze > requirements.txt'
-alias n='node'
 alias act='source venv/bin/activate'  #   activate
 alias deact='deactivate'              # deactivate
 
@@ -150,6 +151,8 @@ alias postman='open -a /Applications/Postman.app'
 alias m='./m'                                           # run compiled cpp file
 alias k='make proj'                                     # cmake 
 alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
+#alias z='clang++ -std=c++2a *.cpp -o ./m'
+alias z='g++ -std=c++20 -pthread *.cpp -o ./m'          # gcc compile threads
 alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
 #-std=c++2a 
 alias vc='v main.cpp'                                   # open main.cpp 

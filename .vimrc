@@ -440,7 +440,7 @@ augroup filetype_cpp
     au FileType cpp hi Include ctermfg=62
 
     au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
-                                        \ smatch ifstream ofstream fstream
+                                        \ smatch ifstream ofstream fstream thread
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
@@ -454,6 +454,7 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>k0
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
+    au FileType cpp nnoremap <buffer> <leader>, A,<esc>:w<cr>
     au FileType cpp nnoremap <buffer> r; Da;<esc>0
 "   insert std::
     au FileType cpp nnoremap <buffer> <leader>s viw<esc>bistd::<esc>
@@ -547,9 +548,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uns using namespace std::
     au FileType cpp inoreabb <buffer> unl using namespace std::literals;<esc>
     au FileType cpp inoreabb <buffer> unsl using namespace std::string_literals;<esc>
+    au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
+
     au FileType cpp inoreabb <buffer> unch using namespace std::chrono;<esc>
     au FileType cpp inoreabb <buffer> unchl using namespace std::chrono_literals;<esc>
-    au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
 
 "   io
     au FileType cpp inoreabb <buffer> out cout <<
@@ -589,6 +591,15 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
     au FileType cpp inoreabb <buffer> ccc const char* const
+
+""  threads
+    au FileType cpp inoreabb <buffer> thr thread
+    au FileType cpp inoreabb <buffer> tthr this_thread
+    au FileType cpp inoreabb <buffer> sf this_thread::sleep_for();<esc>Frl
+
+"   chrono
+    au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now();<esc>Fh;h
+    au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>()<esc>Fmh
 
 
 "   functions
@@ -731,10 +742,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> ov override<esc>Foeh
     au FileType cpp inoreabb <buffer> xp explicit
-
-"   chrono
-    au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now()<esc>
-    au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>()<esc>Fmh
 
  
 "   coroutines    
