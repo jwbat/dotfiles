@@ -451,6 +451,8 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType cpp nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType cpp nnoremap <buffer> <leader>bc O<esc>i/*<cr>*/<esc>hd0
+    au FileType cpp vnoremap <buffer> <leader>bc c/*<cr>/<esc>kp
+    au FileType cpp nnoremap <buffer> <leader>bbc ?/\*<cr>dd/\*\/<cr>dd
     au FileType cpp nnoremap <buffer> <leader>[ A {<cr>}<esc>
     au FileType cpp nnoremap <buffer> <leader>] o{<cr>}<esc>k0
     au FileType cpp nnoremap <buffer> <leader>; A;<esc>:w<cr>
