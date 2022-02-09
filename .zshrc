@@ -135,9 +135,10 @@ alias vh='vim -c help -c only'        # open vim help
 # python & pip
 alias p='python3.10'
 alias pip='pip3.10'
+alias pipi='pip install'
 alias pup='p -m pip install --upgrade pip'      # ugrade pip
-alias pir='pip install -r requirements.txt'
 alias pfr='pip freeze > requirements.txt'
+alias pir='pip install -r requirements.txt'
 alias act='source venv/bin/activate'  #   activate
 alias deact='deactivate'              # deactivate
 

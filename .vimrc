@@ -151,6 +151,11 @@ vnoremap <leader>c "+d
 nnoremap <leader><leader>' gg0"+yG
 " paste from clipboard
 nnoremap <leader>p "+p
+
+" yank to register x from v-mode: 'xy
+" paste from register x from n-mode: 'xp
+vnoremap ' "
+nnoremap ' "
  
 ""   copy visual text into register u
 ""replace visual text with text from u
@@ -396,6 +401,8 @@ augroup filetype_python
 
     au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType python nnoremap <buffer> <leader>u :norm 0x<cr>j
+    au FileType python inoreabb def def x():<cr>pass<esc>k0fxh
+    au FileType python inoreabb cls class x():<cr>pass<esc>k0fxh
     au FileType python inoreabb init def __init__(self):<cr>pass<esc>
     au FileType python inoreabb str def __str__(self):<cr>pass<esc>
     au FileType python inoreabb repr def __repr__(self):<cr>pass<esc>
