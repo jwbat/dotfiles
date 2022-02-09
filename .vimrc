@@ -28,7 +28,7 @@ nnoremap <C-h> :hi statusline none<cr>
 nnoremap 'j :set filetype=javascript<cr>
 nnoremap 'h :set filetype=html<cr>
 nnoremap 'c :set filetype=css<cr>
-nnoremap 't :set filetype=text<cr>
+" nnoremap 't :set filetype=text<cr>
 
 func Eatchar(pat)
   let c = nr2char(getchar(0))
@@ -236,10 +236,8 @@ au FileType json colorscheme sonokai
 
 " --buffer-cmds----------------------------------------------------------
 " next/previous/toggle buffers
-nnoremap gn :bn<cr>
 nnoremap <C-s> :bn<cr>
 nnoremap <C-a> :bp<cr>
-nnoremap gp :bp<cr>
 nnoremap gt :b#<cr>
 
 "nnoremap gb :b 
@@ -274,6 +272,11 @@ nnoremap g6 :b6<cr>
 nnoremap g7 :b7<cr>
 nnoremap g8 :b8<cr>
 nnoremap g9 :b9<cr>
+
+" vimgrep   :vim /pattern/**/*<cr>
+nnoremap gv :vim<space>
+nnoremap gn :cn<cr>
+nnoremap gp :cp<cr>
 
 " ---------------------------------------------------^^-buffer cmds-^^---
 " --ex cmds----------------------------------------------------------
@@ -388,8 +391,9 @@ augroup filetype_vim
     au FileType vim colorscheme PaperColor
 ""    au FileType vim hi statusline none
     au * vim hi statusline none
-    au FileType vim nnoremap <buffer> <leader>c :normal 0i"<cr>j
-    au FileType vim nnoremap <buffer> <leader>u :normal 0xx<cr>j
+    au FileType vim nnoremap <buffer> <leader>c :norm 0i"<cr>j
+"     au FileType vim nnoremap <buffer> <leader>c :norm 0i"<cr>0lr<space>j
+    au FileType vim nnoremap <buffer> <leader>u :norm 0xx<cr>j
 augroup END
 
 "python----------------------------------------------------------
@@ -754,10 +758,10 @@ augroup filetype_cpp
 
  
 "   coroutines    
-    au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
     au FileType cpp inoreabb <buffer> coy co_yield
     au FileType cpp inoreabb <buffer> cor co_return
     au FileType cpp inoreabb <buffer> coa co_await
+""    au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
 
 "   SDL
     au FileType cpp inoreabb <buffer> sd SDL_<c-r>=Eatchar('\s')<cr>

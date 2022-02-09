@@ -134,16 +134,19 @@ alias vh='vim -c help -c only'        # open vim help
 
 # python & pip
 alias p='python3.10'
-alias pip='pip3.10'
-alias pipi='pip install'
-alias pup='p -m pip install --upgrade pip'      # ugrade pip
-alias pfr='pip freeze > requirements.txt'
-alias pir='pip install -r requirements.txt'
-alias act='source venv/bin/activate'  #   activate
-alias deact='deactivate'              # deactivate
+alias pip='pip3.10'                             # pip
+alias pipi='pip install'                        # pip install
+alias pipl='pip list'                           # pip list
+alias pipu='p -m pip install --upgrade pip'     # ugrade pip
+alias pipf='pip freeze > requirements.txt'      # pip freeze
+alias pipr='pip install -r requirements.txt'    # pip install requirements
+alias act='source venv/bin/activate'            # activate
+alias deact='deactivate'                        # deactivate
 
 # fastapi
-alias uv='uvicorn main:app --reload'                    # run asgi server
+alias uv='uvicorn blog.main:app --reload'                          # run asgi server
+#alias uv='uvicorn main:app --reload'
+alias vp='v *.py **/*.py'
 
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'

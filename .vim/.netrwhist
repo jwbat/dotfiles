@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/jamesbatman/code/python/fastapi/01-bit/blog/routers/__pycache__'
+let g:netrw_dirhist_3='/Users/jamesbatman/code/python/fastapi/01-bit/blog/routers'
+let g:netrw_dirhist_2='/Users/jamesbatman/code/python/fastapi/01-bit/blog/routers/__pycache__'
 let g:netrw_dirhist_1='/Users/jamesbatman/code/cpp/utilities/shell/pow'
 let g:netrw_dirhist_0='/Users/jamesbatman/code/cpp/utilities/shell/powers2'
 let g:netrw_dirhist_9='/Users/jamesbatman/code/cpp/utilities/show_compiler'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_8='/Users/jamesbatman/code/cpp/idioms/03-initializer_list'
 let g:netrw_dirhist_7='/Users/jamesbatman/code/cpp/utilities/shell/random'
 let g:netrw_dirhist_6='/Users/jamesbatman/code/cpp/utilities/shell_utils/pow'
 let g:netrw_dirhist_5='/Users/jamesbatman/code/cpp/utilities/fold.h'
-let g:netrw_dirhist_4='/Users/jamesbatman/code/cpp/courses/course3/03-write_to_file_v2'
-let g:netrw_dirhist_3='/Users/jamesbatman/code/cpp/gakwaya/29-ClassTemplates/02-TemplateSpecialization/adder.h'
-let g:netrw_dirhist_2='/Users/jamesbatman/code/cpp/gakwaya/12-Debug/1-Example/main.dSYM/Contents/Resources/DWARF'
