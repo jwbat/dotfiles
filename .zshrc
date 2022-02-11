@@ -144,9 +144,9 @@ alias act='source venv/bin/activate'            # activate
 alias deact='deactivate'                        # deactivate
 
 # fastapi
+alias vp='v main.py [a-z]*.py */[a-z]*.py'
 alias uv='uvicorn blog.main:app --reload'                          # run asgi server
 #alias uv='uvicorn main:app --reload'
-alias vp='v *.py **/*.py'
 
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
