@@ -455,7 +455,7 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
-    au FileType cpp syntax keyword StorageClass queue vector array tuple bitset
+    au FileType cpp syntax keyword StorageClass queue stack deque vector array tuple bitset
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
