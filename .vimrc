@@ -724,6 +724,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
     au FileType cpp inoreabb <buffer> ttu underlying_type_t<T><esc>FTh
+    au FileType cpp inoreabb <buffer> ttrr remove_reference_t<T>()<esc>FTh
     au FileType cpp inoreabb <buffer> eit enable_if_t<><esc>Ftll
     au FileType cpp inoreabb <buffer> tpd typedef
     au FileType cpp inoreabb <buffer> rq requires
