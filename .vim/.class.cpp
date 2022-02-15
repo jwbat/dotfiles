@@ -1,4 +1,5 @@
-class name {
+class name 
+{
     public:
         name() {}
     private:

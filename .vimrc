@@ -399,8 +399,8 @@ augroup END
 "python----------------------------------------------------------
 augroup filetype_python
     autocmd!
-    au FileType python colorscheme gruvbox
-""    au FileType python colorscheme oceanic_material
+    au FileType python colorscheme oceanic_material
+""    au FileType python colorscheme gruvbox
 ""    au FileType python colorscheme PaperColor
 
     au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
@@ -413,9 +413,15 @@ augroup filetype_python
     au FileType python inoreabb rtn return
     au FileType python inoreabb dn ____<esc>hh
 
+    "---imports------------------------------------------------------
     au FileType python inoreabb im import
     au FileType python inoreabb fi from import<esc>0ea
+    au FileType python inoreabb imnp import numpy as np<esc>
+    au FileType python inoreabb impc from time import perf_counter as pc
     au FileType python inoreabb ifnm if __name__ == '__main__':<cr>pass<esc>0wh
+
+    "---scipy--------------------------------------------------------
+""    au FileType python inoreabb imnp import numpy as np
 
     "---django-------------------------------------------------------
     au FileType python inoreabb dj django<esc>A
@@ -714,6 +720,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ef EXIT_FAILURE;<esc>
 
 "   type_traits,  concepts
+    au FileType cpp inoreabb <buffer> ttft false_type<esc>Fp
+    au FileType cpp inoreabb <buffer> tttt true_type<esc>Fp
     au FileType cpp inoreabb <buffer> tti is_integral_v<T><esc>FTh
     au FileType cpp inoreabb <buffer> tta is_arithmetic_v<T><esc>FTh
     au FileType cpp inoreabb <buffer> ttfp is_floating_point_v<T>
@@ -724,8 +732,11 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttv is_void_v<T>
     au FileType cpp inoreabb <buffer> ttc is_default_constructible_v<T>
     au FileType cpp inoreabb <buffer> ttu underlying_type_t<T><esc>FTh
-    au FileType cpp inoreabb <buffer> ttrr remove_reference_t<T>()<esc>FTh
-    au FileType cpp inoreabb <buffer> eit enable_if_t<><esc>Ftll
+    au FileType cpp inoreabb <buffer> ttrr remove_reference_t<T><esc>FTh
+    au FileType cpp inoreabb <buffer> ttei enable_if_t<><esc>Ftl
+    au FileType cpp inoreabb <buffer> ttis is_same_v<><esc>Fvl
+    au FileType cpp inoreabb <buffer> ttib is_base_of_v<><esc>Fvl
+    au FileType cpp inoreabb <buffer> ttdc decay_t<T><esc>FTh
     au FileType cpp inoreabb <buffer> tpd typedef
     au FileType cpp inoreabb <buffer> rq requires
 

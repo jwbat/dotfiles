@@ -136,6 +136,7 @@ alias vh='vim -c help -c only'        # open vim help
 alias p='python3.10'
 alias pip='pip3.10'                             # pip
 alias pipi='pip install'                        # pip install
+alias pypi='p -m pip install'                   # python -m pip install
 alias pipl='pip list'                           # pip list
 alias pipu='p -m pip install --upgrade pip'     # ugrade pip
 alias pipf='pip freeze > requirements.txt'      # pip freeze
