@@ -512,6 +512,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclcon #include <concepts><esc>
     au FileType cpp inoreabb <buffer> nclchr #include <chrono><esc>
     au FileType cpp inoreabb <buffer> nclthr #include <thread><esc>
+    au FileType cpp inoreabb <buffer> nclfut #include <future><esc>
     au FileType cpp inoreabb <buffer> nclmem #include <memory><esc>
     au FileType cpp inoreabb <buffer> nclios #include <ios><esc>
     au FileType cpp inoreabb <buffer> nclsio #include <cstdio><esc>
