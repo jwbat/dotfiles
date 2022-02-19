@@ -457,7 +457,8 @@ augroup filetype_cpp
     au FileType cpp hi Include ctermfg=62
 
     au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
-                                        \ smatch ifstream ofstream fstream thread
+                                        \ smatch ifstream ofstream fstream thread future
+                                        \ promise
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
@@ -557,21 +558,22 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
     au FileType cpp inoreabb <buffer> usfw using std::forward;<esc>
     au FileType cpp inoreabb <buffer> usacc using std::accumulate;<esc>
-    au FileType cpp inoreabb <buffer> urv using std::ranges::views::
-    au FileType cpp inoreabb <buffer> urvi using std::ranges::views::iota;<esc>
-    au FileType cpp inoreabb <buffer> urvf using std::ranges::views::filter;<esc>
-    au FileType cpp inoreabb <buffer> urvt using std::ranges::views::transform;<esc>
-    au FileType cpp inoreabb <buffer> urvr using std::ranges::views::reverse;<esc>
+    au FileType cpp inoreabb <buffer> usrv using std::ranges::views::
+    au FileType cpp inoreabb <buffer> usrvi using std::ranges::views::iota;<esc>
+    au FileType cpp inoreabb <buffer> usrvf using std::ranges::views::filter;<esc>
+    au FileType cpp inoreabb <buffer> usrvt using std::ranges::views::transform;<esc>
+    au FileType cpp inoreabb <buffer> usrvr using std::ranges::views::reverse;<esc>
+    au FileType cpp inoreabb <buffer> usl using std::launch;<esc>
+
     au FileType cpp inoreabb <buffer> usrnd <esc>:-1read ~/.vim/.random.cpp<cr>;
 
     au FileType cpp inoreabb <buffer> nsp namespace
-    au FileType cpp inoreabb <buffer> uns using namespace std::
-    au FileType cpp inoreabb <buffer> unl using namespace std::literals;<esc>
-    au FileType cpp inoreabb <buffer> unsl using namespace std::string_literals;<esc>
-    au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
+    au FileType cpp inoreabb <buffer> usns using namespace std::
+    au FileType cpp inoreabb <buffer> usnl using namespace std::literals;<esc>
+    au FileType cpp inoreabb <buffer> usnsl using namespace std::string_literals;<esc>
 
-    au FileType cpp inoreabb <buffer> unch using namespace std::chrono;<esc>
-    au FileType cpp inoreabb <buffer> unchl using namespace std::chrono_literals;<esc>
+    au FileType cpp inoreabb <buffer> unchr using namespace std::chrono;<esc>
+    au FileType cpp inoreabb <buffer> unchrl using namespace std::chrono_literals;<esc>
 
 "   io
     au FileType cpp inoreabb <buffer> out cout <<
@@ -585,6 +587,7 @@ augroup filetype_cpp
 
 
 "   types
+    au FileType cpp inoreabb <buffer> lli long long int
     au FileType cpp inoreabb <buffer> u8 uint8_t
     au FileType cpp inoreabb <buffer> tmt time_t
     au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
@@ -614,6 +617,8 @@ augroup filetype_cpp
 
 ""  threads
     au FileType cpp inoreabb <buffer> thr thread
+    au FileType cpp inoreabb <buffer> ft future
+    au FileType cpp inoreabb <buffer> prm promise<><esc>Fe
     au FileType cpp inoreabb <buffer> tthr this_thread
     au FileType cpp inoreabb <buffer> sf this_thread::sleep_for();<esc>Frl
 
@@ -678,7 +683,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> dt decltype
 
 "   loops
-    au FileType cpp inoreabb <buffer> fl for (int i{ 0 }; i < x; ++i)<esc>0fx<left>
+    au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; ++i)<esc>0fx<left>
     au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
     au FileType cpp inoreabb <buffer> wh while ()<cr>{<cr>}<esc>2k0ew
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
@@ -768,6 +773,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> ov override<esc>Foeh
     au FileType cpp inoreabb <buffer> xp explicit
+    au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
 
  
 "   coroutines    
