@@ -458,11 +458,11 @@ augroup filetype_cpp
 
     au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
                                         \ smatch ifstream ofstream fstream thread future
-                                        \ promise
+                                        \ promise pair ostream
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
-    au FileType cpp syntax keyword StorageClass queue stack deque vector array tuple bitset
+    au FileType cpp syntax keyword StorageClass queue stack deque vector array bitset
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
@@ -707,7 +707,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> mq make_unique<double>()<esc>Fdh
     au FileType cpp inoreabb <buffer> mksh make_shared<double>()<esc>Fdh
     au FileType cpp inoreabb <buffer> mktp make_tuple()<esc>Fel
-    au FileType cpp inoreabb <buffer> mkp make_pair()<esc>Frl
+    au FileType cpp inoreabb <buffer> mkpr make_pair()<esc>Frl
 
 "   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
@@ -773,6 +773,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vr virtual
     au FileType cpp inoreabb <buffer> ov override<esc>Foeh
     au FileType cpp inoreabb <buffer> xp explicit
+    au FileType cpp inoreabb <buffer> inl inline
     au FileType cpp inoreabb <buffer> ppp public:<cr>private:<cr>protected:<esc>
 
  
