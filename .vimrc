@@ -628,6 +628,8 @@ augroup filetype_cpp
 
 
 "   functions
+    au FileType cpp inoreabb <buffer> fostr friend ostream& operator<< (ostream& os, const X& x)
+                                      \<cr>{<cr>os << << ;<cr>return os;<cr>}<esc>?X<cr>h
     au FileType cpp inoreabb <buffer> pfcn __PRETTY_FUNCTION__
     au FileType cpp inoreabb <buffer> ts to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
