@@ -481,7 +481,7 @@ augroup filetype_cpp
 "   remove std::
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
 "   virtual to override
-    au FileType cpp nnoremap <buffer> <leader>vto 0wdwf=Di override {}<esc>0
+    au FileType cpp nnoremap <buffer> <leader>vo 0wdwf=Di override {}<esc>0
     au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
 
@@ -706,7 +706,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> del delete
     au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
     au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
-    au FileType cpp inoreabb <buffer> mq make_unique<double>()<esc>Fdh
+    au FileType cpp inoreabb <buffer> mkq make_unique<double>()<esc>Fdh
     au FileType cpp inoreabb <buffer> mksh make_shared<double>()<esc>Fdh
     au FileType cpp inoreabb <buffer> mktp make_tuple()<esc>Fel
     au FileType cpp inoreabb <buffer> mkpr make_pair()<esc>Frl
