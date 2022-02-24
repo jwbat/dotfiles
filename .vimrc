@@ -458,7 +458,7 @@ augroup filetype_cpp
 
     au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
                                         \ smatch ifstream ofstream fstream thread future
-                                        \ promise pair ostream
+                                        \ promise pair ostream iterator const_iterator
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
@@ -536,6 +536,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclflst #include <forward_list><esc>
     au FileType cpp inoreabb <buffer> nclu #include <utility><esc>
     au FileType cpp inoreabb <buffer> nclmap #include <map><esc>
+    au FileType cpp inoreabb <buffer> nclum #include <unordered_map><esc>
     au FileType cpp inoreabb <buffer> nclset #include <set><esc>
     au FileType cpp inoreabb <buffer> ncluset #include <unordered_set><esc>
     au FileType cpp inoreabb <buffer> nclq #include <queue><esc>
@@ -587,6 +588,7 @@ augroup filetype_cpp
 
 
 "   types
+    au FileType cpp inoreabb <buffer> um unordered_map<><esc>Fp
     au FileType cpp inoreabb <buffer> lli long long int
     au FileType cpp inoreabb <buffer> u8 uint8_t
     au FileType cpp inoreabb <buffer> tmt time_t
