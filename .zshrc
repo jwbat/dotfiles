@@ -3,7 +3,7 @@ compinit # completions
 
 setopt nobeep autocd  # cd using only name of dir
 
-PS1=' %F{32} %1d %F{yellow}~ '
+PS1=' %F{160} %1d %F{yellow}~ '
 export LSCOLORS=gafxcxdxfaegedabagacad
  
 compinit -d ~/.dump
