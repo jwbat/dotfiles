@@ -560,10 +560,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> usfw using std::forward;<esc>
     au FileType cpp inoreabb <buffer> usacc using std::accumulate;<esc>
     au FileType cpp inoreabb <buffer> usrv using std::ranges::views::
-    au FileType cpp inoreabb <buffer> usrvi using std::ranges::views::iota;<esc>
-    au FileType cpp inoreabb <buffer> usrvf using std::ranges::views::filter;<esc>
-    au FileType cpp inoreabb <buffer> usrvt using std::ranges::views::transform;<esc>
-    au FileType cpp inoreabb <buffer> usrvr using std::ranges::views::reverse;<esc>
     au FileType cpp inoreabb <buffer> usl using std::launch;<esc>
 
     au FileType cpp inoreabb <buffer> usrnd <esc>:-1read ~/.vim/.random.cpp<cr>;
