@@ -284,8 +284,6 @@ nnoremap gp :cp<cr>
 nnoremap <leader>e :  
 " repeat last ex command:
 nnoremap <leader>x @:
-" toggle numbers:
-nnoremap <leader>n :setl nu!<cr>
 " toggle relative numbers:
 nnoremap <leader>r :setl rnu!<cr>
 " set filetype zsh
@@ -574,6 +572,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> unchrl using namespace std::chrono_literals;<esc>
 
 "   io
+    au FileType cpp nnoremap <buffer> <leader>n 0A << "\n";<esc>
     au FileType cpp inoreabb <buffer> out cout <<
     au FileType cpp inoreabb <buffer> in cin >>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l

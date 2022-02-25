@@ -153,21 +153,23 @@ alias uv='uvicorn blog.main:app --reload'                          # run asgi se
 alias chrome='open -a /Applications/Google\ Chrome.app'
 alias postman='open -a /Applications/Postman.app'
 
-# cpp
-alias m='./m'                                           # run compiled cpp file
-alias k='make proj'                                     # cmake 
-alias c='g++ -std=c++20 *.cpp -o ./m'                   # gcc compile
-#alias z='clang++ -std=c++2a *.cpp -o ./m'
-alias z='g++ -std=c++20 -pthread *.cpp -o ./m'          # gcc compile threads
-alias gc='g++ -std=c++20 -I Headers Source/* -o ./m'    # 
-#-std=c++2a 
-alias vc='v main.cpp'                                   # open main.cpp 
+# cpp & cmake
+alias c='g++ -std=c++20 *.cpp -o ./m'                   # compile
+alias co='g++ -std=c++20 -c'                            # cmpl to object files
+alias k='make'                                          # make
+alias kc='make clean'                                   # make clean (rm *.o)
+alias m='./m'                                           # run m
+alias cm='c && m'                                       # compile & run ./m
+alias km='k && m'                                       # make & run
+
+alias vc='v main.cpp'                                   # v main.cpp 
 alias vf='v main.cpp *.h *.cpp'                         # "v flat"
-alias vn='v */main.cpp */*'                             # "v nested"
-alias create-cpp='p ~/code/shell_scripts/create_cpp.py'     # mkdir Headers Source/main.cpp
-alias cm='c && m'                                       # compile and run ./m
-alias km='k && m'                                       # make and run
-alias rmm='rm */m'
+#alias z='clang++ -std=c++2a *.cpp -o ./m'
+alias gc='g++ -std=c++20 -I Source/* -o ./m'    # 
+#-std=c++2a 
+#alias z='g++ -std=c++20 -pthread *.cpp -o ./m'         # gcc compile threads
+alias vn='v */main.cpp */*.cpp'                         # "v nested"
+alias create-cpp='p ~/code/shell_scripts/create_cpp.py' # mkdir Headers Source/main.cpp
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
