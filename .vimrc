@@ -456,13 +456,13 @@ augroup filetype_cpp
     au FileType cpp hi String ctermfg=132
     au FileType cpp hi Include ctermfg=62
 
-    au FileType cpp syntax keyword Type string ostringstream stringstream string_view tuple
-                                        \ smatch ifstream ofstream fstream thread future
-                                        \ promise pair ostream iterator const_iterator
+    au FileType cpp syntax keyword Type string stringstream ostringstream istringstream
+        \ smatch ifstream ofstream fstream thread future istream_view string_view 
+        \ promise pair ostream iterator const_iterator
     au FileType cpp syntax keyword Include /<string>/ 
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
-    au FileType cpp syntax keyword StorageClass queue stack deque vector array bitset
+    au FileType cpp syntax keyword StorageClass queue stack deque vector array bitset tuple
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
@@ -559,6 +559,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> uss using std::string;<esc>
     au FileType cpp inoreabb <buffer> usfw using std::forward;<esc>
     au FileType cpp inoreabb <buffer> usacc using std::accumulate;<esc>
+    au FileType cpp inoreabb <buffer> usvw using std::views::<c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> usrv using std::ranges::views::
     au FileType cpp inoreabb <buffer> usl using std::launch;<esc>
 
@@ -595,8 +596,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> sv string_view
     au FileType cpp inoreabb <buffer> bs basic_string
-    au FileType cpp inoreabb <buffer> bss basic_stringstream
-    au FileType cpp inoreabb <buffer> ss stringstream 
     au FileType cpp inoreabb <buffer> sl string_literals
     au FileType cpp inoreabb <buffer> dbl double
     au FileType cpp inoreabb <buffer> ld long double
@@ -612,6 +611,13 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
     au FileType cpp inoreabb <buffer> ccc const char* const
+
+"   streams
+    au FileType cpp inoreabb <buffer> bss basic_stringstream
+    au FileType cpp inoreabb <buffer> ss stringstream 
+    au FileType cpp inoreabb <buffer> iss istringstream 
+    au FileType cpp inoreabb <buffer> isr istream_view<string>()<esc>Fsh
+
 
 ""  threads
     au FileType cpp inoreabb <buffer> thr thread
