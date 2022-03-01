@@ -432,6 +432,16 @@ augroup filetype_python
 augroup END
 "--------------------------------------------------^^-python ^^---
 
+" make
+au BufEnter,BufNewFile,BufRead makefile setl filetype=make
+augroup filetype_make
+    autocmd!
+    au FileType make colorscheme sonokai
+    au FileType make hi StatusLine ctermbg=bg ctermfg=bg
+    au FileType make nnoremap <buffer> <leader><leader>v :-1read ~/.vim/.make<cr> 
+augroup END
+
+
 " cpp
 au BufEnter,BufNewFile,BufRead *.cpp,*.h,*.c setl filetype=cpp
 augroup filetype_cpp
@@ -481,7 +491,7 @@ augroup filetype_cpp
 "   virtual to override
     au FileType cpp nnoremap <buffer> <leader>vo 0wdwf=Di override {}<esc>0
     au FileType cpp nnoremap <buffer> m. a-><esc>a
-    au FileType cpp nnoremap <buffer> <leader><leader>y :-1read ~/.vim/.main.cpp<cr> 
+    au FileType cpp nnoremap <buffer> <leader><leader>v :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> rx <esc>:-1read ~/.vim/.regex.cpp<cr>
     au FileType cpp inoreabb <buffer> perf <esc>:-1read ~/.vim/.performance.cpp<cr>
@@ -615,7 +625,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> bss basic_stringstream
     au FileType cpp inoreabb <buffer> ss stringstream 
     au FileType cpp inoreabb <buffer> iss istringstream 
-    au FileType cpp inoreabb <buffer> isr istream_view<string>()<esc>Fsh
+    au FileType cpp inoreabb <buffer> isv istream_view<string>()<esc>Fsh
 
 
 ""  threads
@@ -651,7 +661,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> fs fstream
     au FileType cpp inoreabb <buffer> ofs ofstream
     au FileType cpp inoreabb <buffer> ifs ifstream
-    au FileType cpp inoreabb <buffer> usfs using std::fstream;<esc>Ffh
     au FileType cpp inoreabb <buffer> iosi ios::in
     au FileType cpp inoreabb <buffer> ioso ios::out
     au FileType cpp inoreabb <buffer> iosa ios::app

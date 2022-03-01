@@ -3,7 +3,7 @@ compinit # completions
 
 setopt nobeep autocd  # cd using only name of dir
 
-PS1=' %F{160} %1d %F{yellow}~ '
+PS1=' %F{209} %1d %F{yellow}~ '
 export LSCOLORS=gafxcxdxfaegedabagacad
  
 compinit -d ~/.dump
@@ -48,11 +48,11 @@ alias gitcommands='cat ~/code/commands/git.txt'
 # cd
 alias o='cd ~/code'                         # code
 alias dot='cd ~/.dotfiles'                  # .dotfiles
-alias dnv='cd ~/.config/nvim'               # .config/nvim
-alias dv='cd ~/.vim'                        # .vim
-alias rp='cd ~/code/repos'                  # repos
 alias d='cd ~/Desktop'                      # Desktop
 alias dl='cd ~/Downloads'                   # Downloads
+alias dv='cd ~/.vim'                        # .vim
+alias dnv='cd ~/.config/nvim'               # .config/nvim
+alias rp='cd ~/code/repos'                  # repos
 alias scr='cd ~/code/shell/scripts'         # scripts
 alias ulb='cd /usr/local/bin'               # /usr/local/bin
 alias pdfs='cd ~/pdfs'            # pdfs
@@ -61,7 +61,6 @@ alias b='cd -'                              # previous
 alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
-alias tm='touch main.cpp'
 alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
 alias cpsh='cd ~/code/cpp/utilities/shell'  # cpp shell utils
 alias fp='cd ~/code/cpp/functional_cpp'     # functional_cpp
@@ -71,6 +70,7 @@ alias cnt='cd ~/code/net'                   # netlify
 alias cj='cd ~/code/js'                     # js
 alias cv='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
+alias aw='cd ~/code/aws'                    # aws
 
 alias c1='cd ~/code/cpp/courses/design_patterns' # design patterns in cpp
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
@@ -162,6 +162,7 @@ alias m='./m'                                           # run m
 alias cm='c && m'                                       # compile & run ./m
 alias km='k && m'                                       # make & run
 
+alias tm='touch main.cpp'                               # create main.cpp
 alias vc='v main.cpp'                                   # v main.cpp 
 alias vf='v main.cpp *.h *.cpp'                         # "v flat"
 #alias z='clang++ -std=c++2a *.cpp -o ./m'
