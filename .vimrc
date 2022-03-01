@@ -779,6 +779,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> trc try<cr>{<cr>}<cr>catch()<cr>{<cr>}<esc>?h<cr>l
 
 "   specifiers
+    au FileType cpp inoreabb <buffer> stt static
     au FileType cpp inoreabb <buffer> co const
     au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> cev consteval
