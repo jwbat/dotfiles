@@ -87,7 +87,7 @@ inoremap '' ''
 inoremap ''' ''''''<left>
 inoremap ` ``<left>
 inoremap jk <esc>:w<cr>
-inoremap kj <esc>:w<cr>
+""inoremap kj <esc>:w<cr>
 
 "-------------------------------------------------
 
@@ -397,7 +397,8 @@ augroup END
 "python----------------------------------------------------------
 augroup filetype_python
     autocmd!
-    au FileType python colorscheme oceanic_material
+    au FileType python colorscheme sonokai
+""    au FileType python colorscheme oceanic_material
 ""    au FileType python colorscheme gruvbox
 ""    au FileType python colorscheme PaperColor
 
@@ -471,6 +472,7 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
     au FileType cpp syntax keyword StorageClass queue stack deque vector array bitset tuple
+        \ priority_queue
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
@@ -616,6 +618,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Fsh
     au FileType cpp inoreabb <buffer> vb vector<bool><esc>Fbh
     au FileType cpp inoreabb <buffer> vuc vector<unsigned char><esc>Fuh
+    au FileType cpp inoreabb <buffer> pq priority_queue<int><esc>Fih
+    au FileType cpp inoreabb <buffer> qu queue<T><esc>FTh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
@@ -769,7 +773,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wo weak_ordering
     au FileType cpp inoreabb <buffer> sa static_assert();<esc>Ftl
     au FileType cpp inoreabb <buffer> fcn function
-    au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
     au FileType cpp inoreabb <buffer> fe for_each(begin(), end());<esc>Fill
     au FileType cpp inoreabb <buffer> lf [] () { }<esc>6h
     au FileType cpp inoreabb <buffer> nx noexcept
