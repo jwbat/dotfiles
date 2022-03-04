@@ -87,7 +87,7 @@ inoremap '' ''
 inoremap ''' ''''''<left>
 inoremap ` ``<left>
 inoremap jk <esc>:w<cr>
-""inoremap kj <esc>:w<cr>
+inoremap kj <esc>:w<cr>
 
 "-------------------------------------------------
 
@@ -253,7 +253,7 @@ nnoremap gl :ls<cr>
 " write and reload current buffer:
 nnoremap gr :w<cr>:e<cr> 
 " write  current buffer:
-nnoremap gw :w<cr> 
+nnoremap gw :w<cr>
 " quit all w/write:
 nnoremap gq :wqa<cr> 
 " quit all w/out write:
@@ -472,7 +472,7 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
     au FileType cpp syntax keyword StorageClass queue stack deque vector array bitset tuple
-        \ priority_queue
+        \ priority_queue unordered_map list
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
@@ -502,6 +502,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> doth <esc>:-1read ~/.vim/.h_starter.cpp<cr>
     au FileType cpp inoreabb <buffer> prarr <esc>:-1read ~/.vim/.print_array.cpp<cr>
     au FileType cpp inoreabb <buffer> prv <esc>:-1read ~/.vim/.print_vector.cpp<cr>
+    au FileType cpp inoreabb <buffer> prv1 <esc>:-1read ~/.vim/.print_vector1.cpp<cr>
     au FileType cpp inoreabb <buffer> sep <esc>:-1read ~/.vim/.separator.cpp<cr>
 
     au FileType cpp inoreabb <buffer> nclc #include <complex><esc>
@@ -584,9 +585,12 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> unchrl using namespace std::chrono_literals;<esc>
 
 "   io
-    au FileType cpp nnoremap <buffer> <leader>n 0A << "\n";<esc>
     au FileType cpp inoreabb <buffer> out cout <<
     au FileType cpp inoreabb <buffer> in cin >>
+    au FileType cpp inoreabb <buffer> ch <<
+    au FileType cpp inoreabb <buffer> hc >>
+    au FileType cpp inoreabb <buffer> che << endl;<esc>
+    au FileType cpp nnoremap <buffer> <leader>n 0A << "\n";<esc>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
     au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
@@ -618,7 +622,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Fsh
     au FileType cpp inoreabb <buffer> vb vector<bool><esc>Fbh
     au FileType cpp inoreabb <buffer> vuc vector<unsigned char><esc>Fuh
-    au FileType cpp inoreabb <buffer> pq priority_queue<int><esc>Fih
+    au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
     au FileType cpp inoreabb <buffer> qu queue<T><esc>FTh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
@@ -646,6 +650,8 @@ augroup filetype_cpp
 
 "   functions
     au FileType cpp inoreabb <buffer> fostr friend ostream& operator<< (ostream& os, const X& x)
+                                      \<cr>{<cr>os << << ;<cr>return os;<cr>}<esc>?X<cr>h
+    au FileType cpp inoreabb <buffer> ostr ostream& operator<< (ostream& os, const X& x)
                                       \<cr>{<cr>os << << ;<cr>return os;<cr>}<esc>?X<cr>h
     au FileType cpp inoreabb <buffer> pfcn __PRETTY_FUNCTION__
     au FileType cpp inoreabb <buffer> ts to_string()<esc>Fgl
@@ -706,26 +712,29 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wh while ()<cr>{<cr>}<esc>2k0ew
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
 
+"   directives
     au FileType cpp inoreabb <buffer> pra #pragma once<esc>
     au FileType cpp inoreabb <buffer> ppd #ifndef<cr>#define<cr><cr>#endif<esc>
+
+"   methods & fcns
     au FileType cpp inoreabb <buffer> pb push_back();<esc>Fkl
+    au FileType cpp inoreabb <buffer> pf push_front();<esc>Ftl
+    au FileType cpp inoreabb <buffer> popf pop_front();<esc>Ftl
+    au FileType cpp inoreabb <buffer> popb pop_back();<esc>Fkl
     au FileType cpp inoreabb <buffer> eb emplace_back();<esc>Fkl
-    au FileType cpp inoreabb <buffer> ch <<
-    au FileType cpp inoreabb <buffer> hc >>
-    au FileType cpp inoreabb <buffer> che << endl;<esc>
-    au FileType cpp inoreabb <buffer> th this-><esc>F-
     au FileType cpp inoreabb <buffer> ew err.what()<esc>
     au FileType cpp inoreabb <buffer> rerr runtime_error
-
-"   pointers, make
-    au FileType cpp inoreabb <buffer> np nullptr
-    au FileType cpp inoreabb <buffer> del delete
-    au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
-    au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
     au FileType cpp inoreabb <buffer> mkq make_unique<double>()<esc>Fdh
     au FileType cpp inoreabb <buffer> mksh make_shared<double>()<esc>Fdh
     au FileType cpp inoreabb <buffer> mktp make_tuple()<esc>Fel
     au FileType cpp inoreabb <buffer> mkpr make_pair()<esc>Frl
+
+"   pointers, make
+    au FileType cpp inoreabb <buffer> th this-><esc>F-
+    au FileType cpp inoreabb <buffer> np nullptr
+    au FileType cpp inoreabb <buffer> del delete
+    au FileType cpp inoreabb <buffer> qp unique_ptr<double><esc>Fdh
+    au FileType cpp inoreabb <buffer> shp shared_ptr<int><esc>Fih
 
 "   casts or cast-like functions
     au FileType cpp inoreabb <buffer> sc static_cast<>()<esc>Ftl
@@ -734,7 +743,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> rc reinterpret_cast<>()<esc>Ftl
     au FileType cpp inoreabb <buffer> fw forward<T>()<esc>FTh
 
-    au FileType cpp inoreabb <buffer> pf printf("")<esc>Ffll
     au FileType cpp inoreabb <buffer> ne !=
     au FileType cpp inoreabb <buffer> st size_t
     au FileType cpp inoreabb <buffer> pd ptrdiff_t
