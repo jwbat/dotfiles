@@ -512,7 +512,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclrx #include <regex><esc>
     au FileType cpp inoreabb <buffer> nclfmt #include <format><esc>
     au FileType cpp inoreabb <buffer> nclalg #include <algorithm><esc>
-    au FileType cpp inoreabb <buffer> nclnm #include <numeric><esc>
+    au FileType cpp inoreabb <buffer> ncln #include <numeric><esc>
+    au FileType cpp inoreabb <buffer> nclnums #include <numbers><esc>
     au FileType cpp inoreabb <buffer> nclrnd #include <random><esc>
     au FileType cpp inoreabb <buffer> nclcr #include <coroutine><esc>
     au FileType cpp inoreabb <buffer> nclit #include <iterator><esc>
@@ -538,7 +539,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> nclct #include <cctype><esc>
     au FileType cpp inoreabb <buffer> ncll #include <limits><esc>
     au FileType cpp inoreabb <buffer> nclmem #include <memory><esc>
-    au FileType cpp inoreabb <buffer> ncln #include <numbers><esc>
     au FileType cpp inoreabb <buffer> ncla #include <array><esc>
     au FileType cpp inoreabb <buffer> nclv #include <vector><esc>
     au FileType cpp inoreabb <buffer> ncltp #include <tuple><esc>
