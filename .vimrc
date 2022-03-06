@@ -86,8 +86,12 @@ inoremap ' ''<left>
 inoremap '' ''
 inoremap ''' ''''''<left>
 inoremap ` ``<left>
+" escape
 inoremap jk <esc>:w<cr>
 inoremap kj <esc>:w<cr>
+inoremap fg <esc>:w<cr>
+inoremap gf <esc>:w<cr>
+
 
 "-------------------------------------------------
 
