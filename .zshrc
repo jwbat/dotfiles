@@ -164,6 +164,7 @@ alias kc='make clean'                                   # make clean (rm *.o)
 alias m='./m'                                           # run m
 alias cm='c && m'                                       # compile & run ./m
 alias km='k && m'                                       # make & run
+alias rmm='rm m'                                        # remove m
 
 alias tm='touch main.cpp'                               # create main.cpp
 alias vc='v main.cpp'                                   # v main.cpp 

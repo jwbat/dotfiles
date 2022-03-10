@@ -613,7 +613,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> lli long long int
     au FileType cpp inoreabb <buffer> u8 uint8_t
     au FileType cpp inoreabb <buffer> ui unsigned int
-    au FileType cpp inoreabb <buffer> um unordered_map<><esc>Fp
+    au FileType cpp inoreabb <buffer> um unordered_map<int, int> map<esc>Fpl
     au FileType cpp inoreabb <buffer> tmt time_t
     au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
     au FileType cpp inoreabb <buffer> bts bitset<8>()<esc>F8h
@@ -655,6 +655,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> maxel max_element(v.cbegin(), v.cend());<esc>Ftl
     
 "   functions
+    au FileType cpp inoreabb <buffer> compare constexpr auto comp = [] (const auto& p1, const auto& p2)
+                                                        \ { return p1.second < p2.second; };<esc>
     au FileType cpp inoreabb <buffer> fostr friend ostream& operator<< (ostream& os, const X& x)
                                       \<cr>{<cr>os << << ;<cr>return os;<cr>}<esc>?X<cr>h
     au FileType cpp inoreabb <buffer> ostr ostream& operator<< (ostream& os, const X& x)
@@ -803,6 +805,7 @@ augroup filetype_cpp
 "   specifiers
     au FileType cpp inoreabb <buffer> stt static
     au FileType cpp inoreabb <buffer> co const
+    au FileType cpp inoreabb <buffer> ca const auto&
     au FileType cpp inoreabb <buffer> ce constexpr
     au FileType cpp inoreabb <buffer> cev consteval
     au FileType cpp inoreabb <buffer> ci constinit
