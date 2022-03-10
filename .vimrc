@@ -89,8 +89,8 @@ inoremap ` ``<left>
 " escape
 inoremap jk <esc>:w<cr>
 inoremap kj <esc>:w<cr>
-inoremap fg <esc>:w<cr>
-inoremap gf <esc>:w<cr>
+inoremap df <esc>:w<cr>
+inoremap fd <esc>:w<cr>
 
 
 "-------------------------------------------------
@@ -264,7 +264,7 @@ nnoremap gq :wqa<cr>
 nnoremap gh :wqa<cr> 
 " shell command:
 nnoremap gs :!
-" shell command:
+nnoremap gp :!python3 
 nnoremap <leader>w :!pwd<cr>
 
 nnoremap g1 :b1<cr>
@@ -280,7 +280,7 @@ nnoremap g9 :b9<cr>
 " vimgrep   :vim /pattern/**/*<cr>
 nnoremap gv :vim<space>
 nnoremap gn :cn<cr>
-nnoremap gp :cp<cr>
+""nnoremap gp :cp<cr>
 
 " ---------------------------------------------------^^-buffer cmds-^^---
 " --ex cmds----------------------------------------------------------
@@ -496,7 +496,6 @@ augroup filetype_cpp
     au FileType cpp nnoremap <buffer> <leader>rms :%s/std:://g<cr>
 "   virtual to override
     au FileType cpp nnoremap <buffer> <leader>vo 0wdwf=Di override {}<esc>0
-    au FileType cpp nnoremap <buffer> m. a-><esc>a
     au FileType cpp nnoremap <buffer> <leader><leader>v :-1read ~/.vim/.main.cpp<cr> 
 
     au FileType cpp inoreabb <buffer> rx <esc>:-1read ~/.vim/.regex.cpp<cr>
@@ -604,30 +603,31 @@ augroup filetype_cpp
 
 
 "   types
-    au FileType cpp inoreabb <buffer> um unordered_map<><esc>Fp
-    au FileType cpp inoreabb <buffer> lli long long int
-    au FileType cpp inoreabb <buffer> u8 uint8_t
-    au FileType cpp inoreabb <buffer> tmt time_t
-    au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
-    au FileType cpp inoreabb <buffer> bt bitset<8>()<esc>F8h
+    au FileType cpp inoreabb <buffer> dbl double
+    au FileType cpp inoreabb <buffer> ld long double
+    au FileType cpp inoreabb <buffer> flt float
+    au FileType cpp inoreabb <buffer> wc wchar_t
+    au FileType cpp inoreabb <buffer> ushi unsigned short int
     au FileType cpp inoreabb <buffer> uc unsigned char
     au FileType cpp inoreabb <buffer> ul unsigned long
+    au FileType cpp inoreabb <buffer> lli long long int
+    au FileType cpp inoreabb <buffer> u8 uint8_t
+    au FileType cpp inoreabb <buffer> ui unsigned int
+    au FileType cpp inoreabb <buffer> um unordered_map<><esc>Fp
+    au FileType cpp inoreabb <buffer> tmt time_t
+    au FileType cpp inoreabb <buffer> tp tuple<><esc>Fel
+    au FileType cpp inoreabb <buffer> bts bitset<8>()<esc>F8h
     au FileType cpp inoreabb <buffer> str string
     au FileType cpp inoreabb <buffer> sv string_view
     au FileType cpp inoreabb <buffer> bs basic_string
     au FileType cpp inoreabb <buffer> sl string_literals
-    au FileType cpp inoreabb <buffer> dbl double
-    au FileType cpp inoreabb <buffer> ld long double
-    au FileType cpp inoreabb <buffer> flt float
-    au FileType cpp inoreabb <buffer> ui unsigned int
-    au FileType cpp inoreabb <buffer> wc wchar_t
     au FileType cpp inoreabb <buffer> vint vector<int><esc>Frl
     au FileType cpp inoreabb <buffer> vd vector<double><esc>Frl
     au FileType cpp inoreabb <buffer> vs vector<string><esc>Fsh
     au FileType cpp inoreabb <buffer> vb vector<bool><esc>Fbh
     au FileType cpp inoreabb <buffer> vuc vector<unsigned char><esc>Fuh
     au FileType cpp inoreabb <buffer> prq priority_queue<int><esc>Fih
-    au FileType cpp inoreabb <buffer> qu queue<T><esc>FTh
+    au FileType cpp inoreabb <buffer> qw queue<T><esc>FTh
     au FileType cpp inoreabb <buffer> ba boolalpha
     au FileType cpp inoreabb <buffer> alc allocator
     au FileType cpp inoreabb <buffer> ec enum class Name <cr>{<cr>};<esc>kkfNh
@@ -651,7 +651,9 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> hrc high_resolution_clock::now();<esc>Fh;h
     au FileType cpp inoreabb <buffer> drc duration_cast<microseconds>()<esc>Fmh
 
-
+"   algorithms
+    au FileType cpp inoreabb <buffer> maxel max_element(v.cbegin(), v.cend());<esc>Ftl
+    
 "   functions
     au FileType cpp inoreabb <buffer> fostr friend ostream& operator<< (ostream& os, const X& x)
                                       \<cr>{<cr>os << << ;<cr>return os;<cr>}<esc>?X<cr>h
@@ -661,8 +663,10 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ts to_string()<esc>Fgl
     au FileType cpp inoreabb <buffer> so sizeof()<esc>Ffl
     au FileType cpp inoreabb <buffer> prnt auto print = [] (const auto& x) { cout << x; };
-    au FileType cpp inoreabb <buffer> tbb auto tab = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\t"; };<esc>
-    au FileType cpp inoreabb <buffer> nwl auto newline = [] (int n = 1) { for (int i{ 0 }; i < n; ++i) cout << "\n"; };<esc>
+    au FileType cpp inoreabb <buffer> tbb auto tab = [] (int n = 1) 
+                                      \{ for (int i{ 0 }; i < n; ++i) cout << "\t"; };<esc>
+    au FileType cpp inoreabb <buffer> nwl auto newline = [] (int n = 1) 
+                                      \{ for (int i{ 0 }; i < n; ++i) cout << "\n"; };<esc>
 
 "   random
     au FileType cpp inoreabb <buffer> rndint <esc>:-1read ~/.vim/.rand_int.cpp<cr>
@@ -698,6 +702,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ttu template <typename T, typename U><esc>FUh
 
 "   iterators
+    au FileType cpp inoreabb <buffer> cit vector<int>::const_iterator;<esc>
     au FileType cpp inoreabb <buffer> isbi istreambuf_iterator<char>()<esc>Fch
     au FileType cpp inoreabb <buffer> itr iterator
     au FileType cpp inoreabb <buffer> ins inserter
@@ -712,9 +717,10 @@ augroup filetype_cpp
 
 "   loops
     au FileType cpp inoreabb <buffer> fl for (int i = 0; i < x; ++i)<esc>0fx<left>
-    au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; j++) {<cr>}<esc>k0fx<left>
+    au FileType cpp inoreabb <buffer> flj for (int j = 0; j < x; ++j)<esc>0fx<left>
     au FileType cpp inoreabb <buffer> wh while ()<cr>{<cr>}<esc>2k0ew
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
+    au FileType cpp inoreabb <buffer> ei else if
 
 "   directives
     au FileType cpp inoreabb <buffer> pra #pragma once<esc>
@@ -734,6 +740,8 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> mkpr make_pair()<esc>Frl
 
 "   pointers, make
+    au FileType cpp nnoremap <buffer> m. a-><esc>a
+    au FileType cpp inoreabb <buffer> thp this-><c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> th this-><esc>F-
     au FileType cpp inoreabb <buffer> np nullptr
     au FileType cpp inoreabb <buffer> del delete
@@ -776,7 +784,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> tpd typedef
     au FileType cpp inoreabb <buffer> rq requires
 
-    au FileType cpp inoreabb <buffer> thp this-><c-r>=Eatchar('\s')<cr>
     au FileType cpp inoreabb <buffer> il initializer_list<double><esc>Fdh
     au FileType cpp inoreabb <buffer> op operator
     au FileType cpp inoreabb <buffer> df default

@@ -61,6 +61,7 @@ alias b='cd -'                              # previous
 alias u='cd ..'                             # go up 1
 
 alias cpl='cd ~/code/cpp'                   # cpp
+alias sdl='cd ~/code/cpp/sdl'               # sdl
 alias lee='cd ~/code/cpp/experimental/Leetcode' # Leetcode
 alias cutil='cd ~/code/cpp/utilities'       # cpp utilities
 alias xp='cd ~/code/cpp/experimental'       # cpp experimental
