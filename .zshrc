@@ -71,7 +71,7 @@ alias py='cd ~/code/python'                 # python
 alias cn='cd ~/code/node'                   # node
 alias cnt='cd ~/code/net'                   # netlify
 alias cj='cd ~/code/js'                     # js
-alias cv='cd ~/code/vue'                    # vue
+alias vu='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
 alias aw='cd ~/code/aws'                    # aws
 
@@ -79,7 +79,7 @@ alias c1='cd ~/code/cpp/courses/design_patterns' # design patterns in cpp
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
 alias num='cd ~/code/cpp/courses/numerical' # numerical
 alias serial='cd ~/code/vue/nuxt/serial'    # serial
-alias resume='cd ~/code/vue/nuxt/resume'    # resume
+alias elm='cd ~/code/vue/projects/element'  # element
 
 # cats
 alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
@@ -87,24 +87,22 @@ alias brw='cat ~/.dotfiles/.snippets/.brew.txt'
 
 # misc. 
 alias ls='gls -aX --group-directories-first'
-#alias ls='ls -aX'
 alias sz='source ~/.zshrc'                  # source .zshrc
 alias ds='du -sh * | sort -rn'              # see disk space 
 alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil eject'
 
-# node
-alias n='node'
-alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
-alias pkg='v package.json'
-alias rmn='rm -r node_modules'              # rm node_modules
-alias ns='npm start'
-alias ni='npm install'
-alias nci='npm ci'                          # install all dependencies
-#alias nrs='npm run serve'                   # vue dev server
+# vue
+alias va='v *.js *.vue `find . -type f`'    # open vue project
+alias ov='v main.js App.vue pages/* components/*/* composables/*'
+alias nrs='npm run serve'                   # vue dev server
 alias nrd='npm run dev'                     # nuxt dev server
 alias nrb='npm run build'                   # build vue project
 alias nrg='npm run generate'                # nuxt generate static
 alias nuxtwf='cat ~/code/vue/nuxt/workflow.txt'  # cat nuxt workflow
+
+# nuxt
+alias on='v store/*.js pages/*.vue components/*.vue layouts/**/*.vue plugins/*.js nuxt.config.js'  
+alias onu='v store/*.js pages/**/*.vue components/**/*.vue layouts/**/*.vue middleware/*.js assets/**/*.css nuxt.config.js'
 
 alias nif='npm install fsevents'
 alias nt='npm test'
@@ -116,18 +114,19 @@ alias ntd='netlify dev'
 alias ntdp='netlify deploy'
 alias nth='netlify help'
 
-# vue
-alias ov='v main.js App.vue pages/* components/*/* composables/*'
-alias va='v *.js *.vue `find . -type f`'
-
-# nuxt
-alias or='v pages/*.vue components/*.vue layouts/**/*.vue nuxt.config.js'  # resume project
-alias on='v store/*.js pages/*.vue components/*.vue layouts/**/*.vue plugins/*.js nuxt.config.js'  
-alias onu='v store/*.js pages/**/*.vue components/**/*.vue layouts/**/*.vue middleware/*.js assets/**/*.css api/*.js nuxt.config.js'
-
 # firebase
 alias fbs='firebase serve'
 alias fdf='firebase deploy --only functions'
+
+# node
+alias n='node'
+alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
+alias pkg='v package.json'
+alias rmn='rm -r node_modules'              # rm node_modules
+alias ns='npm start'
+alias ni='npm install'
+alias nci='npm ci'                          # install all dependencies
+
 
 # vim
 alias v='~/nvim-osx64/bin/nvim'       # neovim

@@ -28,7 +28,7 @@ nnoremap <C-h> :hi statusline none<cr>
 nnoremap 'j :set filetype=javascript<cr>
 nnoremap 'h :set filetype=html<cr>
 nnoremap 'c :set filetype=css<cr>
-" nnoremap 't :set filetype=text<cr>
+nnoremap 'f :set filetype?<cr>
 
 func Eatchar(pat)
   let c = nr2char(getchar(0))
@@ -227,19 +227,11 @@ nnoremap <silent> <leader>h :set hls!<cr>
 " colorscheme
 nnoremap <silent> <C-c> :colorscheme<cr> 
 
-function! MyHighlights() abort
-    hi StatusLine none
-endfunction
-
-au BufEnter * call MyHighlights()
-au ColorScheme * call MyHighlights()
-
-""colorscheme PaperColor
-au FileType vim colorscheme sonokai
 au FileType json colorscheme sonokai
 
 " --buffer-cmds----------------------------------------------------------
 " next/previous/toggle buffers
+""nnoremap <C-s> :bn<cr>
 nnoremap <C-s> :bn<cr>
 nnoremap <C-a> :bp<cr>
 nnoremap gt :b#<cr>
@@ -593,7 +585,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> ch <<
     au FileType cpp inoreabb <buffer> hc >>
     au FileType cpp inoreabb <buffer> che << endl;<esc>
-    au FileType cpp nnoremap <buffer> <leader>n 0A << "\n";<esc>
     au FileType cpp inoreabb <buffer> gl getline(cin, )<esc>F,l
     au FileType cpp inoreabb <buffer> onl cout << "\n";<esc>Fnh
     au FileType cpp inoreabb <buffer> ot cout << "\t";<esc>
@@ -821,7 +812,6 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> coy co_yield
     au FileType cpp inoreabb <buffer> cor co_return
     au FileType cpp inoreabb <buffer> coa co_await
-""    au FileType cpp inoreabb <buffer> gn generator<int><esc>Fih
 
 "   SDL
     au FileType cpp inoreabb <buffer> sd SDL_<c-r>=Eatchar('\s')<cr>
@@ -839,21 +829,26 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> qfi Q_FUNC_INFO
     au FileType cpp inoreabb <buffer> qi qInfo() <<
     au FileType cpp inoreabb <buffer> qdb qDebug() <<
-    au FileType cpp inoreabb <buffer> qson setObjectName("");<esc>3h
+    au FileType cpp inoreabb <buffer> qson setObjectName();<esc>3h
     au FileType cpp inoreabb <buffer> cn connect()<esc>hh
 
-
 augroup END
+
 
 "javaScript-------------------------------------------------------
 au BufEnter,BufNewFile,BufRead *.ts setl filetype=javascript
 au BufEnter,BufNewFile,BufRead *.vue setl filetype=javascript
+
 augroup filetype_javascript
     autocmd!
-    let maplocalleader=","
     au FileType javascript colorscheme PaperColor
     au FileType javascript hi statusline none
     au FileType javascript setlocal shiftwidth=2 tabstop=2
+
+""    au FileType javascript hi link dFunction Function
+""    au FileType javascript hi Function ctermfg=154
+""    au FileType javascript hi String ctermfg=223
+
     au FileType javascript nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType javascript nnoremap <buffer> <leader>u :norm 0xx<cr>j
     au FileType javascript nnoremap <buffer> <leader>bc 0i/* */<esc>0f*;
@@ -1017,12 +1012,12 @@ augroup filetype_javascript
     au FileType javascript inoreabb <buffer> cpnt <esc>:-1read ~/.vim/.cpnt.vue<cr>
 
     " Vue Nuxt
-    " ,h ,j ,c => go template, script, or style & set filetype
-    au FileType javascript nnoremap <buffer> <localleader>h /<template><cr>:
+    " <space>h <space>j <space>c => go to template, script, or style & set filetype
+    au FileType javascript nnoremap <buffer> <space>h /<template><cr>:
                                              \ setl filetype=html<cr>
-    au FileType javascript nnoremap <buffer> <localleader>j /<script><cr>:
+    au FileType javascript nnoremap <buffer> <space>j /<script><cr>:
                                              \ setl filetype=javascript<cr>zt
-    au FileType javascript nnoremap <buffer> <localleader>c /<style<cr>:
+    au FileType javascript nnoremap <buffer> <space>c /<style<cr>:
                                              \ setl filetype=css<cr>zt
                                              \ :setl filetype=css<cr>
     au FileType javascript nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>
@@ -1030,11 +1025,11 @@ augroup filetype_javascript
     au FileType javascript inoreabb <buffer> rp this.$router.push('')<esc>Fhll
     au FileType javascript inoreabb <buffer> vi v-if=""<esc>F=l
     au FileType javascript inoreabb <buffer> acl @click=""<esc>F=l
-    au FileType javascript inoreabb <buffer> db {{ }}<esc>F<space>ha
+    au FileType javascript inoreabb <buffer> dc {{ }}<esc>F<space>ha
     au FileType javascript inoreabb <buffer> d data() {<cr>return {<cr>};<cr>}<esc>?;<cr>h
     au FileType javascript inoreabb <buffer> c computed: {<cr>},<esc>O//<esc>0wh
-    au FileType javascript inoreabb <buffer> vca const app = Vue.createApp({<cr>});
-                            \<cr><cr>app.mount('#');<esc>F#h
+    au FileType javascript inoreabb <buffer> ca const app = createApp(App);
+                                                \<cr><cr>app.mount('#app');<esc>
 
 
     au FileType javascript inoreabb <buffer> em this.$emit('')<esc>Ftll
@@ -1064,12 +1059,13 @@ augroup filetype_javascript
 
 augroup END
 
+
 "html------------------------------------------------------------
 au BufEnter,BufNewFile,BufRead *.ejs,*.njk setl filetype=html
 augroup filetype_html
     au! 
     au FileType html colorscheme sonokai
-    au FileType html runtime macros/matchit.vim
+""    au FileType html runtime macros/matchit.vim
     au FileType html hi statusline none
     au FileType html nnoremap <buffer> <leader>c O<!-- --><esc>F<space>i<cr><esc>ddp
     au FileType html nnoremap <buffer> <leader>u 0i<space><esc>0w4x/--><cr>3x
@@ -1110,7 +1106,7 @@ augroup filetype_html
     au FileType html inoreabb <buffer> vm v-model=""<esc>F=l
     au FileType html inoreabb <buffer> vo v-on:click=""<esc>Fnl
     au FileType html inoreabb <buffer> vf v-for=""<esc>F=l
-    au FileType html inoreabb <buffer> vb v-bind:
+    au FileType html inoreabb <buffer> vb v-bind:<c-r>=Eatchar('\s')<cr>
     au FileType html inoreabb <buffer> vbs :style="{ }"<esc>F=lla
     au FileType html inoreabb <buffer> db {{ }}<esc>F<space>ha
     au FileType html inoreabb <buffer> ac @click=""<esc>F=l
@@ -1121,7 +1117,7 @@ augroup filetype_html
 augroup END
 
 "css-------------------------------------------------------
-au BufEnter,BufNewFile,BufRead *.scss setl filetype=css
+""au BufEnter,BufNewFile,BufRead *.scss setl filetype=css
 augroup filetype_css
     au!
     au FileType css colorscheme sonokai
@@ -1130,8 +1126,6 @@ augroup filetype_css
     au FileType css nnoremap <buffer> <leader>; A;<esc> 
     au FileType css nnoremap <buffer> <leader>c O/*<cr>/<esc>ddp
     au FileType css nnoremap <buffer> <leader>u :norm 0xxx<esc>f*xxj
-    au FileType css nnoremap <buffer> <leader>h bea:hover<esc>
-    au FileType css nnoremap <buffer> <leader>a bea:active<esc>
 
     au FileType css inoreabb <buffer> r :root {<cr>--varname:<cr>}<esc>k0fvh
     au FileType css inoreabb <buffer> am @media (min-width: rem)<esc>F:l
@@ -1320,9 +1314,11 @@ augroup filetype_css
                 \<esc>o.v-enter-active,<cr>.v-leave-active {<cr>}
                 \<esc>o.v-leave-to {<cr>}<esc>
 augroup END
+
+
 "-----------------------------------------------------------------
-au BufEnter *.vue set syntax=html
-au BufEnter *.njk set syntax=html
+""au BufEnter *.vue set syntax=html
+""au BufEnter *.njk set syntax=html
 "-----------------------------------------------------------------
 "lua
 au BufEnter,BufNewFile,BufRead *.lua setl filetype=lua
