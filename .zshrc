@@ -75,6 +75,7 @@ alias cj='cd ~/code/js'                     # js
 alias vu='cd ~/code/vue'                    # vue
 alias cvn='cd ~/code/vue/nuxt'              # nuxt
 alias aw='cd ~/code/aws'                    # aws
+alias smp='cd ~/code/samples'               # samples
 
 alias c1='cd ~/code/cpp/courses/design_patterns' # design patterns in cpp
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
