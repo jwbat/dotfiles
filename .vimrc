@@ -357,6 +357,15 @@ augroup END
 "zsh----------------------------------------------------------
 nnoremap <leader>shb :-1read ~/.vim/.zsh-starter<cr>
 
+fun! s:DetectZsh()
+    if getline(1) == '#!/bin/zsh'
+        set ft=zsh
+    endif
+endfun
+
+autocmd BufRead * call s:DetectZsh()
+
+
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
