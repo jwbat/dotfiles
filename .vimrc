@@ -393,10 +393,7 @@ augroup END
 "python----------------------------------------------------------
 augroup filetype_python
     autocmd!
-    au FileType python colorscheme sonokai
-""    au FileType python colorscheme oceanic_material
-""    au FileType python colorscheme gruvbox
-""    au FileType python colorscheme PaperColor
+    au FileType python colorscheme PaperColor
 
     au FileType python nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType python nnoremap <buffer> <leader>u :norm 0x<cr>j
@@ -1013,13 +1010,13 @@ augroup filetype_javascript
 
     " Vue Nuxt
     " <space>h <space>j <space>c => go to template, script, or style & set filetype
-    au FileType javascript nnoremap <buffer> <space>h /<template><cr>:
-                                             \ setl filetype=html<cr>
-    au FileType javascript nnoremap <buffer> <space>j /<script><cr>:
-                                             \ setl filetype=javascript<cr>zt
-    au FileType javascript nnoremap <buffer> <space>c /<style<cr>:
-                                             \ setl filetype=css<cr>zt
-                                             \ :setl filetype=css<cr>
+""    au FileType javascript nnoremap <buffer> <space>h /<template><cr>:
+""                                             \ setl filetype=html<cr>
+""    au FileType javascript nnoremap <buffer> <space>j /<script><cr>:
+""                                             \ setl filetype=javascript<cr>zt
+""    au FileType javascript nnoremap <buffer> <space>c /<style<cr>:
+""                                             \ setl filetype=css<cr>zt
+""                                             \ :setl filetype=css<cr>
     au FileType javascript nnoremap <buffer> <leader>t diWi<></><esc>F<;pf/pF>
     au FileType javascript inoreabb <buffer> nt this.$nextTick(() => {<cr>})<esc>O//<esc>hh
     au FileType javascript inoreabb <buffer> rp this.$router.push('')<esc>Fhll
