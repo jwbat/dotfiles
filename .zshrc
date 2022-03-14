@@ -81,7 +81,7 @@ alias c1='cd ~/code/cpp/courses/design_patterns' # design patterns in cpp
 alias qt1='cd ~/code/cpp/courses/qt1'       # qt1
 alias num='cd ~/code/cpp/courses/numerical' # numerical
 alias serial='cd ~/code/vue/nuxt/serial'    # serial
-alias elm='cd ~/code/vue/projects/element'  # element
+alias elm='cd ~/code/vue/element'  # element
 
 # cats
 alias bsh='cat ~/.dotfiles/.snippets/.bash.txt'
