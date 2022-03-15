@@ -474,7 +474,7 @@ augroup filetype_cpp
     au FileType cpp syntax keyword Label typename boolalpha namespace
     au FileType cpp syntax keyword Keyword class template
     au FileType cpp syntax keyword StorageClass queue stack deque vector array bitset tuple
-        \ priority_queue unordered_map list
+        \ priority_queue unordered_map list set
     au FileType cpp syntax keyword Statement constexpr constinit
 
 
