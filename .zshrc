@@ -100,7 +100,7 @@ alias nrd='npm run dev'                     # run dev server (vue)
 alias nrs='npm run serve'                   # run dev server
 alias nrb='npm run build'                   # build vue project
 alias naf='npm audit fix'                   # audit fix
-alias niv='npm init vue@latest'             # vue init
+alias niv='npm init vue@latest'             # vue init project w build tools
 alias nrg='npm run generate'                # nuxt generate static
 alias nuxtwf='cat ~/code/vue/nuxt/workflow.txt'  # cat nuxt workflow
 
@@ -122,13 +122,14 @@ alias nth='netlify help'
 alias fbs='firebase serve'
 alias fdf='firebase deploy --only functions'
 
-# node
+# npm node
 alias n='node'
 alias nvmcmnds='cat ~/code/node/nvm-commands.txt' # nvm commands
 alias pkg='v package.json'
 alias rmn='rm -r node_modules'              # rm node_modules
 alias ns='npm start'
 alias ni='npm install'
+alias nu='npm uninstall'
 alias nci='npm ci'                          # install all dependencies
 
 
