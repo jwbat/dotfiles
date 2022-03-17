@@ -843,17 +843,24 @@ augroup END
 
 "javaScript-------------------------------------------------------
 au BufEnter,BufNewFile,BufRead *.ts setl filetype=javascript
-au BufEnter,BufNewFile,BufRead *.vue setl filetype=javascript
+au BufEnter,BufNewFile,BufRead *.vue setl filetype=html
+""au BufEnter,BufNewFile,BufRead *.vue setl filetype=javascript
 
 augroup filetype_javascript
     autocmd!
-    au FileType javascript colorscheme PaperColor
+""    au FileType javascript colorscheme oceanic_material
+""    au FileType javascript colorscheme sonokai
+""    au FileType javascript colorscheme PaperColor
+    au FileType javascript colorscheme gruvbox
     au FileType javascript hi statusline none
     au FileType javascript setlocal shiftwidth=2 tabstop=2
 
 ""    au FileType javascript hi link dFunction Function
-""    au FileType javascript hi Function ctermfg=154
-""    au FileType javascript hi String ctermfg=223
+""    au FileType javascript hi Function ctermfg=115
+    au FileType javascript hi String ctermfg=24
+""    au FileType javascript hi Keyword ctermfg=84
+    au FileType javascript syntax keyword Keyword export const let
+""    au FileType javascript syntax keyword Label 
 
     au FileType javascript nnoremap <buffer> <leader>c :norm 0i//<cr>j
     au FileType javascript nnoremap <buffer> <leader>u :norm 0xx<cr>j
@@ -1070,7 +1077,9 @@ augroup END
 au BufEnter,BufNewFile,BufRead *.ejs,*.njk setl filetype=html
 augroup filetype_html
     au! 
-    au FileType html colorscheme sonokai
+    au FileType html colorscheme gruvbox
+""    au FileType html colorscheme PaperColor
+""    au FileType html colorscheme sonokai
 ""    au FileType html runtime macros/matchit.vim
     au FileType html hi statusline none
     au FileType html nnoremap <buffer> <leader>c O<!-- --><esc>F<space>i<cr><esc>ddp

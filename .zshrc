@@ -96,9 +96,11 @@ alias ej='find /Volumes -maxdepth 1 -not -user root -print0 | xargs -0 diskutil 
 # vue
 alias va='v *.js *.vue `find . -type f`'    # open vue project
 alias ov='v main.js App.vue pages/* components/*/* composables/*'
-alias nrs='npm run serve'                   # vue dev server
-alias nrd='npm run dev'                     # nuxt dev server
+alias nrd='npm run dev'                     # run dev server (vue)
+alias nrs='npm run serve'                   # run dev server
 alias nrb='npm run build'                   # build vue project
+alias naf='npm audit fix'                   # audit fix
+alias niv='npm init vue@latest'             # vue init
 alias nrg='npm run generate'                # nuxt generate static
 alias nuxtwf='cat ~/code/vue/nuxt/workflow.txt'  # cat nuxt workflow
 
