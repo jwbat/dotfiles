@@ -369,7 +369,8 @@ autocmd BufRead * call s:DetectZsh()
 au BufEnter,BufNewFile,BufRead *.zshrc setl filetype=zsh
 augroup filetype_zsh
     autocmd!
-    au FileType zsh colorscheme oceanic_material
+    au FileType zsh colorscheme PaperColor
+""    au FileType zsh colorscheme oceanic_material
     au FileType zsh hi StatusLine ctermbg=bg ctermfg=bg
     au FileType zsh nnoremap <buffer> <leader>c :norm 0i#<cr>j
     au FileType zsh nnoremap <buffer> <leader>u :norm 0x<cr>j
@@ -720,6 +721,7 @@ augroup filetype_cpp
     au FileType cpp inoreabb <buffer> wh while ()<cr>{<cr>}<esc>2k0ew
     au FileType cpp inoreabb <buffer> dw do <cr>{<cr>} while (true);<esc>O//<esc>0wh
     au FileType cpp inoreabb <buffer> ei else if
+    au FileType cpp inoreabb <buffer> pe +=
 
 "   directives
     au FileType cpp inoreabb <buffer> pra #pragma once<esc>
