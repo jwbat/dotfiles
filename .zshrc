@@ -31,6 +31,7 @@ alias grep='ggrep -P'                       # Perl grep
 alias lss='ls ~/code/shell/scripts'         # ls scripts
 alias lscp='ls ~/code/cpp/*/'               # ls cpp
 alias lsa='ls /Volumes/Andromeda'           # ls volume andromeda
+alias lm='ls /Volumes/mu'                   # ls volume mu
 alias ka='sudo rm -r /Volumes/Andromeda/*'  # clear volume andromeda
 alias kdl='rm -r ~/Downloads/*'             # clear Downloads
 alias rmds='rm .DS_Store'
